@@ -2,8 +2,8 @@ import logging
 from rest_framework import viewsets
 from api.models import Blitz
 from api.Serializers.blitz_serializer import BlitzSerializer
-
 from drf_spectacular.utils import extend_schema
+
 logger = logging.getLogger('api')
 
 @extend_schema(tags=['Blitzs'])
