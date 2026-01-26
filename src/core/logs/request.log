@@ -1,0 +1,8 @@
+WARNING 2026-01-25 05:32:22,740 logging_middleware 1452 134759833401024 CLIENT ERROR: {"method": "GET", "path": "/", "status": 404, "duration": 0.0057, "ip": "172.19.0.1", "user_id": "Anonymous"}
+WARNING 2026-01-25 05:32:22,744 log 1452 134759833401024 Not Found: /
+WARNING 2026-01-25 05:32:22,923 logging_middleware 1452 134759833401024 CLIENT ERROR: {"method": "GET", "path": "/favicon.ico", "status": 404, "duration": 0.0035, "ip": "172.19.0.1", "user_id": "Anonymous"}
+WARNING 2026-01-25 05:32:22,925 log 1452 134759833401024 Not Found: /favicon.ico
+INFO 2026-01-25 05:32:37,054 logging_middleware 1452 134759833401024 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0107, "ip": "172.19.0.1", "user_id": "Anonymous"}
+INFO 2026-01-25 05:32:37,455 logging_middleware 1452 134759833401024 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.1137, "ip": "172.19.0.1", "user_id": "Anonymous"}
+INFO 2026-01-25 05:32:58,830 logging_middleware 1452 134759833401024 SUCCESS: {"method": "GET", "path": "/api/users/", "status": 200, "duration": 0.0249, "ip": "172.19.0.1", "user_id": "Anonymous"}
+INFO 2026-01-25 05:33:09,060 logging_middleware 1452 134759833401024 SUCCESS: {"method": "GET", "path": "/api/groups/", "status": 200, "duration": 0.0248, "ip": "172.19.0.1", "user_id": "Anonymous"}
