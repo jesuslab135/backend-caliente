@@ -1,95 +1,66 @@
 """
-SquadUp - Django Models (Refactorizado)
+SquadUp - Django Models (Versión Final)
 =======================================
-Basado en el análisis del SRS y corrigiendo los problemas detectados en la versión anterior.
+Actualizado después de auditoría visual de mockups.
 
-CAMBIOS PRINCIPALES:
-1. Modelo User compatible con Firebase Auth
-2. Corrección de relaciones incorrectas (ForeignKey vs OneToOneField)
-3. Adición de modelos faltantes según el SRS (Friendship, BlitzInteraction, Notification)
-4. Corrección del error crítico en Message.chat_id
-5. Adición de campos requeridos para la lógica de Blitz
+MODELOS AÑADIDOS TRAS REVISIÓN DE UI:
+- Memory, MemoryPhoto (pantalla Add Memory, Match Space Enhanced)
+- MatchActivity (Timeline en Match Space)
+- MeetupPlan (Plan Suggested, Meetup Confirmed)
+- BlitzVote (Group Consensus/votación grupal)
+
+CAMPOS AÑADIDOS:
+- Profile.interests (tags de intereses)
+- Group.is_new (badge "New")
+- User stats como properties
 """
 
 from django.db import models
 from django.utils import timezone
-from datetime import timedelta
 from django.core.validators import MinValueValidator
 from decimal import Decimal
+from datetime import timedelta
 import uuid
 
+
+# =============================================================================
+# USER BILLING MIXIN
+# =============================================================================
 class UserBillingMixin:
-    """
-    Mixin que agrega funcionalidad de billing al modelo User.
-    
-    INTEGRACIÓN CON USER:
-    El modelo User existente (con Firebase Auth) se relaciona con billing así:
-    - User.subscriptions → Todas las suscripciones del usuario
-    - User.payment_methods → Métodos de pago guardados
-    - User.invoices → Facturas generadas
-    
-    Para usarlo, tu clase User debe heredar de este mixin:
-    
-    class User(UserBillingMixin, models.Model):
-        first_name = ...
-        firebase_uid = ...
-    """
+    """Métodos de billing para User."""
     
     @property
     def active_subscription(self):
-        """
-        Retorna la suscripción activa actual del usuario.
-        
-        DISEÑO FREEMIUM:
-        Todo usuario SIEMPRE tiene una suscripción (aunque sea Free).
-        Este método retorna la más reciente activa.
-        """
         return self.subscriptions.filter(
             status__in=['trialing', 'active', 'past_due']
         ).order_by('-created_at').first()
     
     @property
     def current_plan(self):
-        """Retorna el plan actual del usuario."""
         subscription = self.active_subscription
-        if subscription:
-            return subscription.plan
-        return None
+        return subscription.plan if subscription else None
     
     @property
     def is_premium(self):
-        """¿El usuario tiene acceso premium?"""
         plan = self.current_plan
-        if not plan:
-            return False
-        return plan.plan_type in ['premium', 'enterprise']
+        return plan and plan.plan_type in ['premium', 'enterprise']
     
     @property
     def is_trialing(self):
-        """¿El usuario está en periodo de prueba?"""
         subscription = self.active_subscription
         return subscription and subscription.status == 'trialing'
     
     @property
     def default_payment_method(self):
-        """Retorna el método de pago predeterminado."""
         return self.payment_methods.filter(
             is_default=True, 
             is_valid=True
         ).first()
     
     def has_feature(self, feature_key: str) -> bool:
-        """
-        Verifica si el usuario tiene acceso a una feature.
-        
-        USO:
-            if user.has_feature('unlimited_blitz'):
-                allow_action()
-        """
         plan = self.current_plan
         if not plan:
             return False
-        
         try:
             feature = plan.features.get(feature_key=feature_key)
             return feature.as_bool
@@ -97,105 +68,38 @@ class UserBillingMixin:
             return False
     
     def get_feature_limit(self, feature_key: str) -> int:
-        """
-        Obtiene el límite numérico de una feature.
-        
-        Retorna:
-        - -1 si es ilimitado
-        - 0 si la feature no existe
-        - N si tiene un límite específico
-        
-        USO:
-            max_groups = user.get_feature_limit('max_groups')
-            if max_groups == -1 or current_groups < max_groups:
-                allow_create_group()
-        """
         plan = self.current_plan
         if not plan:
             return 0
-        
         try:
             feature = plan.features.get(feature_key=feature_key)
             return feature.as_int
         except PlanFeature.DoesNotExist:
             return 0
-    
-    def get_usage(self, feature_key: str) -> int:
-        """
-        Obtiene el uso actual de una feature en el periodo de facturación.
-        """
-        subscription = self.active_subscription
-        if not subscription:
-            return 0
-        
-        # Obtener el uso del periodo actual
-        usage = UsageRecord.objects.filter(
-            subscription=subscription,
-            feature_key=feature_key,
-            period_start__lte=timezone.now(),
-            period_end__gte=timezone.now()
-        ).aggregate(total=models.Sum('quantity'))
-        
-        return usage['total'] or 0
-    
-    def can_use_feature(self, feature_key: str, quantity: int = 1) -> tuple:
-        """
-        Verifica si el usuario puede usar una feature.
-        
-        Retorna: (bool, str) - (puede_usar, mensaje)
-        
-        USO:
-            can_create, message = user.can_use_feature('max_groups')
-            if not can_create:
-                return Response({'error': message}, status=403)
-        """
-        limit = self.get_feature_limit(feature_key)
-        
-        if limit == -1:  # Ilimitado
-            return True, "OK"
-        
-        if limit == 0:  # Feature no disponible
-            return False, f"Esta función no está disponible en tu plan actual."
-        
-        current_usage = self.get_usage(feature_key)
-        
-        if current_usage + quantity > limit:
-            remaining = limit - current_usage
-            return False, f"Has alcanzado el límite de tu plan. Disponible: {remaining}."
-        
-        return True, "OK"
+
 
 # =============================================================================
 # USER MODEL
 # =============================================================================
 class User(UserBillingMixin, models.Model):
     """
-    Modelo de Usuario compatible con Firebase Authentication.
-    
-    CAMBIOS RESPECTO A LA VERSIÓN ANTERIOR:
-    - Se mantiene como modelo independiente (no AbstractUser) porque Firebase
-      maneja la autenticación. Django solo almacena datos de perfil.
-    - AÑADIDO: 'profile_photo' - Requerido por RF-003 (identificación con foto)
-    - AÑADIDO: 'is_verified' - Para el proceso de verificación de identidad
-    - CORREGIDO: 'firebase_uid' ahora tiene unique=True para evitar duplicados
+    Usuario compatible con Firebase Authentication.
     """
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    email = models.EmailField(max_length=254, unique=True)  # CORREGIDO: añadido unique=True
+    email = models.EmailField(max_length=254, unique=True)
     phone = models.CharField(max_length=16, blank=True, default="")
     
     # Firebase Integration
-    # CORREGIDO: Antes no tenía unique=True, lo cual podría causar usuarios duplicados
     firebase_uid = models.CharField(max_length=128, unique=True, db_index=True)
     
-    # AÑADIDO: Campos requeridos por RF-003 (User Identification)
+    # AÑADIDO: Requerido por RF-003 (User Identification)
     profile_photo = models.URLField(max_length=500, blank=True, default="")
     is_verified = models.BooleanField(default=False)
     
     is_active = models.BooleanField(default=True)
     
-    # CORREGIDO: El campo 'json' era muy genérico. Renombrado para claridad.
-    # Almacena preferencias del usuario para el algoritmo de recomendación (RF-013)
+    # Preferencias para algoritmo de recomendación
     preferences = models.JSONField(default=dict, blank=True)
     
     created_at = models.DateTimeField(auto_now_add=True)
@@ -210,20 +114,95 @@ class User(UserBillingMixin, models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
+    
+    @property
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
+    
+    @property
+    def initials(self):
+        """Para el avatar con iniciales (mockup Profile: 'FM')"""
+        return f"{self.first_name[0]}{self.last_name[0]}".upper()
+    
+    # =========================================================================
+    # STATS - Vistos en mockup Profile (12 Matches, 3 Groups, 28 Memories)
+    # =========================================================================
+    @property
+    def total_matches(self):
+        """Cuenta matches donde el usuario participó."""
+        from django.db.models import Q
+        return Match.objects.filter(
+            Q(blitz_1__group__members=self) | Q(blitz_2__group__members=self),
+            status__in=['active', 'chatting', 'met']
+        ).distinct().count()
+    
+    @property
+    def total_groups(self):
+        """Grupos donde el usuario es miembro."""
+        return self.groups.filter(is_active=True).count()
+    
+    @property
+    def total_memories(self):
+        """Memories creadas por el usuario."""
+        return Memory.objects.filter(created_by=self).count()
 
 
 # =============================================================================
-# FRIENDSHIP MODEL (NUEVO)
+# PROFILE MODEL
+# =============================================================================
+class Profile(models.Model):
+    """
+    Perfil extendido del usuario.
+    
+    AÑADIDO tras mockup:
+    - interests: Lista de intereses (Gaming, Music, Coffee, Fitness)
+    """
+    user = models.OneToOneField(
+        User, 
+        on_delete=models.CASCADE, 
+        related_name='profile'
+    )
+    
+    bio = models.TextField(blank=True, default="")
+    
+    # AÑADIDO: Intereses del usuario (visto en mockup Profile y Friends)
+    # Estructura: ["Gaming", "Music", "Coffee", "Fitness"]
+    interests = models.JSONField(
+        default=list, 
+        blank=True,
+        help_text="Lista de intereses/tags del usuario"
+    )
+    
+    # Datos demográficos opcionales
+    age = models.PositiveIntegerField(null=True, blank=True)
+    gender = models.CharField(max_length=20, blank=True, default="")
+    
+    # Ubicación preferida (para heat map y descubrimiento)
+    default_location = models.JSONField(
+        default=dict, 
+        blank=True,
+        help_text="Ubicación por defecto: {lat, lng, city}"
+    )
+    
+    extra_data = models.JSONField(default=dict, blank=True)
+    
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'profiles'
+
+    def __str__(self):
+        return f"Profile of {self.user}"
+
+
+# =============================================================================
+# FRIENDSHIP MODEL
 # =============================================================================
 class Friendship(models.Model):
     """
-    NUEVO MODELO - Requerido por RF-004 (Friend Management)
-    
-    La versión anterior NO tenía este modelo, lo cual hacía imposible
-    implementar la gestión de amigos requerida por el SRS.
-    
-    Diseño bidireccional: cuando user_1 y user_2 son amigos, solo se crea
-    UN registro (user_1.id < user_2.id para consistencia).
+    Gestión de amigos (RF-004).
+    Mockup: Friends list con nombre e intereses.
     """
     class Status(models.TextChoices):
         PENDING = 'pending', 'Pendiente'
@@ -231,7 +210,6 @@ class Friendship(models.Model):
         REJECTED = 'rejected', 'Rechazado'
         BLOCKED = 'blocked', 'Bloqueado'
     
-    # Siempre user_from.id < user_to.id para evitar duplicados
     user_from = models.ForeignKey(
         User, 
         on_delete=models.CASCADE, 
@@ -252,7 +230,6 @@ class Friendship(models.Model):
 
     class Meta:
         db_table = 'friendships'
-        # Evita solicitudes de amistad duplicadas
         unique_together = ('user_from', 'user_to')
         indexes = [
             models.Index(fields=['user_from', 'status']),
@@ -268,19 +245,15 @@ class Friendship(models.Model):
 # =============================================================================
 class Group(models.Model):
     """
-    Modelo de Grupo para sesiones Blitz.
+    Grupo de usuarios para Blitz.
     
-    CAMBIOS RESPECTO A LA VERSIÓN ANTERIOR:
-    - AÑADIDO: 'name' - Los grupos necesitan un nombre identificable
-    - AÑADIDO: 'creator' - Referencia al usuario que creó el grupo
-    - AÑADIDO: 'is_active' - Para soft delete
-    - CORREGIDO: 'json' renombrado a 'metadata' para claridad
-    - AÑADIDO: Validación de mínimo 2 miembros (RF-005) se hace a nivel de aplicación
+    AÑADIDO tras mockup:
+    - is_new: Badge "New" en Home Hub
+    - color: Color del avatar del grupo (visto en mockups)
     """
-    name = models.CharField(max_length=100, default="Mi Grupo")
+    name = models.CharField(max_length=100)
     description = models.TextField(blank=True, default="")
     
-    # AÑADIDO: Creador del grupo (importante para permisos)
     creator = models.ForeignKey(
         User, 
         on_delete=models.SET_NULL, 
@@ -288,15 +261,28 @@ class Group(models.Model):
         related_name='created_groups'
     )
     
-    # Miembros del grupo
     members = models.ManyToManyField(
         User, 
-        through='GroupMembership',  # AÑADIDO: Tabla intermedia para más control
+        through='GroupMembership',
         related_name='groups'
     )
     
+    # AÑADIDO: Color del grupo para avatar (mockup muestra círculos de colores)
+    # Estructura: {"primary": "#FF6B6B", "secondary": "#4ECDC4"}
+    colors = models.JSONField(
+        default=dict,
+        blank=True,
+        help_text="Colores del avatar del grupo"
+    )
+    
+    # AÑADIDO: Para mostrar badge "New" en Home Hub
+    is_new = models.BooleanField(
+        default=True,
+        help_text="Mostrar badge 'New' (se desactiva después de X días)"
+    )
+    
     is_active = models.BooleanField(default=True)
-    metadata = models.JSONField(default=dict, blank=True)  # RENOMBRADO de 'json'
+    metadata = models.JSONField(default=dict, blank=True)
     
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -310,23 +296,62 @@ class Group(models.Model):
     @property
     def member_count(self):
         return self.members.count()
+    
+    @property
+    def combined_interests(self):
+        """
+        Unión de intereses de todos los miembros.
+        Visto en mockup: "Combined Interests" en Create Group y Group Detail.
+        """
+        interests = set()
+        for member in self.members.all():
+            if hasattr(member, 'profile') and member.profile.interests:
+                interests.update(member.profile.interests)
+        return list(interests)
+    
+    @property
+    def leader(self):
+        """Retorna el Blitz Leader del grupo."""
+        membership = self.groupmembership_set.filter(role='admin').first()
+        return membership.user if membership else self.creator
+    
+    # STATS vistas en mockup Group Detail
+    @property
+    def total_matches(self):
+        from django.db.models import Q
+        return Match.objects.filter(
+            Q(blitz_1__group=self) | Q(blitz_2__group=self),
+            status__in=['active', 'chatting', 'met']
+        ).distinct().count()
+    
+    @property
+    def total_outings(self):
+        """Outings = Meetups confirmados."""
+        from django.db.models import Q
+        return MeetupPlan.objects.filter(
+            Q(match__blitz_1__group=self) | Q(match__blitz_2__group=self),
+            status='completed'
+        ).count()
+    
+    @property
+    def total_memories(self):
+        from django.db.models import Q
+        return Memory.objects.filter(
+            Q(match__blitz_1__group=self) | Q(match__blitz_2__group=self)
+        ).count()
 
 
 # =============================================================================
-# GROUP MEMBERSHIP (NUEVO)
+# GROUP MEMBERSHIP
 # =============================================================================
 class GroupMembership(models.Model):
     """
-    NUEVO MODELO - Tabla intermedia para la relación User-Group
-    
-    La versión anterior usaba ManyToManyField directo, lo cual no permitía
-    almacenar información adicional como:
-    - Fecha de unión al grupo
-    - Rol dentro del grupo (útil para el Blitz Leader de RF-006)
+    Relación User-Group con rol.
+    Mockup: "Leader" vs "Member" badges.
     """
     class Role(models.TextChoices):
         MEMBER = 'member', 'Miembro'
-        ADMIN = 'admin', 'Administrador'
+        ADMIN = 'admin', 'Líder'  # Blitz Leader
     
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     group = models.ForeignKey(Group, on_delete=models.CASCADE)
@@ -339,66 +364,22 @@ class GroupMembership(models.Model):
 
     def __str__(self):
         return f"{self.user} in {self.group} ({self.role})"
-
-
-# =============================================================================
-# PROFILE MODEL
-# =============================================================================
-class Profile(models.Model):
-    """
-    Perfil extendido del usuario.
     
-    CAMBIOS RESPECTO A LA VERSIÓN ANTERIOR:
-    - CORREGIDO: 'user_id' cambiado a 'user' (convención Django)
-    - CORREGIDO: ForeignKey cambiado a OneToOneField (un usuario = un perfil)
-    - AÑADIDO: Campos para preferencias sociales (útil para RF-013 algoritmo)
-    """
-    # CORREGIDO: Antes era ForeignKey, lo cual permitía múltiples perfiles por usuario
-    # OneToOneField garantiza la relación 1:1
-    user = models.OneToOneField(
-        User, 
-        on_delete=models.CASCADE, 
-        related_name='profile'
-    )
-    
-    bio = models.TextField(blank=True, default="")
-    
-    # AÑADIDO: Preferencias para el algoritmo de recomendación (RF-013)
-    interests = models.JSONField(default=list, blank=True)  # ["música", "deportes", etc.]
-    age = models.PositiveIntegerField(null=True, blank=True)
-    
-    # RENOMBRADO: 'json' a 'extra_data' para claridad
-    extra_data = models.JSONField(default=dict, blank=True)
-    
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    class Meta:
-        db_table = 'profiles'
-
-    def __str__(self):
-        return f"Profile of {self.user}"
+    @property
+    def is_leader(self):
+        return self.role == self.Role.ADMIN
 
 
 # =============================================================================
 # BLITZ MODEL
 # =============================================================================
-
-# Duración por defecto de una sesión Blitz (RF-012)
 BLITZ_DEFAULT_DURATION_MINUTES = 60
 
 
 class Blitz(models.Model):
     """
-    Sesión Blitz - Estado temporal de disponibilidad de un grupo.
-    
-    CAMBIOS RESPECTO A LA VERSIÓN ANTERIOR:
-    - CORREGIDO: 'group_id' renombrado a 'group' (convención Django)
-    - AÑADIDO: 'status' - El modelo anterior no tenía estado (activo/expirado)
-    - AÑADIDO: 'leader' - Requerido por RF-006 (Blitz Leader)
-    - AÑADIDO: 'expires_at' - Requerido por RF-012 (expiración automática)
-    - AÑADIDO: 'activity_type' - Contexto de la actividad (qué quieren hacer)
-    - MEJORADO: 'location' ahora tiene estructura definida
+    Sesión Blitz - Disponibilidad temporal de un grupo.
+    Mockup: Timer "LIVE 14:32", estado activo.
     """
     class Status(models.TextChoices):
         ACTIVE = 'active', 'Activo'
@@ -412,7 +393,6 @@ class Blitz(models.Model):
         related_name='blitz_sessions'
     )
     
-    # AÑADIDO: Blitz Leader (RF-006) - Usuario que toma decisiones durante el Blitz
     leader = models.ForeignKey(
         User, 
         on_delete=models.CASCADE, 
@@ -425,19 +405,17 @@ class Blitz(models.Model):
         default=Status.ACTIVE
     )
     
-    # AÑADIDO: Campos de tiempo para RF-012 (Blitz Session Expiration)
     started_at = models.DateTimeField(auto_now_add=True)
     expires_at = models.DateTimeField(blank=True, null=True)
     last_activity_at = models.DateTimeField(auto_now=True)
     
-    # Ubicación para RF-007 (Blitz Group Discovery) y RF-014 (Heat Map)
-    # Estructura: {"lat": float, "lng": float, "address": str, "radius_km": float}
-    location = models.JSONField(default=dict)
+    # Ubicación
+    location = models.JSONField(
+        default=dict,
+        help_text="Estructura: {lat, lng, address, radius_km}"
+    )
     
-    # AÑADIDO: Tipo de actividad que busca el grupo
     activity_type = models.CharField(max_length=100, blank=True, default="")
-    
-    # Datos adicionales (preferencias de match, etc.)
     metadata = models.JSONField(default=dict, blank=True)
     
     created_at = models.DateTimeField(auto_now_add=True)
@@ -455,7 +433,6 @@ class Blitz(models.Model):
         return f"Blitz: {self.group.name} ({self.status})"
     
     def save(self, *args, **kwargs):
-        # Auto-establecer expires_at si no está definido
         if not self.expires_at:
             self.expires_at = timezone.now() + timedelta(minutes=BLITZ_DEFAULT_DURATION_MINUTES)
         super().save(*args, **kwargs)
@@ -463,54 +440,122 @@ class Blitz(models.Model):
     @property
     def is_expired(self):
         return timezone.now() > self.expires_at or self.status != self.Status.ACTIVE
+    
+    @property
+    def time_remaining_seconds(self):
+        """Para el timer 'LIVE 14:32' del mockup."""
+        if self.is_expired:
+            return 0
+        delta = self.expires_at - timezone.now()
+        return max(0, int(delta.total_seconds()))
+    
+    @property
+    def time_remaining_display(self):
+        """Formato MM:SS para UI."""
+        seconds = self.time_remaining_seconds
+        minutes = seconds // 60
+        secs = seconds % 60
+        return f"{minutes:02d}:{secs:02d}"
 
 
 # =============================================================================
-# BLITZ INTERACTION (NUEVO)
+# BLITZ INTERACTION
 # =============================================================================
 class BlitzInteraction(models.Model):
     """
-    NUEVO MODELO - Requerido por RF-008 (Fast Group Interaction)
-    
-    La versión anterior NO tenía forma de registrar los likes/skips.
-    Este modelo almacena cada interacción entre grupos en Blitz.
+    Interacciones like/skip entre grupos.
     """
     class InteractionType(models.TextChoices):
         LIKE = 'like', 'Like'
         SKIP = 'skip', 'Skip'
     
-    # El Blitz que realiza la interacción
     from_blitz = models.ForeignKey(
         Blitz, 
         on_delete=models.CASCADE, 
         related_name='interactions_made'
     )
-    
-    # El Blitz que recibe la interacción
     to_blitz = models.ForeignKey(
         Blitz, 
         on_delete=models.CASCADE, 
         related_name='interactions_received'
     )
+    interaction_type = models.CharField(max_length=10, choices=InteractionType.choices)
     
-    interaction_type = models.CharField(
-        max_length=10, 
-        choices=InteractionType.choices
+    # AÑADIDO: Para saber si requiere votación grupal
+    requires_consensus = models.BooleanField(
+        default=False,
+        help_text="Si True, requiere aprobación de miembros del grupo"
     )
     
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         db_table = 'blitz_interactions'
-        # Un grupo solo puede interactuar una vez con otro grupo por sesión
         unique_together = ('from_blitz', 'to_blitz')
-        indexes = [
-            models.Index(fields=['from_blitz', 'interaction_type']),
-            models.Index(fields=['to_blitz', 'interaction_type']),
-        ]
 
     def __str__(self):
         return f"{self.from_blitz.group.name} -> {self.to_blitz.group.name}: {self.interaction_type}"
+    
+    @property
+    def consensus_status(self):
+        """Estado del consenso grupal."""
+        if not self.requires_consensus:
+            return 'not_required'
+        
+        votes = self.votes.all()
+        if not votes.exists():
+            return 'pending'
+        
+        approved = votes.filter(vote='approved').count()
+        total_members = self.from_blitz.group.member_count
+        
+        if approved == total_members:
+            return 'approved'
+        elif votes.filter(vote='rejected').exists():
+            return 'rejected'
+        return 'pending'
+
+
+# =============================================================================
+# BLITZ VOTE (NUEVO - Group Consensus)
+# =============================================================================
+class BlitzVote(models.Model):
+    """
+    NUEVO MODELO - Visto en mockup "Group Consensus"
+    
+    Permite que cada miembro del grupo vote sobre un like.
+    Mockup muestra: "2 of 3 members approved", estados "Approved"/"Pending"
+    """
+    class VoteChoice(models.TextChoices):
+        PENDING = 'pending', 'Pendiente'
+        APPROVED = 'approved', 'Aprobado'
+        REJECTED = 'rejected', 'Rechazado'
+    
+    interaction = models.ForeignKey(
+        BlitzInteraction,
+        on_delete=models.CASCADE,
+        related_name='votes'
+    )
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='blitz_votes'
+    )
+    vote = models.CharField(
+        max_length=20,
+        choices=VoteChoice.choices,
+        default=VoteChoice.PENDING
+    )
+    voted_at = models.DateTimeField(null=True, blank=True)
+    
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'blitz_votes'
+        unique_together = ('interaction', 'user')
+
+    def __str__(self):
+        return f"{self.user} voted {self.vote} on {self.interaction}"
 
 
 # =============================================================================
@@ -518,18 +563,17 @@ class BlitzInteraction(models.Model):
 # =============================================================================
 class Match(models.Model):
     """
-    Blitz Match - Cuando dos grupos hacen like mutuo (RF-010).
+    Match entre dos grupos.
     
-    CAMBIOS RESPECTO A LA VERSIÓN ANTERIOR:
-    - CORREGIDO: 'blitz_id' y 'blitz_id_2' renombrados a 'blitz_1' y 'blitz_2'
-    - AÑADIDO: 'status' - Para tracking del estado del match
-    - AÑADIDO: 'chat' - Referencia al chat creado (RF-011)
-    - RENOMBRADO: 'json' a 'metadata'
+    AÑADIDO tras mockup:
+    - matched_at: Fecha específica del match ("Matched Jan 20")
     """
     class Status(models.TextChoices):
+        PENDING = 'pending', 'Pendiente'  # AÑADIDO: Tab "Pending" en Matches
         ACTIVE = 'active', 'Activo'
         CHATTING = 'chatting', 'En Chat'
         MET = 'met', 'Se Encontraron'
+        PAST = 'past', 'Pasado'  # AÑADIDO: Tab "Past" en Matches
         EXPIRED = 'expired', 'Expirado'
         CANCELLED = 'cancelled', 'Cancelado'
     
@@ -545,13 +589,14 @@ class Match(models.Model):
     )
     
     status = models.CharField(
-        max_length=20, 
-        choices=Status.choices, 
+        max_length=20,
+        choices=Status.choices,
         default=Status.ACTIVE
     )
     
-    # AÑADIDO: Referencia al chat temporal (RF-011)
-    # Se crea automáticamente al formar el match
+    # AÑADIDO: Fecha del match para mostrar "Matched Jan 20"
+    matched_at = models.DateTimeField(default=timezone.now)
+    
     chat = models.OneToOneField(
         'Chat', 
         on_delete=models.SET_NULL, 
@@ -560,9 +605,7 @@ class Match(models.Model):
         related_name='match'
     )
     
-    # Ubicación acordada para el encuentro (opcional)
     meeting_location = models.JSONField(null=True, blank=True)
-    
     metadata = models.JSONField(default=dict, blank=True)
     
     created_at = models.DateTimeField(auto_now_add=True)
@@ -573,10 +616,250 @@ class Match(models.Model):
         verbose_name_plural = 'Matches'
         indexes = [
             models.Index(fields=['status', 'created_at']),
+            models.Index(fields=['status', 'matched_at']),
         ]
 
     def __str__(self):
         return f"Match: {self.blitz_1.group.name} <-> {self.blitz_2.group.name}"
+    
+    @property
+    def days_together(self):
+        """Para mostrar '56d Together' en mockup Match Space Enhanced."""
+        delta = timezone.now() - self.matched_at
+        return delta.days
+    
+    @property
+    def common_interests(self):
+        """Intereses en común entre ambos grupos."""
+        interests_1 = set(self.blitz_1.group.combined_interests)
+        interests_2 = set(self.blitz_2.group.combined_interests)
+        return list(interests_1.intersection(interests_2))
+    
+    @property
+    def common_interests_count(self):
+        """'3 common interests' en mockup."""
+        return len(self.common_interests)
+
+
+# =============================================================================
+# MATCH ACTIVITY (NUEVO - Timeline)
+# =============================================================================
+class MatchActivity(models.Model):
+    """
+    NUEVO MODELO - Timeline visto en mockup "Match Space"
+    
+    Registra eventos: Match Created, Chat Started, Plan Suggested, Meetup Confirmed
+    """
+    class ActivityType(models.TextChoices):
+        MATCH_CREATED = 'match_created', 'Match Created'
+        CHAT_STARTED = 'chat_started', 'Chat Started'
+        PLAN_SUGGESTED = 'plan_suggested', 'Plan Suggested'
+        PLAN_ACCEPTED = 'plan_accepted', 'Plan Accepted'
+        MEETUP_CONFIRMED = 'meetup_confirmed', 'Meetup Confirmed'
+        MEETUP_COMPLETED = 'meetup_completed', 'Meetup Completed'
+        MEMORY_ADDED = 'memory_added', 'Memory Added'
+        PHOTO_SHARED = 'photo_shared', 'Photo Shared'
+    
+    match = models.ForeignKey(
+        Match,
+        on_delete=models.CASCADE,
+        related_name='activities'
+    )
+    
+    activity_type = models.CharField(max_length=30, choices=ActivityType.choices)
+    
+    # Usuario que generó la actividad (si aplica)
+    triggered_by = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='match_activities'
+    )
+    
+    # Descripción para mostrar en timeline
+    description = models.CharField(max_length=500, blank=True, default="")
+    
+    # Datos adicionales (ej: ID del plan, mensaje, etc.)
+    metadata = models.JSONField(default=dict, blank=True)
+    
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'match_activities'
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f"{self.match}: {self.activity_type}"
+
+
+# =============================================================================
+# MEETUP PLAN (NUEVO)
+# =============================================================================
+class MeetupPlan(models.Model):
+    """
+    NUEVO MODELO - Visto en mockup Match Space Timeline
+    
+    "Plan Suggested", "Meetup Confirmed" con fecha/hora específica.
+    Mockup: "Jamie proposed meeting at The Blue Note", "Saturday, Jan 25 at 7 PM"
+    """
+    class Status(models.TextChoices):
+        PROPOSED = 'proposed', 'Propuesto'
+        ACCEPTED = 'accepted', 'Aceptado'
+        CONFIRMED = 'confirmed', 'Confirmado'
+        COMPLETED = 'completed', 'Completado'
+        CANCELLED = 'cancelled', 'Cancelado'
+    
+    match = models.ForeignKey(
+        Match,
+        on_delete=models.CASCADE,
+        related_name='meetup_plans'
+    )
+    
+    proposed_by = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='proposed_meetups'
+    )
+    
+    title = models.CharField(
+        max_length=200,
+        help_text="Ej: 'Meeting at The Blue Note'"
+    )
+    
+    # Fecha y hora del meetup
+    scheduled_at = models.DateTimeField()
+    
+    # Ubicación
+    location_name = models.CharField(max_length=200, blank=True, default="")
+    location_address = models.TextField(blank=True, default="")
+    location_coords = models.JSONField(
+        default=dict,
+        blank=True,
+        help_text="{lat, lng}"
+    )
+    
+    status = models.CharField(
+        max_length=20,
+        choices=Status.choices,
+        default=Status.PROPOSED
+    )
+    
+    notes = models.TextField(blank=True, default="")
+    metadata = models.JSONField(default=dict, blank=True)
+    
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'meetup_plans'
+        ordering = ['-scheduled_at']
+
+    def __str__(self):
+        return f"{self.title} - {self.scheduled_at}"
+
+
+# =============================================================================
+# MEMORY MODEL (NUEVO)
+# =============================================================================
+class Memory(models.Model):
+    """
+    NUEVO MODELO - Visto en mockups "Add Memory" y "Match Space Enhanced"
+    
+    Permite guardar recuerdos de outings con fotos y notas.
+    Mockup muestra: Memory Type (Outing/Photo/Note), Title, Date, Photos, Notes
+    """
+    class MemoryType(models.TextChoices):
+        OUTING = 'outing', 'Outing'
+        PHOTO = 'photo', 'Photo'
+        NOTE = 'note', 'Note'
+    
+    match = models.ForeignKey(
+        Match,
+        on_delete=models.CASCADE,
+        related_name='memories'
+    )
+    
+    created_by = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='created_memories'
+    )
+    
+    memory_type = models.CharField(
+        max_length=20,
+        choices=MemoryType.choices,
+        default=MemoryType.OUTING
+    )
+    
+    title = models.CharField(max_length=200)
+    
+    # Fecha del evento (puede ser diferente a created_at)
+    event_date = models.DateField()
+    
+    notes = models.TextField(blank=True, default="")
+    
+    # Ubicación del evento (opcional)
+    location_name = models.CharField(max_length=200, blank=True, default="")
+    
+    metadata = models.JSONField(default=dict, blank=True)
+    
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'memories'
+        verbose_name_plural = 'Memories'
+        ordering = ['-event_date']
+
+    def __str__(self):
+        return f"{self.title} ({self.memory_type})"
+    
+    @property
+    def photo_count(self):
+        """Para mostrar '5 photos' en mockup."""
+        return self.photos.count()
+
+
+# =============================================================================
+# MEMORY PHOTO (NUEVO)
+# =============================================================================
+class MemoryPhoto(models.Model):
+    """
+    NUEVO MODELO - Fotos asociadas a un Memory.
+    Mockup "Add Memory" muestra grid de fotos.
+    """
+    memory = models.ForeignKey(
+        Memory,
+        on_delete=models.CASCADE,
+        related_name='photos'
+    )
+    
+    uploaded_by = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='uploaded_photos'
+    )
+    
+    # URL de la imagen (almacenada en Firebase Storage, S3, etc.)
+    image_url = models.URLField(max_length=500)
+    
+    # Thumbnail para carga rápida
+    thumbnail_url = models.URLField(max_length=500, blank=True, default="")
+    
+    caption = models.CharField(max_length=500, blank=True, default="")
+    
+    # Orden de la foto en la galería
+    order = models.PositiveIntegerField(default=0)
+    
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'memory_photos'
+        ordering = ['order', 'created_at']
+
+    def __str__(self):
+        return f"Photo for {self.memory.title}"
 
 
 # =============================================================================
@@ -584,22 +867,17 @@ class Match(models.Model):
 # =============================================================================
 class Chat(models.Model):
     """
-    Chat temporal para coordinación (RF-011).
-    
-    CAMBIOS RESPECTO A LA VERSIÓN ANTERIOR:
-    - AÑADIDO: 'is_active' - Los chats son temporales y pueden desactivarse
-    - AÑADIDO: 'expires_at' - Para limpieza automática
-    - AÑADIDO: Relación con participantes
-    - RENOMBRADO: 'json' a 'metadata'
+    Chat temporal para coordinación.
+    Mockup muestra: "7 members • 3 online"
     """
-    # Los participantes son todos los usuarios de ambos grupos del Match
-    participants = models.ManyToManyField(
-        User, 
-        related_name='chats'
-    )
+    participants = models.ManyToManyField(User, related_name='chats')
     
     is_active = models.BooleanField(default=True)
     expires_at = models.DateTimeField(null=True, blank=True)
+    
+    # AÑADIDO: Último mensaje para preview
+    last_message_at = models.DateTimeField(null=True, blank=True)
+    last_message_preview = models.CharField(max_length=100, blank=True, default="")
     
     metadata = models.JSONField(default=dict, blank=True)
     
@@ -610,7 +888,12 @@ class Chat(models.Model):
         db_table = 'chats'
 
     def __str__(self):
-        return f"Chat {self.id} ({'active' if self.is_active else 'inactive'})"
+        return f"Chat {self.id}"
+    
+    @property
+    def participant_count(self):
+        """'7 members' en mockup."""
+        return self.participants.count()
 
 
 # =============================================================================
@@ -618,14 +901,8 @@ class Chat(models.Model):
 # =============================================================================
 class Message(models.Model):
     """
-    Mensaje dentro de un chat.
-    
-    CAMBIOS RESPECTO A LA VERSIÓN ANTERIOR:
-    - ⚠️ ERROR CRÍTICO CORREGIDO: 'chat_id' apuntaba a User en lugar de Chat
-      Esto hacía IMPOSIBLE asociar mensajes con chats correctamente.
-    - CORREGIDO: 'user_id' renombrado a 'sender' (convención y claridad)
-    - AÑADIDO: 'message_type' - Para soportar diferentes tipos de contenido
-    - AÑADIDO: 'is_read' - Para tracking de mensajes leídos
+    Mensaje en un chat.
+    Mockup: Avatar, nombre, texto, timestamp.
     """
     class MessageType(models.TextChoices):
         TEXT = 'text', 'Texto'
@@ -633,15 +910,12 @@ class Message(models.Model):
         LOCATION = 'location', 'Ubicación'
         SYSTEM = 'system', 'Sistema'
     
-    # CORREGIDO: Antes apuntaba a User (ERROR GRAVE)
-    # Ahora apunta correctamente a Chat
     chat = models.ForeignKey(
         Chat, 
         on_delete=models.CASCADE, 
         related_name='messages'
     )
     
-    # RENOMBRADO: 'user_id' -> 'sender' para mayor claridad
     sender = models.ForeignKey(
         User, 
         on_delete=models.CASCADE, 
@@ -655,11 +929,9 @@ class Message(models.Model):
         default=MessageType.TEXT
     )
     
-    # AÑADIDO: Para tracking de mensajes leídos
     is_read = models.BooleanField(default=False)
     read_at = models.DateTimeField(null=True, blank=True)
     
-    # Para contenido adicional (URL de imagen, coordenadas, etc.)
     metadata = models.JSONField(default=dict, blank=True)
     
     created_at = models.DateTimeField(auto_now_add=True)
@@ -670,29 +942,27 @@ class Message(models.Model):
         ordering = ['created_at']
         indexes = [
             models.Index(fields=['chat', 'created_at']),
-            models.Index(fields=['sender', 'created_at']),
         ]
 
     def __str__(self):
-        return f"{self.sender}: {self.text[:50]}..."
+        return f"{self.sender}: {self.text[:30]}..."
 
 
 # =============================================================================
-# NOTIFICATION MODEL (NUEVO)
+# NOTIFICATION MODEL
 # =============================================================================
 class Notification(models.Model):
-    """
-    NUEVO MODELO - Requerido por RF-009 (Instant Notifications)
+    """Notificaciones push y in-app."""
     
-    La versión anterior NO tenía modelo de notificaciones, lo cual hacía
-    imposible implementar el requisito RF-009 del SRS.
-    """
     class NotificationType(models.TextChoices):
         BLITZ_MATCH = 'blitz_match', 'Nuevo Match'
         BLITZ_LIKE = 'blitz_like', 'Grupo te dio Like'
+        BLITZ_VOTE_REQUEST = 'blitz_vote_request', 'Votación Pendiente'
         NEW_MESSAGE = 'new_message', 'Nuevo Mensaje'
         FRIEND_REQUEST = 'friend_request', 'Solicitud de Amistad'
         GROUP_INVITE = 'group_invite', 'Invitación a Grupo'
+        MEETUP_PROPOSED = 'meetup_proposed', 'Plan Propuesto'
+        MEETUP_CONFIRMED = 'meetup_confirmed', 'Meetup Confirmado'
         BLITZ_EXPIRING = 'blitz_expiring', 'Blitz por Expirar'
         SYSTEM = 'system', 'Sistema'
     
@@ -702,21 +972,15 @@ class Notification(models.Model):
         related_name='notifications'
     )
     
-    notification_type = models.CharField(
-        max_length=30, 
-        choices=NotificationType.choices
-    )
-    
+    notification_type = models.CharField(max_length=30, choices=NotificationType.choices)
     title = models.CharField(max_length=200)
     body = models.TextField()
     
-    # Datos adicionales para la acción (ej: ID del match, chat, etc.)
     data = models.JSONField(default=dict, blank=True)
     
     is_read = models.BooleanField(default=False)
     read_at = models.DateTimeField(null=True, blank=True)
     
-    # Para integración con Firebase Cloud Messaging
     fcm_sent = models.BooleanField(default=False)
     fcm_sent_at = models.DateTimeField(null=True, blank=True)
     
@@ -727,7 +991,6 @@ class Notification(models.Model):
         ordering = ['-created_at']
         indexes = [
             models.Index(fields=['user', 'is_read', 'created_at']),
-            models.Index(fields=['user', 'notification_type']),
         ]
 
     def __str__(self):
@@ -735,16 +998,13 @@ class Notification(models.Model):
 
 
 # =============================================================================
-# LOCATION LOG (NUEVO) - Para Heat Map (RF-014)
+# LOCATION LOG - Para Heat Map
 # =============================================================================
 class LocationLog(models.Model):
     """
-    NUEVO MODELO - Requerido por RF-014 (Meeting Heat Map)
-    
-    Registra ubicaciones de actividad para generar el mapa de calor
-    de zonas con alta densidad de grupos.
+    Registro de ubicaciones para Heat Map.
+    Mockup: Clusters con "3 groups", "8 groups", estadísticas de zona.
     """
-    # Puede ser un log de un Blitz activo o de un Match completado
     blitz = models.ForeignKey(
         Blitz, 
         on_delete=models.CASCADE, 
@@ -763,8 +1023,7 @@ class LocationLog(models.Model):
     latitude = models.DecimalField(max_digits=9, decimal_places=6)
     longitude = models.DecimalField(max_digits=9, decimal_places=6)
     
-    # Tipo de evento para el heat map
-    event_type = models.CharField(max_length=50)  # 'blitz_active', 'match_created', 'meeting'
+    event_type = models.CharField(max_length=50)
     
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -773,111 +1032,109 @@ class LocationLog(models.Model):
         indexes = [
             models.Index(fields=['latitude', 'longitude']),
             models.Index(fields=['created_at']),
-            models.Index(fields=['event_type', 'created_at']),
+        ]
+
+
+# =============================================================================
+# ZONE STATS (NUEVO - Heat Map Premium)
+# =============================================================================
+class ZoneStats(models.Model):
+    """
+    NUEVO MODELO - Estadísticas por zona para Heat Map Premium.
+    
+    Mockup "Heat Map Premium" muestra:
+    - 12 Groups LIVE
+    - 47 People
+    - 8pm Peak Hour
+    - Hourly Trend (gráfico de barras)
+    """
+    # Identificador de zona (puede ser geohash o nombre)
+    zone_id = models.CharField(max_length=50, db_index=True)
+    zone_name = models.CharField(max_length=100)  # "Downtown District"
+    
+    # Coordenadas del centro de la zona
+    center_lat = models.DecimalField(max_digits=9, decimal_places=6)
+    center_lng = models.DecimalField(max_digits=9, decimal_places=6)
+    
+    # Stats actuales (se actualizan periódicamente)
+    groups_live = models.PositiveIntegerField(default=0)
+    people_count = models.PositiveIntegerField(default=0)
+    
+    # Peak hour (0-23)
+    peak_hour = models.PositiveSmallIntegerField(null=True, blank=True)
+    
+    # Trend por hora: {"5pm": 2, "6pm": 4, "7pm": 8, ...}
+    hourly_trend = models.JSONField(default=dict, blank=True)
+    
+    # Nivel de actividad
+    activity_level = models.CharField(
+        max_length=20,
+        choices=[('low', 'Low'), ('medium', 'Medium'), ('high', 'High')],
+        default='low'
+    )
+    
+    # Fecha de las estadísticas
+    stats_date = models.DateField()
+    
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'zone_stats'
+        unique_together = ('zone_id', 'stats_date')
+        indexes = [
+            models.Index(fields=['stats_date', 'activity_level']),
         ]
 
     def __str__(self):
-        return f"Location ({self.latitude}, {self.longitude}) - {self.event_type}"
+        return f"{self.zone_name}: {self.groups_live} groups"
 
 
 # =============================================================================
-# PLAN MODEL - La Oferta Comercial
+# BILLING MODELS
 # =============================================================================
+
 class Plan(models.Model):
-    """
-    Define los planes disponibles en el sistema (Free, Premium, etc.)
-    
-    IMPORTANTE: Un Plan es la OFERTA, no la instancia del usuario.
-    Múltiples usuarios pueden estar suscritos al mismo Plan.
-    
-    DISEÑO AGNÓSTICO:
-    - 'external_id' almacena el ID del plan en la pasarela externa
-    - Permite mapear a Stripe Price ID, PayPal Plan ID, etc.
-    """
+    """Plan de suscripción (Free, Premium)."""
     
     class BillingInterval(models.TextChoices):
-        """
-        Intervalos de facturación soportados.
-        'LIFETIME' es para compras únicas (no renovables).
-        """
+        WEEKLY = 'weekly', 'Semanal'
         MONTHLY = 'monthly', 'Mensual'
-        QUARTERLY = 'quarterly', 'Trimestral'
         YEARLY = 'yearly', 'Anual'
         LIFETIME = 'lifetime', 'Vitalicio'
     
     class PlanType(models.TextChoices):
-        """
-        Tipos de plan para lógica de negocio.
-        FREE siempre debe existir como fallback.
-        """
         FREE = 'free', 'Gratuito'
         PREMIUM = 'premium', 'Premium'
         ENTERPRISE = 'enterprise', 'Empresarial'
     
-    # Identificadores
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    external_id = models.CharField(max_length=255, null=True, blank=True, db_index=True)
     
-    # AGNÓSTICO: ID en la pasarela de pago externa (Stripe price_id, etc.)
-    # Puede ser NULL para el plan Free que no requiere pasarela
-    external_id = models.CharField(
-        max_length=255, 
-        null=True, 
-        blank=True,
-        db_index=True,
-        help_text="ID del plan en la pasarela de pago (ej: price_xxxxx en Stripe)"
-    )
-    
-    # Información del plan
-    name = models.CharField(max_length=100)  # "Premium Mensual", "Premium Anual"
-    slug = models.SlugField(unique=True)  # "premium-monthly", "premium-yearly"
+    name = models.CharField(max_length=100)
+    slug = models.SlugField(unique=True)
     description = models.TextField(blank=True, default="")
-    plan_type = models.CharField(
-        max_length=20, 
-        choices=PlanType.choices,
-        default=PlanType.FREE
-    )
+    plan_type = models.CharField(max_length=20, choices=PlanType.choices, default=PlanType.FREE)
     
-    # Precio y facturación
-    # IMPORTANTE: Usar Decimal para dinero, NUNCA float (errores de precisión)
     price = models.DecimalField(
         max_digits=10, 
         decimal_places=2,
         default=Decimal('0.00'),
         validators=[MinValueValidator(Decimal('0.00'))]
     )
-    currency = models.CharField(max_length=3, default='MXN')  # ISO 4217
+    currency = models.CharField(max_length=3, default='USD')
     billing_interval = models.CharField(
         max_length=20,
         choices=BillingInterval.choices,
         default=BillingInterval.MONTHLY
     )
     
-    # Trial (periodo de prueba)
-    # FREEMIUM: Permite ofrecer X días gratis de Premium antes de cobrar
-    trial_days = models.PositiveIntegerField(
-        default=0,
-        help_text="Días de prueba gratuita (0 = sin trial)"
-    )
+    trial_days = models.PositiveIntegerField(default=0)
     
-    # Control de disponibilidad
-    is_active = models.BooleanField(
-        default=True,
-        help_text="Si está disponible para nuevas suscripciones"
-    )
-    is_public = models.BooleanField(
-        default=True,
-        help_text="Si aparece en la UI pública (False para planes legacy)"
-    )
-    
-    # Orden de display en UI
+    is_active = models.BooleanField(default=True)
+    is_public = models.BooleanField(default=True)
     display_order = models.PositiveIntegerField(default=0)
     
-    # Metadata flexible para características adicionales
-    metadata = models.JSONField(
-        default=dict, 
-        blank=True,
-        help_text="Datos adicionales del plan (límites, características, etc.)"
-    )
+    metadata = models.JSONField(default=dict, blank=True)
     
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -887,74 +1144,39 @@ class Plan(models.Model):
         ordering = ['display_order', 'price']
 
     def __str__(self):
-        return f"{self.name} ({self.price} {self.currency}/{self.billing_interval})"
+        return f"{self.name} ({self.price} {self.currency})"
     
     @property
     def is_free(self):
-        return self.plan_type == self.PlanType.FREE or self.price == Decimal('0.00')
+        return self.plan_type == self.PlanType.FREE
     
     @property
     def interval_days(self):
-        """Retorna la cantidad de días del intervalo de facturación."""
-        intervals = {
-            'monthly': 30,
-            'quarterly': 90,
-            'yearly': 365,
-            'lifetime': 36500,  # ~100 años
-        }
+        intervals = {'weekly': 7, 'monthly': 30, 'yearly': 365, 'lifetime': 36500}
         return intervals.get(self.billing_interval, 30)
 
 
-# =============================================================================
-# PLAN FEATURE - Feature Flags por Plan
-# =============================================================================
 class PlanFeature(models.Model):
     """
-    Define las características/límites de cada plan.
+    Features por plan.
     
-    DISEÑO FLEXIBLE:
-    Permite definir tanto booleanos (tiene_feature) como límites numéricos
-    (max_grupos: 3) usando el campo 'value'.
-    
-    EJEMPLO DE USO EN CÓDIGO:
-    ```python
-    def can_create_group(user):
-        feature = user.subscription.plan.features.get(feature_key='max_groups')
-        current_count = user.created_groups.count()
-        return current_count < int(feature.value)
-    ```
+    ACTUALIZADO según mockup Premium:
+    - max_blitz_per_week: 3 (Free) / unlimited (Premium)
+    - max_groups: 1 (Free) / 5 (Premium)
+    - basic_heat_map / full_heat_map
+    - zone_analytics: false (Free) / true (Premium)
+    - priority_matching: false (Free) / true (Premium)
     """
+    plan = models.ForeignKey(Plan, on_delete=models.CASCADE, related_name='features')
+    feature_key = models.CharField(max_length=100)
+    feature_name = models.CharField(max_length=200)
+    value = models.CharField(max_length=100)
+    description = models.TextField(blank=True, default="")
     
-    plan = models.ForeignKey(
-        Plan, 
-        on_delete=models.CASCADE, 
-        related_name='features'
-    )
-    
-    # Clave programática (usar en código)
-    feature_key = models.CharField(
-        max_length=100,
-        help_text="Clave única para usar en código (ej: 'max_groups', 'unlimited_blitz')"
-    )
-    
-    # Nombre legible (usar en UI)
-    feature_name = models.CharField(
-        max_length=200,
-        help_text="Nombre para mostrar al usuario (ej: 'Grupos máximos')"
-    )
-    
-    # Valor de la característica
-    # Puede ser: "true"/"false" para booleanos, o número para límites
-    value = models.CharField(
-        max_length=100,
-        help_text="Valor: 'true'/'false' para flags, número para límites, 'unlimited' para sin límite"
-    )
-    
-    # Descripción para marketing
-    description = models.TextField(
-        blank=True, 
-        default="",
-        help_text="Descripción para mostrar en página de precios"
+    # AÑADIDO: Para mostrar en UI con ✓ o ✗
+    is_highlighted = models.BooleanField(
+        default=False,
+        help_text="Si mostrar destacado en página de precios"
     )
     
     created_at = models.DateTimeField(auto_now_add=True)
@@ -969,173 +1191,31 @@ class PlanFeature(models.Model):
     
     @property
     def as_bool(self):
-        """Convierte el valor a booleano."""
         return self.value.lower() in ('true', '1', 'yes', 'unlimited')
     
     @property
     def as_int(self):
-        """Convierte el valor a entero. Retorna -1 si es 'unlimited'."""
         if self.value.lower() == 'unlimited':
-            return -1  # -1 indica sin límite
+            return -1
         try:
             return int(self.value)
         except ValueError:
             return 0
 
 
-# =============================================================================
-# PAYMENT METHOD - Métodos de Pago del Usuario
-# =============================================================================
-class PaymentMethod(models.Model):
-    """
-    Almacena los métodos de pago guardados del usuario.
-    
-    DISEÑO AGNÓSTICO:
-    - 'provider' identifica la pasarela (stripe, paypal, mercadopago)
-    - 'external_id' es el ID del método en esa pasarela
-    - NUNCA almacenamos datos sensibles (número de tarjeta, CVV)
-    - Solo guardamos los últimos 4 dígitos para display
-    
-    SEGURIDAD:
-    Los datos reales de pago viven en la pasarela externa.
-    Este modelo solo guarda referencias y metadata para UX.
-    """
-    
-    class Provider(models.TextChoices):
-        STRIPE = 'stripe', 'Stripe'
-        PAYPAL = 'paypal', 'PayPal'
-        MERCADOPAGO = 'mercadopago', 'MercadoPago'
-        CONEKTA = 'conekta', 'Conekta'
-        MANUAL = 'manual', 'Manual/Transferencia'
-    
-    class MethodType(models.TextChoices):
-        CARD = 'card', 'Tarjeta de Crédito/Débito'
-        PAYPAL = 'paypal', 'PayPal'
-        BANK_TRANSFER = 'bank_transfer', 'Transferencia Bancaria'
-        OXXO = 'oxxo', 'OXXO'
-        SPEI = 'spei', 'SPEI'
-    
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    
-    # Relación con User (del archivo models.py principal)
-    user = models.ForeignKey(
-        'User',  # String reference para evitar imports circulares
-        on_delete=models.CASCADE,
-        related_name='payment_methods'
-    )
-    
-    # AGNÓSTICO: Identificación en pasarela externa
-    provider = models.CharField(max_length=30, choices=Provider.choices)
-    external_id = models.CharField(
-        max_length=255,
-        help_text="ID del método en la pasarela (ej: pm_xxxx en Stripe)"
-    )
-    
-    method_type = models.CharField(max_length=30, choices=MethodType.choices)
-    
-    # Datos de display (NO SENSIBLES)
-    # Para tarjetas: últimos 4 dígitos
-    last_four = models.CharField(
-        max_length=4, 
-        blank=True, 
-        default="",
-        help_text="Últimos 4 dígitos (solo para display)"
-    )
-    # Para tarjetas: marca (Visa, Mastercard, etc.)
-    card_brand = models.CharField(max_length=50, blank=True, default="")
-    # Mes/Año de expiración
-    exp_month = models.PositiveSmallIntegerField(null=True, blank=True)
-    exp_year = models.PositiveSmallIntegerField(null=True, blank=True)
-    
-    # Para PayPal: email asociado
-    billing_email = models.EmailField(blank=True, default="")
-    
-    # Estado
-    is_default = models.BooleanField(
-        default=False,
-        help_text="Si es el método de pago predeterminado"
-    )
-    is_valid = models.BooleanField(
-        default=True,
-        help_text="Si el método sigue siendo válido (puede expirar o ser rechazado)"
-    )
-    
-    # Dirección de facturación (opcional pero recomendado)
-    billing_address = models.JSONField(
-        default=dict, 
-        blank=True,
-        help_text="Dirección de facturación: {street, city, state, postal_code, country}"
-    )
-    
-    metadata = models.JSONField(default=dict, blank=True)
-    
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    class Meta:
-        db_table = 'billing_payment_methods'
-        indexes = [
-            models.Index(fields=['user', 'is_default']),
-            models.Index(fields=['provider', 'external_id']),
-        ]
-
-    def __str__(self):
-        if self.method_type == self.MethodType.CARD:
-            return f"{self.card_brand} ****{self.last_four}"
-        return f"{self.method_type} ({self.provider})"
-    
-    def save(self, *args, **kwargs):
-        # Si este método se marca como default, desmarcar los demás
-        if self.is_default:
-            PaymentMethod.objects.filter(
-                user=self.user, 
-                is_default=True
-            ).exclude(pk=self.pk).update(is_default=False)
-        super().save(*args, **kwargs)
-
-
-# =============================================================================
-# SUBSCRIPTION - La Instancia del Usuario en un Plan
-# =============================================================================
 class Subscription(models.Model):
-    """
-    Representa la suscripción activa de un usuario a un plan.
-    
-    CICLO DE VIDA TÍPICO:
-    1. TRIALING → Usuario en periodo de prueba gratuito
-    2. ACTIVE → Suscripción activa y al día
-    3. PAST_DUE → Pago fallido, en periodo de gracia
-    4. UNPAID → Periodo de gracia terminado, servicio limitado
-    5. CANCELED → Usuario canceló (puede tener acceso hasta period_end)
-    6. EXPIRED → Suscripción terminada completamente
-    
-    DISEÑO AGNÓSTICO:
-    - 'external_id' mapea a la suscripción en la pasarela
-    - Permite sincronizar estados con Stripe Subscription, etc.
-    
-    FREEMIUM:
-    - Todo usuario SIEMPRE tiene una Subscription (aunque sea al plan Free)
-    - Esto simplifica el código: user.subscription.plan siempre existe
-    """
+    """Suscripción de usuario a un plan."""
     
     class Status(models.TextChoices):
-        # Estados activos (usuario tiene acceso)
         TRIALING = 'trialing', 'En Prueba'
         ACTIVE = 'active', 'Activa'
-        
-        # Estados problemáticos (acceso limitado o en riesgo)
         PAST_DUE = 'past_due', 'Pago Vencido'
         UNPAID = 'unpaid', 'Impaga'
-        
-        # Estados terminales
         CANCELED = 'canceled', 'Cancelada'
         EXPIRED = 'expired', 'Expirada'
-        
-        # Estado especial
         PAUSED = 'paused', 'Pausada'
     
     class CancelReason(models.TextChoices):
-        """Razones de cancelación para analytics."""
         USER_REQUEST = 'user_request', 'Solicitud del Usuario'
         PAYMENT_FAILED = 'payment_failed', 'Pago Fallido'
         FRAUD = 'fraud', 'Fraude Detectado'
@@ -1146,92 +1226,35 @@ class Subscription(models.Model):
     
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     
-    # Relaciones principales
-    user = models.ForeignKey(
-        'User',
-        on_delete=models.CASCADE,
-        related_name='subscriptions'
-    )
-    plan = models.ForeignKey(
-        Plan,
-        on_delete=models.PROTECT,  # PROTECT: no permitir borrar planes con suscripciones
-        related_name='subscriptions'
-    )
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='subscriptions')
+    plan = models.ForeignKey(Plan, on_delete=models.PROTECT, related_name='subscriptions')
     
-    # AGNÓSTICO: ID en pasarela externa
-    external_id = models.CharField(
-        max_length=255, 
-        null=True, 
-        blank=True,
-        db_index=True,
-        help_text="ID de suscripción en pasarela (ej: sub_xxxx en Stripe)"
-    )
+    external_id = models.CharField(max_length=255, null=True, blank=True, db_index=True)
     
-    # Estado actual
-    status = models.CharField(
-        max_length=20,
-        choices=Status.choices,
-        default=Status.ACTIVE
-    )
+    status = models.CharField(max_length=20, choices=Status.choices, default=Status.ACTIVE)
     
-    # =========================================================================
-    # FECHAS CRÍTICAS DEL CICLO DE SUSCRIPCIÓN
-    # =========================================================================
-    
-    # Inicio de la suscripción
     started_at = models.DateTimeField(default=timezone.now)
-    
-    # Periodo actual de facturación
-    # IMPORTANTE: Estas fechas definen cuándo cobrar
     current_period_start = models.DateTimeField(default=timezone.now)
-    current_period_end = models.DateTimeField(
-        help_text="Fecha en que termina el periodo actual y se debe renovar/cobrar"
-    )
+    current_period_end = models.DateTimeField(blank=True, null=True)
     
-    # Trial (periodo de prueba)
     trial_start = models.DateTimeField(null=True, blank=True)
-    trial_end = models.DateTimeField(
-        null=True, 
-        blank=True,
-        help_text="Si está en trial, fecha en que termina y se cobra"
-    )
+    trial_end = models.DateTimeField(null=True, blank=True)
     
-    # Cancelación
     canceled_at = models.DateTimeField(null=True, blank=True)
-    cancel_at_period_end = models.BooleanField(
-        default=False,
-        help_text="Si True, se cancela al final del periodo actual (no inmediatamente)"
-    )
-    cancel_reason = models.CharField(
-        max_length=30,
-        choices=CancelReason.choices,
-        null=True,
-        blank=True
-    )
+    cancel_at_period_end = models.BooleanField(default=False)
+    cancel_reason = models.CharField(max_length=30, choices=CancelReason.choices, null=True, blank=True)
     
-    # Periodo de gracia para pagos fallidos
-    # FREEMIUM CRÍTICO: Permite X días extra antes de downgrade
-    grace_period_end = models.DateTimeField(
-        null=True, 
-        blank=True,
-        help_text="Si está en past_due, fecha límite para pagar antes de suspensión"
-    )
+    grace_period_end = models.DateTimeField(null=True, blank=True)
     
-    # Método de pago asociado (el que se usará para renovaciones)
     default_payment_method = models.ForeignKey(
-        PaymentMethod,
+        'PaymentMethod',
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
         related_name='subscriptions'
     )
     
-    # Contadores y tracking
-    billing_cycle_count = models.PositiveIntegerField(
-        default=0,
-        help_text="Número de ciclos de facturación completados"
-    )
-    
+    billing_cycle_count = models.PositiveIntegerField(default=0)
     metadata = models.JSONField(default=dict, blank=True)
     
     created_at = models.DateTimeField(auto_now_add=True)
@@ -1242,78 +1265,72 @@ class Subscription(models.Model):
         indexes = [
             models.Index(fields=['user', 'status']),
             models.Index(fields=['status', 'current_period_end']),
-            models.Index(fields=['external_id']),
         ]
 
     def __str__(self):
         return f"{self.user} - {self.plan.name} ({self.status})"
     
     def save(self, *args, **kwargs):
-        # Auto-calcular current_period_end si no está definido
         if not self.current_period_end:
-            self.current_period_end = self.current_period_start + timedelta(
-                days=self.plan.interval_days
-            )
+            self.current_period_end = self.current_period_start + timedelta(days=self.plan.interval_days)
         super().save(*args, **kwargs)
-    
-    # =========================================================================
-    # PROPIEDADES ÚTILES
-    # =========================================================================
     
     @property
     def is_active(self):
-        """¿El usuario tiene acceso al servicio premium?"""
-        return self.status in [
-            self.Status.TRIALING,
-            self.Status.ACTIVE,
-            self.Status.PAST_DUE,  # Aún tiene acceso durante grace period
+        return self.status in ['trialing', 'active', 'past_due']
+
+
+class PaymentMethod(models.Model):
+    """Métodos de pago del usuario."""
+    
+    class Provider(models.TextChoices):
+        STRIPE = 'stripe', 'Stripe'
+        PAYPAL = 'paypal', 'PayPal'
+        MERCADOPAGO = 'mercadopago', 'MercadoPago'
+        APPLE = 'apple', 'Apple Pay'
+        GOOGLE = 'google', 'Google Pay'
+    
+    class MethodType(models.TextChoices):
+        CARD = 'card', 'Tarjeta'
+        PAYPAL = 'paypal', 'PayPal'
+        BANK_TRANSFER = 'bank_transfer', 'Transferencia'
+    
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='payment_methods')
+    
+    provider = models.CharField(max_length=30, choices=Provider.choices)
+    external_id = models.CharField(max_length=255)
+    method_type = models.CharField(max_length=30, choices=MethodType.choices)
+    
+    last_four = models.CharField(max_length=4, blank=True, default="")
+    card_brand = models.CharField(max_length=50, blank=True, default="")
+    exp_month = models.PositiveSmallIntegerField(null=True, blank=True)
+    exp_year = models.PositiveSmallIntegerField(null=True, blank=True)
+    
+    billing_email = models.EmailField(blank=True, default="")
+    
+    is_default = models.BooleanField(default=False)
+    is_valid = models.BooleanField(default=True)
+    
+    billing_address = models.JSONField(default=dict, blank=True)
+    metadata = models.JSONField(default=dict, blank=True)
+    
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'billing_payment_methods'
+        indexes = [
+            models.Index(fields=['user', 'is_default']),
         ]
-    
-    @property
-    def is_trialing(self):
-        return self.status == self.Status.TRIALING
-    
-    @property
-    def is_on_grace_period(self):
-        """¿Está en periodo de gracia por pago fallido?"""
-        if self.status != self.Status.PAST_DUE:
-            return False
-        if not self.grace_period_end:
-            return False
-        return timezone.now() < self.grace_period_end
-    
-    @property
-    def days_until_renewal(self):
-        """Días hasta la próxima renovación."""
-        if not self.current_period_end:
-            return 0
-        delta = self.current_period_end - timezone.now()
-        return max(0, delta.days)
-    
-    @property
-    def will_cancel(self):
-        """¿Se cancelará al final del periodo?"""
-        return self.cancel_at_period_end and self.status == self.Status.ACTIVE
+
+    def __str__(self):
+        return f"{self.card_brand} ****{self.last_four}" if self.last_four else f"{self.method_type}"
 
 
-# =============================================================================
-# INVOICE - Facturas
-# =============================================================================
 class Invoice(models.Model):
-    """
-    Documento de facturación generado para cada cobro.
-    
-    FLUJO:
-    1. Se crea Invoice con status='draft' al inicio del periodo
-    2. Se intenta cobrar → status='open'
-    3. Si pago exitoso → status='paid'
-    4. Si falla → status='open' (se reintenta)
-    5. Si no se puede cobrar → status='uncollectible' o 'void'
-    
-    DISEÑO AGNÓSTICO:
-    - 'external_id' mapea a Invoice en pasarela
-    - Permite sincronizar con Stripe Invoice, etc.
-    """
+    """Facturas."""
     
     class Status(models.TextChoices):
         DRAFT = 'draft', 'Borrador'
@@ -1323,104 +1340,38 @@ class Invoice(models.Model):
         UNCOLLECTIBLE = 'uncollectible', 'Incobrable'
     
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    invoice_number = models.CharField(max_length=50, unique=True)
     
-    # Número de factura legible (para mostrar al usuario)
-    invoice_number = models.CharField(
-        max_length=50, 
-        unique=True,
-        help_text="Número de factura para display (ej: INV-2026-00001)"
-    )
-    
-    # Relaciones
-    user = models.ForeignKey(
-        'User',
-        on_delete=models.CASCADE,
-        related_name='invoices'
-    )
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='invoices')
     subscription = models.ForeignKey(
-        Subscription,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name='invoices'
+        Subscription, on_delete=models.SET_NULL, null=True, blank=True, related_name='invoices'
     )
     
-    # AGNÓSTICO
-    external_id = models.CharField(
-        max_length=255, 
-        null=True, 
-        blank=True,
-        db_index=True
-    )
+    external_id = models.CharField(max_length=255, null=True, blank=True, db_index=True)
     
-    status = models.CharField(
-        max_length=20,
-        choices=Status.choices,
-        default=Status.DRAFT
-    )
+    status = models.CharField(max_length=20, choices=Status.choices, default=Status.DRAFT)
     
-    # Montos
-    # IMPORTANTE: Todos en Decimal, nunca float
-    currency = models.CharField(max_length=3, default='MXN')
-    subtotal = models.DecimalField(
-        max_digits=10, 
-        decimal_places=2,
-        default=Decimal('0.00')
-    )
-    tax = models.DecimalField(
-        max_digits=10, 
-        decimal_places=2,
-        default=Decimal('0.00'),
-        help_text="IVA u otros impuestos"
-    )
-    discount = models.DecimalField(
-        max_digits=10, 
-        decimal_places=2,
-        default=Decimal('0.00'),
-        help_text="Descuentos aplicados (cupones, etc.)"
-    )
-    total = models.DecimalField(
-        max_digits=10, 
-        decimal_places=2,
-        default=Decimal('0.00')
-    )
-    amount_paid = models.DecimalField(
-        max_digits=10, 
-        decimal_places=2,
-        default=Decimal('0.00'),
-        help_text="Monto efectivamente pagado"
-    )
-    amount_due = models.DecimalField(
-        max_digits=10, 
-        decimal_places=2,
-        default=Decimal('0.00'),
-        help_text="Monto pendiente de pago"
-    )
+    currency = models.CharField(max_length=3, default='USD')
+    subtotal = models.DecimalField(max_digits=10, decimal_places=2, default=Decimal('0.00'))
+    tax = models.DecimalField(max_digits=10, decimal_places=2, default=Decimal('0.00'))
+    discount = models.DecimalField(max_digits=10, decimal_places=2, default=Decimal('0.00'))
+    total = models.DecimalField(max_digits=10, decimal_places=2, default=Decimal('0.00'))
+    amount_paid = models.DecimalField(max_digits=10, decimal_places=2, default=Decimal('0.00'))
+    amount_due = models.DecimalField(max_digits=10, decimal_places=2, default=Decimal('0.00'))
     
-    # Fechas
     invoice_date = models.DateTimeField(default=timezone.now)
-    due_date = models.DateTimeField(
-        null=True, 
-        blank=True,
-        help_text="Fecha límite de pago"
-    )
+    due_date = models.DateTimeField(null=True, blank=True)
     paid_at = models.DateTimeField(null=True, blank=True)
     
-    # Periodo que cubre esta factura
     period_start = models.DateTimeField(null=True, blank=True)
     period_end = models.DateTimeField(null=True, blank=True)
     
-    # Datos de facturación (snapshot al momento de la factura)
     billing_name = models.CharField(max_length=200, blank=True, default="")
     billing_email = models.EmailField(blank=True, default="")
     billing_address = models.JSONField(default=dict, blank=True)
     
-    # PDF de la factura (URL o path)
     pdf_url = models.URLField(max_length=500, blank=True, default="")
-    
-    # Notas
     notes = models.TextField(blank=True, default="")
-    
     metadata = models.JSONField(default=dict, blank=True)
     
     created_at = models.DateTimeField(auto_now_add=True)
@@ -1429,38 +1380,13 @@ class Invoice(models.Model):
     class Meta:
         db_table = 'billing_invoices'
         ordering = ['-invoice_date']
-        indexes = [
-            models.Index(fields=['user', 'status']),
-            models.Index(fields=['invoice_number']),
-            models.Index(fields=['external_id']),
-        ]
 
     def __str__(self):
-        return f"{self.invoice_number} - {self.total} {self.currency} ({self.status})"
-    
-    def save(self, *args, **kwargs):
-        # Auto-calcular amount_due
-        self.amount_due = self.total - self.amount_paid
-        super().save(*args, **kwargs)
-    
-    @property
-    def is_paid(self):
-        return self.status == self.Status.PAID
+        return f"{self.invoice_number} - {self.total} {self.currency}"
 
 
-# =============================================================================
-# INVOICE ITEM - Líneas de Factura
-# =============================================================================
 class InvoiceItem(models.Model):
-    """
-    Líneas de detalle dentro de una factura.
-    
-    Permite desglosar:
-    - Cargo por suscripción
-    - Proration (cambio de plan a mitad de ciclo)
-    - Cargos adicionales
-    - Descuentos aplicados
-    """
+    """Líneas de factura."""
     
     class ItemType(models.TextChoices):
         SUBSCRIPTION = 'subscription', 'Suscripción'
@@ -1471,67 +1397,29 @@ class InvoiceItem(models.Model):
     
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     
-    invoice = models.ForeignKey(
-        Invoice,
-        on_delete=models.CASCADE,
-        related_name='items'
-    )
+    invoice = models.ForeignKey(Invoice, on_delete=models.CASCADE, related_name='items')
     
     item_type = models.CharField(max_length=20, choices=ItemType.choices)
     description = models.CharField(max_length=500)
     
     quantity = models.PositiveIntegerField(default=1)
     unit_price = models.DecimalField(max_digits=10, decimal_places=2)
-    amount = models.DecimalField(
-        max_digits=10, 
-        decimal_places=2,
-        help_text="quantity * unit_price"
-    )
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
     
-    # Referencia al plan (si aplica)
-    plan = models.ForeignKey(
-        Plan,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True
-    )
+    plan = models.ForeignKey(Plan, on_delete=models.SET_NULL, null=True, blank=True)
     
-    # Periodo que cubre este item
     period_start = models.DateTimeField(null=True, blank=True)
     period_end = models.DateTimeField(null=True, blank=True)
     
     metadata = models.JSONField(default=dict, blank=True)
-    
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         db_table = 'billing_invoice_items'
 
-    def __str__(self):
-        return f"{self.description}: {self.amount}"
-    
-    def save(self, *args, **kwargs):
-        # Auto-calcular amount
-        self.amount = self.quantity * self.unit_price
-        super().save(*args, **kwargs)
 
-
-# =============================================================================
-# PAYMENT - Intentos de Pago
-# =============================================================================
 class Payment(models.Model):
-    """
-    Registra cada intento de cobro (exitoso o fallido).
-    
-    IMPORTANTE:
-    - Una Invoice puede tener múltiples Payments (reintentos)
-    - Solo el último exitoso marca la factura como pagada
-    - Los fallidos se guardan para debugging y analytics
-    
-    DISEÑO AGNÓSTICO:
-    - 'external_id' mapea a PaymentIntent (Stripe), Charge, etc.
-    - 'failure_code' usa códigos genéricos que luego se mapean por pasarela
-    """
+    """Intentos de pago."""
     
     class Status(models.TextChoices):
         PENDING = 'pending', 'Pendiente'
@@ -1540,89 +1428,36 @@ class Payment(models.Model):
         FAILED = 'failed', 'Fallido'
         CANCELED = 'canceled', 'Cancelado'
         REFUNDED = 'refunded', 'Reembolsado'
-        PARTIALLY_REFUNDED = 'partially_refunded', 'Reembolso Parcial'
     
     class FailureReason(models.TextChoices):
-        """Razones de fallo genéricas (mapear desde cada pasarela)."""
         INSUFFICIENT_FUNDS = 'insufficient_funds', 'Fondos Insuficientes'
         CARD_DECLINED = 'card_declined', 'Tarjeta Rechazada'
         EXPIRED_CARD = 'expired_card', 'Tarjeta Expirada'
-        INCORRECT_CVC = 'incorrect_cvc', 'CVC Incorrecto'
         PROCESSING_ERROR = 'processing_error', 'Error de Procesamiento'
-        FRAUD_DETECTED = 'fraud_detected', 'Fraude Detectado'
-        AUTHENTICATION_REQUIRED = 'authentication_required', '3DS Requerido'
-        LIMIT_EXCEEDED = 'limit_exceeded', 'Límite Excedido'
         OTHER = 'other', 'Otro'
     
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     
-    # Relaciones
-    invoice = models.ForeignKey(
-        Invoice,
-        on_delete=models.CASCADE,
-        related_name='payments'
-    )
+    invoice = models.ForeignKey(Invoice, on_delete=models.CASCADE, related_name='payments')
     payment_method = models.ForeignKey(
-        PaymentMethod,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name='payments'
+        PaymentMethod, on_delete=models.SET_NULL, null=True, blank=True, related_name='payments'
     )
     
-    # AGNÓSTICO
-    provider = models.CharField(max_length=30)  # stripe, paypal, etc.
-    external_id = models.CharField(
-        max_length=255, 
-        null=True, 
-        blank=True,
-        db_index=True,
-        help_text="ID del pago en pasarela (ej: pi_xxxx, ch_xxxx)"
-    )
+    provider = models.CharField(max_length=30)
+    external_id = models.CharField(max_length=255, null=True, blank=True, db_index=True)
     
-    status = models.CharField(
-        max_length=30,
-        choices=Status.choices,
-        default=Status.PENDING
-    )
+    status = models.CharField(max_length=30, choices=Status.choices, default=Status.PENDING)
     
-    # Montos
-    currency = models.CharField(max_length=3, default='MXN')
+    currency = models.CharField(max_length=3, default='USD')
     amount = models.DecimalField(max_digits=10, decimal_places=2)
-    amount_refunded = models.DecimalField(
-        max_digits=10, 
-        decimal_places=2,
-        default=Decimal('0.00')
-    )
+    amount_refunded = models.DecimalField(max_digits=10, decimal_places=2, default=Decimal('0.00'))
+    fee = models.DecimalField(max_digits=10, decimal_places=2, default=Decimal('0.00'))
     
-    # Fee de la pasarela (para reportes)
-    fee = models.DecimalField(
-        max_digits=10, 
-        decimal_places=2,
-        default=Decimal('0.00'),
-        help_text="Comisión cobrada por la pasarela"
-    )
+    failure_reason = models.CharField(max_length=50, choices=FailureReason.choices, null=True, blank=True)
+    failure_message = models.TextField(blank=True, default="")
     
-    # Información de fallo
-    failure_reason = models.CharField(
-        max_length=50,
-        choices=FailureReason.choices,
-        null=True,
-        blank=True
-    )
-    failure_message = models.TextField(
-        blank=True, 
-        default="",
-        help_text="Mensaje de error de la pasarela"
-    )
-    
-    # Número de intento (para reintentos)
     attempt_number = models.PositiveSmallIntegerField(default=1)
-    
-    # Fechas
     processed_at = models.DateTimeField(null=True, blank=True)
-    
-    # Receipt (recibo)
     receipt_url = models.URLField(max_length=500, blank=True, default="")
     
     metadata = models.JSONField(default=dict, blank=True)
@@ -1633,41 +1468,10 @@ class Payment(models.Model):
     class Meta:
         db_table = 'billing_payments'
         ordering = ['-created_at']
-        indexes = [
-            models.Index(fields=['invoice', 'status']),
-            models.Index(fields=['external_id']),
-            models.Index(fields=['status', 'created_at']),
-        ]
-
-    def __str__(self):
-        return f"Payment {self.id} - {self.amount} {self.currency} ({self.status})"
-    
-    @property
-    def is_successful(self):
-        return self.status == self.Status.SUCCEEDED
-    
-    @property
-    def net_amount(self):
-        """Monto neto después de fees y reembolsos."""
-        return self.amount - self.fee - self.amount_refunded
 
 
-# =============================================================================
-# COUPON & DISCOUNT - Sistema de Cupones
-# =============================================================================
 class Coupon(models.Model):
-    """
-    Define cupones de descuento.
-    
-    TIPOS:
-    - Porcentaje: 20% off
-    - Monto fijo: $100 MXN off
-    
-    DURACIÓN:
-    - once: Solo el primer pago
-    - repeating: Por X meses
-    - forever: Para siempre mientras tenga suscripción
-    """
+    """Cupones de descuento."""
     
     class DiscountType(models.TextChoices):
         PERCENTAGE = 'percentage', 'Porcentaje'
@@ -1680,54 +1484,25 @@ class Coupon(models.Model):
     
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     
-    # Código que el usuario ingresa
     code = models.CharField(max_length=50, unique=True, db_index=True)
-    
-    # AGNÓSTICO
     external_id = models.CharField(max_length=255, null=True, blank=True)
     
-    # Configuración del descuento
     discount_type = models.CharField(max_length=20, choices=DiscountType.choices)
-    amount = models.DecimalField(
-        max_digits=10, 
-        decimal_places=2,
-        help_text="Porcentaje (ej: 20.00) o monto fijo"
-    )
-    currency = models.CharField(
-        max_length=3, 
-        default='MXN',
-        help_text="Solo aplica si es fixed_amount"
-    )
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    currency = models.CharField(max_length=3, default='USD')
     
-    # Duración del descuento
     duration = models.CharField(max_length=20, choices=Duration.choices)
-    duration_in_months = models.PositiveIntegerField(
-        null=True, 
-        blank=True,
-        help_text="Solo si duration='repeating'"
-    )
+    duration_in_months = models.PositiveIntegerField(null=True, blank=True)
     
-    # Restricciones
-    max_redemptions = models.PositiveIntegerField(
-        null=True, 
-        blank=True,
-        help_text="Usos máximos totales (null = ilimitado)"
-    )
+    max_redemptions = models.PositiveIntegerField(null=True, blank=True)
     times_redeemed = models.PositiveIntegerField(default=0)
     
-    # Validez
     valid_from = models.DateTimeField(default=timezone.now)
     valid_until = models.DateTimeField(null=True, blank=True)
     
-    # Planes aplicables (vacío = todos)
-    applicable_plans = models.ManyToManyField(
-        Plan, 
-        blank=True,
-        related_name='coupons'
-    )
+    applicable_plans = models.ManyToManyField(Plan, blank=True, related_name='coupons')
     
     is_active = models.BooleanField(default=True)
-    
     metadata = models.JSONField(default=dict, blank=True)
     
     created_at = models.DateTimeField(auto_now_add=True)
@@ -1737,99 +1512,38 @@ class Coupon(models.Model):
         db_table = 'billing_coupons'
 
     def __str__(self):
-        if self.discount_type == self.DiscountType.PERCENTAGE:
-            return f"{self.code}: {self.amount}% off"
-        return f"{self.code}: {self.amount} {self.currency} off"
-    
-    @property
-    def is_valid(self):
-        """¿El cupón es válido ahora?"""
-        if not self.is_active:
-            return False
-        now = timezone.now()
-        if now < self.valid_from:
-            return False
-        if self.valid_until and now > self.valid_until:
-            return False
-        if self.max_redemptions and self.times_redeemed >= self.max_redemptions:
-            return False
-        return True
+        return f"{self.code}: {self.amount}{'%' if self.discount_type == 'percentage' else ''}"
 
 
 class Discount(models.Model):
-    """
-    Instancia de un cupón aplicado a una suscripción específica.
-    
-    Un Coupon puede generar múltiples Discounts (uno por cada uso).
-    """
+    """Descuento aplicado a una suscripción."""
     
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     
-    coupon = models.ForeignKey(
-        Coupon,
-        on_delete=models.CASCADE,
-        related_name='discounts'
-    )
-    subscription = models.ForeignKey(
-        Subscription,
-        on_delete=models.CASCADE,
-        related_name='discounts'
-    )
+    coupon = models.ForeignKey(Coupon, on_delete=models.CASCADE, related_name='discounts')
+    subscription = models.ForeignKey(Subscription, on_delete=models.CASCADE, related_name='discounts')
     
-    # Tracking de uso
     start_date = models.DateTimeField(default=timezone.now)
-    end_date = models.DateTimeField(
-        null=True, 
-        blank=True,
-        help_text="Cuando expira el descuento"
-    )
-    
-    # Para duration='repeating'
+    end_date = models.DateTimeField(null=True, blank=True)
     remaining_months = models.PositiveIntegerField(null=True, blank=True)
     
     is_active = models.BooleanField(default=True)
-    
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         db_table = 'billing_discounts'
 
-    def __str__(self):
-        return f"{self.coupon.code} on {self.subscription}"
 
-
-# =============================================================================
-# USAGE RECORD - Tracking de Uso (Para Límites por Plan)
-# =============================================================================
 class UsageRecord(models.Model):
-    """
-    Registra el uso de features limitadas por plan.
-    
-    EJEMPLO:
-    - Plan Free permite 3 grupos → Registrar cada grupo creado
-    - Verificar contra PlanFeature antes de permitir crear más
-    
-    ÚTIL PARA:
-    - Mostrar "Has usado 2 de 3 grupos"
-    - Bloquear acciones cuando se alcanza el límite
-    - Analytics de uso por plan
-    """
+    """Tracking de uso para límites por plan."""
     
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     
-    subscription = models.ForeignKey(
-        Subscription,
-        on_delete=models.CASCADE,
-        related_name='usage_records'
-    )
+    subscription = models.ForeignKey(Subscription, on_delete=models.CASCADE, related_name='usage_records')
     
-    # Feature key (debe coincidir con PlanFeature.feature_key)
     feature_key = models.CharField(max_length=100)
-    
-    # Cantidad usada
     quantity = models.PositiveIntegerField(default=1)
     
-    # Periodo de medición (para features que se resetean mensualmente)
     period_start = models.DateTimeField()
     period_end = models.DateTimeField()
     
@@ -1840,32 +1554,10 @@ class UsageRecord(models.Model):
 
     class Meta:
         db_table = 'billing_usage_records'
-        indexes = [
-            models.Index(fields=['subscription', 'feature_key', 'period_start']),
-        ]
-
-    def __str__(self):
-        return f"{self.subscription.user}: {self.feature_key} = {self.quantity}"
 
 
-# =============================================================================
-# WEBHOOK LOG - Auditoría de Webhooks (Muy Importante)
-# =============================================================================
 class WebhookLog(models.Model):
-    """
-    Registra todos los webhooks recibidos de pasarelas de pago.
-    
-    CRÍTICO PARA:
-    - Debugging cuando algo falla
-    - Idempotencia (evitar procesar el mismo evento 2 veces)
-    - Auditoría y compliance
-    
-    FLUJO:
-    1. Llega webhook de Stripe/PayPal
-    2. Se guarda en WebhookLog con status='received'
-    3. Se procesa → status='processed' o 'failed'
-    4. Si falla, se puede reintentar manualmente
-    """
+    """Log de webhooks recibidos."""
     
     class Status(models.TextChoices):
         RECEIVED = 'received', 'Recibido'
@@ -1876,35 +1568,16 @@ class WebhookLog(models.Model):
     
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     
-    # Identificación
-    provider = models.CharField(max_length=30)  # stripe, paypal, etc.
-    event_id = models.CharField(
-        max_length=255,
-        db_index=True,
-        help_text="ID del evento en la pasarela (para idempotencia)"
-    )
-    event_type = models.CharField(
-        max_length=100,
-        help_text="Tipo de evento (ej: invoice.payment_succeeded)"
-    )
+    provider = models.CharField(max_length=30)
+    event_id = models.CharField(max_length=255, db_index=True)
+    event_type = models.CharField(max_length=100)
     
-    # Payload completo (para debugging)
     payload = models.JSONField()
-    
-    # Headers HTTP (para verificación de firma)
     headers = models.JSONField(default=dict, blank=True)
     
-    # Estado de procesamiento
-    status = models.CharField(
-        max_length=20,
-        choices=Status.choices,
-        default=Status.RECEIVED
-    )
-    
-    # Si falló, guardar el error
+    status = models.CharField(max_length=20, choices=Status.choices, default=Status.RECEIVED)
     error_message = models.TextField(blank=True, default="")
     
-    # Tracking
     processed_at = models.DateTimeField(null=True, blank=True)
     processing_attempts = models.PositiveSmallIntegerField(default=0)
     
@@ -1914,9 +1587,4 @@ class WebhookLog(models.Model):
         db_table = 'billing_webhook_logs'
         indexes = [
             models.Index(fields=['provider', 'event_id']),
-            models.Index(fields=['event_type', 'status']),
-            models.Index(fields=['created_at']),
         ]
-
-    def __str__(self):
-        return f"{self.provider}:{self.event_type} ({self.status})"
