@@ -1,7 +1,7 @@
 import logging
 from rest_framework import viewsets
 from api.models import BlitzInteraction
-from backend.src.core.api.Serializers.blitz_interaction_serializer import BlitzInteractionSerializer 
+from api.Serializers.blitz_interaction_serializer import BlitzInteractionSerializer
 from drf_spectacular.utils import extend_schema
 
 logger = logging.getLogger('api')

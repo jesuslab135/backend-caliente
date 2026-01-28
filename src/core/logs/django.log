@@ -5,3 +5,18 @@ INFO 2026-01-25 05:32:37,058 log 1452 134759833401024 "GET /api/schema/swagger-u
 INFO 2026-01-25 05:32:37,458 log 1452 134759833401024 "GET /api/schema/ HTTP/1.1" 200 79520
 INFO 2026-01-25 05:32:58,832 log 1452 134759833401024 "GET /api/users/ HTTP/1.1" 200 2
 INFO 2026-01-25 05:33:09,062 log 1452 134759833401024 "GET /api/groups/ HTTP/1.1" 200 2
+INFO 2026-01-28 17:52:21,057 autoreload 23 133931112480896 Watching for file changes with StatReloader
+INFO 2026-01-28 17:53:46,073 autoreload 23 133931112480896 /app/core/api/urls.py changed, reloading.
+INFO 2026-01-28 17:53:47,269 autoreload 27 128051222581376 Watching for file changes with StatReloader
+INFO 2026-01-28 17:53:51,339 autoreload 34 123964911263872 Watching for file changes with StatReloader
+INFO 2026-01-28 17:56:33,396 autoreload 42 136432224202880 Watching for file changes with StatReloader
+INFO 2026-01-28 17:57:05,626 autoreload 42 136432224202880 /app/core/api/Viewsets/location_log_viewset.py changed, reloading.
+INFO 2026-01-28 17:57:06,313 autoreload 46 140379754762368 Watching for file changes with StatReloader
+INFO 2026-01-28 17:57:09,771 autoreload 46 140379754762368 /app/core/api/Viewsets/location_log_viewset.py changed, reloading.
+INFO 2026-01-28 17:57:10,897 autoreload 50 132668766359680 Watching for file changes with StatReloader
+INFO 2026-01-28 17:57:30,163 autoreload 50 132668766359680 /app/core/api/Viewsets/location_log_viewset.py changed, reloading.
+INFO 2026-01-28 17:57:30,811 autoreload 54 133442948546688 Watching for file changes with StatReloader
+INFO 2026-01-28 17:57:33,926 autoreload 54 133442948546688 /app/core/api/Viewsets/location_log_viewset.py changed, reloading.
+INFO 2026-01-28 17:57:34,568 autoreload 58 129378682548352 Watching for file changes with StatReloader
+INFO 2026-01-28 17:57:39,934 log 58 129378621437632 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
+INFO 2026-01-28 17:57:40,460 log 58 129378621437632 "GET /api/schema/ HTTP/1.1" 200 403762

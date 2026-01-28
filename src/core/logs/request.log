@@ -6,3 +6,5 @@ INFO 2026-01-25 05:32:37,054 logging_middleware 1452 134759833401024 SUCCESS: {"
 INFO 2026-01-25 05:32:37,455 logging_middleware 1452 134759833401024 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.1137, "ip": "172.19.0.1", "user_id": "Anonymous"}
 INFO 2026-01-25 05:32:58,830 logging_middleware 1452 134759833401024 SUCCESS: {"method": "GET", "path": "/api/users/", "status": 200, "duration": 0.0249, "ip": "172.19.0.1", "user_id": "Anonymous"}
 INFO 2026-01-25 05:33:09,060 logging_middleware 1452 134759833401024 SUCCESS: {"method": "GET", "path": "/api/groups/", "status": 200, "duration": 0.0248, "ip": "172.19.0.1", "user_id": "Anonymous"}
+INFO 2026-01-28 17:57:39,929 logging_middleware 58 129378621437632 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0291, "ip": "172.19.0.1", "user_id": "Anonymous"}
+INFO 2026-01-28 17:57:40,455 logging_middleware 58 129378621437632 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.3905, "ip": "172.19.0.1", "user_id": "Anonymous"}
