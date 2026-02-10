@@ -20,3 +20,122 @@ INFO 2026-01-28 17:57:33,926 autoreload 54 133442948546688 /app/core/api/Viewset
 INFO 2026-01-28 17:57:34,568 autoreload 58 129378682548352 Watching for file changes with StatReloader
 INFO 2026-01-28 17:57:39,934 log 58 129378621437632 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
 INFO 2026-01-28 17:57:40,460 log 58 129378621437632 "GET /api/schema/ HTTP/1.1" 200 403762
+INFO 2026-02-04 20:04:34,326 autoreload 38 139705484947584 Watching for file changes with StatReloader
+INFO 2026-02-04 20:12:17,837 autoreload 37 135767324340352 Watching for file changes with StatReloader
+INFO 2026-02-04 20:13:21,240 autoreload 50 129014456295552 Watching for file changes with StatReloader
+INFO 2026-02-04 20:13:28,698 log 50 129014395184832 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
+INFO 2026-02-04 20:13:29,279 log 50 129014395184832 "GET /api/schema/ HTTP/1.1" 200 403762
+INFO 2026-02-04 20:13:32,362 log 50 129014395184832 "GET /api/ HTTP/1.1" 200 9364
+INFO 2026-02-04 20:13:32,407 log 50 129014308009664 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2026-02-04 20:13:32,409 log 50 129014299616960 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2026-02-04 20:13:32,414 log 50 129014395184832 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2026-02-04 20:13:32,475 log 50 129014299616960 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2026-02-04 20:13:32,484 log 50 129014395184832 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2026-02-04 20:13:32,489 log 50 129014308009664 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2026-02-04 20:13:32,496 log 50 129014299616960 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2026-02-04 20:13:32,498 log 50 129014395184832 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2026-02-04 20:13:32,503 log 50 129014299616960 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2026-02-04 20:13:32,507 log 50 129014395184832 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2026-02-04 20:13:32,515 log 50 129014395184832 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2026-02-04 20:13:32,570 log 50 129014395184832 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2026-02-04 20:13:33,259 log 50 129014395184832 "GET / HTTP/1.1" 404 2829
+WARNING 2026-02-04 20:13:33,517 log 50 129014395184832 "GET /favicon.ico HTTP/1.1" 404 2880
+INFO 2026-02-04 20:13:56,708 log 50 129014395184832 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
+INFO 2026-02-04 20:13:57,108 log 50 129014395184832 "GET /api/schema/ HTTP/1.1" 200 403762
+INFO 2026-02-04 20:30:01,194 autoreload 118 136789829128320 Watching for file changes with StatReloader
+INFO 2026-02-04 20:32:40,276 autoreload 439 128508937093248 Watching for file changes with StatReloader
+WARNING 2026-02-04 20:32:47,513 log 439 128508877027008 "GET / HTTP/1.1" 404 2829
+INFO 2026-02-04 20:32:53,591 log 439 128508877027008 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
+INFO 2026-02-04 20:32:53,731 log 439 128508877027008 "GET /api/schema/ HTTP/1.1" 200 197
+INFO 2026-02-04 20:49:18,537 autoreload 2376 134506336178304 Watching for file changes with StatReloader
+INFO 2026-02-04 20:49:24,252 log 2376 134506276112064 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
+INFO 2026-02-04 20:49:24,381 log 2376 134506276112064 "GET /api/schema/ HTTP/1.1" 200 197
+INFO 2026-02-04 20:49:25,100 log 2376 134506276112064 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
+INFO 2026-02-04 20:49:25,170 log 2376 134506276112064 "GET /api/schema/ HTTP/1.1" 200 197
+INFO 2026-02-04 20:49:25,568 log 2376 134506276112064 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
+INFO 2026-02-04 20:49:25,648 log 2376 134506276112064 "GET /api/schema/ HTTP/1.1" 200 197
+INFO 2026-02-04 20:49:25,987 log 2376 134506276112064 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
+INFO 2026-02-04 20:49:26,055 log 2376 134506276112064 "GET /api/schema/ HTTP/1.1" 200 197
+INFO 2026-02-04 20:49:26,403 log 2376 134506276112064 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
+INFO 2026-02-04 20:49:26,475 log 2376 134506276112064 "GET /api/schema/ HTTP/1.1" 200 197
+INFO 2026-02-04 20:49:27,856 log 2376 134506276112064 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
+INFO 2026-02-04 20:49:27,940 log 2376 134506276112064 "GET /api/schema/ HTTP/1.1" 200 197
+INFO 2026-02-04 20:49:50,828 autoreload 2376 134506336178304 /app/core/core/settings.py changed, reloading.
+INFO 2026-02-04 20:49:51,616 autoreload 2446 132512696930432 Watching for file changes with StatReloader
+INFO 2026-02-04 20:49:56,288 autoreload 2446 132512696930432 /app/core/core/settings.py changed, reloading.
+INFO 2026-02-04 20:49:57,057 autoreload 2460 134577825124480 Watching for file changes with StatReloader
+INFO 2026-02-04 20:50:02,585 log 2460 134577697846976 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4655
+INFO 2026-02-04 20:50:02,841 log 2460 134577697846976 "GET /api/schema/ HTTP/1.1" 200 194
+INFO 2026-02-04 21:09:54,124 autoreload 4803 127631907655808 Watching for file changes with StatReloader
+INFO 2026-02-04 21:09:58,632 log 4803 127631847589568 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4655
+ERROR 2026-02-04 21:09:58,951 log 4803 127631847589568 "GET /api/schema/ HTTP/1.1" 500 177000
+ERROR 2026-02-04 21:09:59,025 log 4803 127631847589568 "GET /api/schema/ HTTP/1.1" 500 177000
+INFO 2026-02-04 21:12:28,952 autoreload 4803 127631907655808 /app/core/api/Serializers/employee_serializer.py changed, reloading.
+INFO 2026-02-04 21:12:30,147 autoreload 5109 127052866080896 Watching for file changes with StatReloader
+INFO 2026-02-04 21:13:26,734 autoreload 5226 123529279570048 Watching for file changes with StatReloader
+INFO 2026-02-04 21:13:31,707 log 5226 123529219503808 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4655
+INFO 2026-02-04 21:13:32,093 log 5226 123529219503808 "GET /api/schema/ HTTP/1.1" 200 199828
+INFO 2026-02-05 20:36:31,141 autoreload 313 138148937478272 Watching for file changes with StatReloader
+INFO 2026-02-05 20:36:56,895 autoreload 376 133377701007488 Watching for file changes with StatReloader
+INFO 2026-02-05 20:36:59,740 log 376 133377640941248 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4655
+INFO 2026-02-05 20:37:00,177 log 376 133377640941248 "GET /api/schema/ HTTP/1.1" 200 199828
+INFO 2026-02-06 19:19:28,701 autoreload 340 129175249043584 Watching for file changes with StatReloader
+INFO 2026-02-06 19:20:47,487 log 340 129175187928768 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4655
+INFO 2026-02-06 19:20:47,954 log 340 129175187928768 "GET /api/schema/ HTTP/1.1" 200 250638
+INFO 2026-02-06 19:21:44,067 log 340 129175187928768 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4655
+INFO 2026-02-06 19:21:44,449 log 340 129175187928768 "GET /api/schema/ HTTP/1.1" 200 250638
+INFO 2026-02-08 22:31:11,435 autoreload 392 135722049618048 Watching for file changes with StatReloader
+INFO 2026-02-08 22:31:13,617 log 392 135721989551808 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4655
+INFO 2026-02-08 22:31:14,141 log 392 135721989551808 "GET /api/schema/ HTTP/1.1" 200 250638
+WARNING 2026-02-08 22:33:23,783 log 392 135721906075328 "OPTIONS /api/auth/login/ HTTP/1.1" 401 58
+INFO 2026-02-09 06:47:33,744 autoreload 130 129864469524608 Watching for file changes with StatReloader
+INFO 2026-02-09 06:49:21,763 autoreload 348 135145153831040 Watching for file changes with StatReloader
+WARNING 2026-02-09 06:53:25,600 log 348 135145092716224 "OPTIONS /api/auth/login/ HTTP/1.1" 401 58
+INFO 2026-02-09 07:14:02,882 autoreload 92 125832046469248 Watching for file changes with StatReloader
+WARNING 2026-02-09 07:17:22,182 log 92 125831985354432 "OPTIONS /api/auth/login/ HTTP/1.1" 401 58
+INFO 2026-02-09 07:17:57,010 autoreload 92 125832046469248 /app/core/core/settings.py changed, reloading.
+INFO 2026-02-09 07:17:57,942 autoreload 551 134159642505344 Watching for file changes with StatReloader
+INFO 2026-02-09 07:18:00,357 autoreload 551 134159642505344 /app/core/core/settings.py changed, reloading.
+INFO 2026-02-09 07:18:01,177 autoreload 561 131787445883008 Watching for file changes with StatReloader
+INFO 2026-02-09 07:18:10,317 autoreload 561 131787445883008 /app/core/core/settings.py changed, reloading.
+INFO 2026-02-09 07:18:11,112 autoreload 585 129745810268288 Watching for file changes with StatReloader
+INFO 2026-02-09 07:18:13,465 autoreload 585 129745810268288 /app/core/core/settings.py changed, reloading.
+INFO 2026-02-09 07:18:14,217 autoreload 595 138623231479936 Watching for file changes with StatReloader
+INFO 2026-02-09 07:18:19,896 autoreload 595 138623231479936 /app/core/core/settings.py changed, reloading.
+INFO 2026-02-09 07:18:20,615 autoreload 611 132906741780608 Watching for file changes with StatReloader
+INFO 2026-02-09 07:18:23,940 autoreload 611 132906741780608 /app/core/core/settings.py changed, reloading.
+INFO 2026-02-09 07:18:24,740 autoreload 623 125483703025792 Watching for file changes with StatReloader
+INFO 2026-02-09 07:18:26,989 autoreload 623 125483703025792 /app/core/core/settings.py changed, reloading.
+INFO 2026-02-09 07:18:27,690 autoreload 633 125071749128320 Watching for file changes with StatReloader
+INFO 2026-02-09 07:18:29,990 autoreload 633 125071749128320 /app/core/core/settings.py changed, reloading.
+INFO 2026-02-09 07:18:30,744 autoreload 643 130274470334592 Watching for file changes with StatReloader
+INFO 2026-02-09 07:21:36,600 autoreload 643 130274470334592 /app/core/core/settings.py changed, reloading.
+INFO 2026-02-09 07:21:37,303 autoreload 1007 132163365376128 Watching for file changes with StatReloader
+INFO 2026-02-09 07:21:45,787 autoreload 1007 132163365376128 /app/core/core/settings.py changed, reloading.
+INFO 2026-02-09 07:21:46,370 autoreload 1029 127795178897536 Watching for file changes with StatReloader
+INFO 2026-02-09 07:21:56,910 autoreload 1029 127795178897536 /app/core/core/settings.py changed, reloading.
+INFO 2026-02-09 07:21:57,594 autoreload 1055 128669398712448 Watching for file changes with StatReloader
+INFO 2026-02-09 07:22:22,373 autoreload 1055 128669398712448 /app/core/core/settings.py changed, reloading.
+INFO 2026-02-09 07:22:22,941 autoreload 1107 135669202579584 Watching for file changes with StatReloader
+INFO 2026-02-09 07:29:55,891 autoreload 218 132517496078464 Watching for file changes with StatReloader
+INFO 2026-02-09 07:30:20,599 autoreload 279 134938039754880 Watching for file changes with StatReloader
+INFO 2026-02-09 07:35:12,854 log 279 134937978640064 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2026-02-09 07:35:12,925 log 279 134937978640064 "POST /api/auth/login/ HTTP/1.1" 400 41
+INFO 2026-02-09 07:48:07,929 autoreload 2356 131541385203840 Watching for file changes with StatReloader
+INFO 2026-02-09 07:49:58,826 auth_viewset 2356 131541324089024 User logged in: admin@caliente.mx
+INFO 2026-02-09 07:49:58,836 log 2356 131541324089024 "POST /api/auth/login/ HTTP/1.1" 200 1174
+INFO 2026-02-09 07:50:46,298 log 2356 131541324089024 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+WARNING 2026-02-09 07:50:46,328 log 2356 131541324089024 "POST /api/auth/logout/ HTTP/1.1" 400 39
+INFO 2026-02-09 07:51:04,914 auth_viewset 2356 131541324089024 User logged in: admin@caliente.mx
+INFO 2026-02-09 07:51:04,920 log 2356 131541324089024 "POST /api/auth/login/ HTTP/1.1" 200 1174
+WARNING 2026-02-09 07:51:08,941 log 2356 131541324089024 "POST /api/auth/logout/ HTTP/1.1" 400 39
+INFO 2026-02-09 07:51:18,560 auth_viewset 2356 131541324089024 User logged in: manager@caliente.mx
+INFO 2026-02-09 07:51:18,568 log 2356 131541324089024 "POST /api/auth/login/ HTTP/1.1" 200 1282
+WARNING 2026-02-09 07:51:31,382 log 2356 131541324089024 "POST /api/auth/logout/ HTTP/1.1" 400 39
+INFO 2026-02-09 07:51:44,146 auth_viewset 2356 131541324089024 User logged in: trader@caliente.mx
+INFO 2026-02-09 07:51:44,159 log 2356 131541324089024 "POST /api/auth/login/ HTTP/1.1" 200 1297
+WARNING 2026-02-09 07:51:59,277 log 2356 131541324089024 "POST /api/auth/logout/ HTTP/1.1" 400 39
+INFO 2026-02-09 07:59:05,327 auth_viewset 2356 131541324089024 User logged in: admin@caliente.mx
+INFO 2026-02-09 07:59:05,335 log 2356 131541324089024 "POST /api/auth/login/ HTTP/1.1" 200 1174
+INFO 2026-02-09 07:59:09,786 auth_viewset 2356 131541324089024 User logged out: admin@caliente.mx
+INFO 2026-02-09 07:59:09,790 log 2356 131541324089024 "POST /api/auth/logout/ HTTP/1.1" 200 53

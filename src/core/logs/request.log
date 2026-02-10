@@ -8,3 +8,203 @@ INFO 2026-01-25 05:32:58,830 logging_middleware 1452 134759833401024 SUCCESS: {"
 INFO 2026-01-25 05:33:09,060 logging_middleware 1452 134759833401024 SUCCESS: {"method": "GET", "path": "/api/groups/", "status": 200, "duration": 0.0248, "ip": "172.19.0.1", "user_id": "Anonymous"}
 INFO 2026-01-28 17:57:39,929 logging_middleware 58 129378621437632 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0291, "ip": "172.19.0.1", "user_id": "Anonymous"}
 INFO 2026-01-28 17:57:40,455 logging_middleware 58 129378621437632 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.3905, "ip": "172.19.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:13:28,691 logging_middleware 50 129014395184832 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0232, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:13:29,276 logging_middleware 50 129014395184832 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.3534, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:13:32,358 logging_middleware 50 129014395184832 SUCCESS: {"method": "GET", "path": "/api/", "status": 200, "duration": 0.0465, "ip": "172.18.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-04 20:13:33,252 logging_middleware 50 129014395184832 CLIENT ERROR: {"method": "GET", "path": "/", "status": 404, "duration": 0.004, "ip": "172.18.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-04 20:13:33,255 log 50 129014395184832 Not Found: /
+WARNING 2026-02-04 20:13:33,511 logging_middleware 50 129014395184832 CLIENT ERROR: {"method": "GET", "path": "/favicon.ico", "status": 404, "duration": 0.0028, "ip": "172.18.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-04 20:13:33,514 log 50 129014395184832 Not Found: /favicon.ico
+INFO 2026-02-04 20:13:56,705 logging_middleware 50 129014395184832 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0014, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:13:57,104 logging_middleware 50 129014395184832 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.2048, "ip": "172.18.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-04 20:32:47,507 logging_middleware 439 128508877027008 CLIENT ERROR: {"method": "GET", "path": "/", "status": 404, "duration": 0.0046, "ip": "172.18.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-04 20:32:47,510 log 439 128508877027008 Not Found: /
+INFO 2026-02-04 20:32:53,587 logging_middleware 439 128508877027008 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0082, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:32:53,728 logging_middleware 439 128508877027008 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.0091, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:49:24,248 logging_middleware 2376 134506276112064 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0099, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:49:24,379 logging_middleware 2376 134506276112064 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.0249, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:49:25,097 logging_middleware 2376 134506276112064 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0007, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:49:25,166 logging_middleware 2376 134506276112064 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.002, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:49:25,566 logging_middleware 2376 134506276112064 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0008, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:49:25,644 logging_middleware 2376 134506276112064 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.0028, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:49:25,985 logging_middleware 2376 134506276112064 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0012, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:49:26,050 logging_middleware 2376 134506276112064 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.0017, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:49:26,401 logging_middleware 2376 134506276112064 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0011, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:49:26,472 logging_middleware 2376 134506276112064 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.0024, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:49:27,854 logging_middleware 2376 134506276112064 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0014, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:49:27,936 logging_middleware 2376 134506276112064 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.002, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:50:02,582 logging_middleware 2460 134577697846976 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0062, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 20:50:02,837 logging_middleware 2460 134577697846976 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.0222, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 21:09:58,629 logging_middleware 4803 127631847589568 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.016, "ip": "172.18.0.1", "user_id": "Anonymous"}
+ERROR 2026-02-04 21:09:58,943 log 4803 127631847589568 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/django/views/generic/base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/generators.py", line 287, in get_schema
+    paths=self.parse(request, public),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/generators.py", line 258, in parse
+    operation = view.schema.get_operation(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/openapi.py", line 113, in get_operation
+    operation['responses'] = self._get_response_bodies()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/openapi.py", line 1407, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/openapi.py", line 1463, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/openapi.py", line 1658, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/openapi.py", line 959, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/openapi.py", line 1052, in _map_basic_serializer
+    for field in serializer.fields.values():
+                 ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `__all__` is not valid for model `Employee` in `api.Serializers.employee_serializer.EmployeeSerializer`.
+ERROR 2026-02-04 21:09:58,947 logging_middleware 4803 127631847589568 SERVER ERROR: {"method": "GET", "path": "/api/schema/", "status": 500, "duration": 0.0921, "ip": "172.18.0.1", "user_id": "Anonymous"}
+ERROR 2026-02-04 21:09:59,018 log 4803 127631847589568 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/django/views/generic/base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/generators.py", line 287, in get_schema
+    paths=self.parse(request, public),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/generators.py", line 258, in parse
+    operation = view.schema.get_operation(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/openapi.py", line 113, in get_operation
+    operation['responses'] = self._get_response_bodies()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/openapi.py", line 1407, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/openapi.py", line 1463, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/openapi.py", line 1658, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/openapi.py", line 959, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/drf_spectacular/openapi.py", line 1052, in _map_basic_serializer
+    for field in serializer.fields.values():
+                 ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `__all__` is not valid for model `Employee` in `api.Serializers.employee_serializer.EmployeeSerializer`.
+ERROR 2026-02-04 21:09:59,021 logging_middleware 4803 127631847589568 SERVER ERROR: {"method": "GET", "path": "/api/schema/", "status": 500, "duration": 0.0464, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 21:13:31,703 logging_middleware 5226 123529219503808 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0173, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-04 21:13:32,088 logging_middleware 5226 123529219503808 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.245, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-05 20:36:59,734 logging_middleware 376 133377640941248 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0189, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-05 20:37:00,174 logging_middleware 376 133377640941248 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.2394, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-06 19:20:47,482 logging_middleware 340 129175187928768 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0192, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-06 19:20:47,951 logging_middleware 340 129175187928768 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.2939, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-06 19:21:44,064 logging_middleware 340 129175187928768 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0015, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-06 19:21:44,445 logging_middleware 340 129175187928768 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.1399, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-08 22:31:13,613 logging_middleware 392 135721989551808 SUCCESS: {"method": "GET", "path": "/api/schema/swagger-ui/", "status": 200, "duration": 0.0291, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-08 22:31:14,137 logging_middleware 392 135721989551808 SUCCESS: {"method": "GET", "path": "/api/schema/", "status": 200, "duration": 0.3642, "ip": "172.18.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-08 22:33:23,779 logging_middleware 392 135721906075328 CLIENT ERROR: {"method": "OPTIONS", "path": "/api/auth/login/", "status": 401, "duration": 0.002, "ip": "172.18.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-08 22:33:23,781 log 392 135721906075328 Unauthorized: /api/auth/login/
+WARNING 2026-02-09 06:53:25,594 logging_middleware 348 135145092716224 CLIENT ERROR: {"method": "OPTIONS", "path": "/api/auth/login/", "status": 401, "duration": 0.0019, "ip": "172.18.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-09 06:53:25,598 log 348 135145092716224 Unauthorized: /api/auth/login/
+WARNING 2026-02-09 07:17:22,177 logging_middleware 92 125831985354432 CLIENT ERROR: {"method": "OPTIONS", "path": "/api/auth/login/", "status": 401, "duration": 0.0009, "ip": "172.18.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-09 07:17:22,181 log 92 125831985354432 Unauthorized: /api/auth/login/
+WARNING 2026-02-09 07:35:12,920 logging_middleware 279 134937978640064 CLIENT ERROR: {"method": "POST", "path": "/api/auth/login/", "status": 400, "duration": 0.0578, "ip": "172.18.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-09 07:35:12,923 log 279 134937978640064 Bad Request: /api/auth/login/
+INFO 2026-02-09 07:49:58,831 logging_middleware 2356 131541324089024 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4658, "ip": "172.18.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-09 07:50:46,324 logging_middleware 2356 131541324089024 CLIENT ERROR: {"method": "POST", "path": "/api/auth/logout/", "status": 400, "duration": 0.0224, "ip": "172.18.0.1", "user_id": 1}
+WARNING 2026-02-09 07:50:46,326 log 2356 131541324089024 Bad Request: /api/auth/logout/
+INFO 2026-02-09 07:51:04,918 logging_middleware 2356 131541324089024 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.3989, "ip": "172.18.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-09 07:51:08,937 logging_middleware 2356 131541324089024 CLIENT ERROR: {"method": "POST", "path": "/api/auth/logout/", "status": 400, "duration": 0.0137, "ip": "172.18.0.1", "user_id": 1}
+WARNING 2026-02-09 07:51:08,939 log 2356 131541324089024 Bad Request: /api/auth/logout/
+INFO 2026-02-09 07:51:18,566 logging_middleware 2356 131541324089024 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4006, "ip": "172.18.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-09 07:51:31,378 logging_middleware 2356 131541324089024 CLIENT ERROR: {"method": "POST", "path": "/api/auth/logout/", "status": 400, "duration": 0.0168, "ip": "172.18.0.1", "user_id": 2}
+WARNING 2026-02-09 07:51:31,380 log 2356 131541324089024 Bad Request: /api/auth/logout/
+INFO 2026-02-09 07:51:44,156 logging_middleware 2356 131541324089024 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4179, "ip": "172.18.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-09 07:51:59,274 logging_middleware 2356 131541324089024 CLIENT ERROR: {"method": "POST", "path": "/api/auth/logout/", "status": 400, "duration": 0.015, "ip": "172.18.0.1", "user_id": 3}
+WARNING 2026-02-09 07:51:59,276 log 2356 131541324089024 Bad Request: /api/auth/logout/
+INFO 2026-02-09 07:59:05,333 logging_middleware 2356 131541324089024 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4304, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-09 07:59:09,788 logging_middleware 2356 131541324089024 SUCCESS: {"method": "POST", "path": "/api/auth/logout/", "status": 200, "duration": 0.0314, "ip": "172.18.0.1", "user_id": 1}

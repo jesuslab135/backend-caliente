@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
 
 from dotenv import load_dotenv
 import os
@@ -28,7 +29,6 @@ load_dotenv()
 DB_USER = os.getenv('DB_USER')
 DB_PASSWORD = os.getenv('DB_PASSWORD')
 DB_NAME = os.getenv('DB_NAME')
-SECRET_KEY = os.getenv('SECRET_KEY')
 HOST = os.getenv('HOST')
 PORT = os.getenv('PORT')
 SECRET_KEY = os.getenv('SECRET_KEY')
@@ -39,6 +39,22 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
+    'localhost:3000',
+    'localhost:8000',
+    'localhost:8080',
+    'localhost:5173',
+    '127.0.0.1:3000',
+    '127.0.0.1:8000',
+    '127.0.0.1:8080',
+    '127.0.0.1:5173'
+]
+
+# =============================================================================
+# CORS Configuration (django-cors-headers)
+# =============================================================================
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173',
+    'http://127.0.0.1:5173',
 ]
 
 
@@ -55,23 +71,97 @@ INSTALLED_APPS = [
     'api',
 
     'rest_framework',
+    'rest_framework_simplejwt',
+    'rest_framework_simplejwt.token_blacklist',
 
     'drf_spectacular',
+
+    'corsheaders',
 ]
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Backend10B API',
-    'DESCRIPTION': 'API for WEB and MOBILE',
+    'TITLE': 'Caliente Scheduler API',
+    'DESCRIPTION': 'Enterprise Scheduler System API for Caliente Traders',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
     'SERVE_PERMISSIONS': ['rest_framework.permissions.AllowAny'],
+    # JWT Security Scheme for Swagger UI
+    'SECURITY': [{'bearerAuth': []}],
+    'APPEND_COMPONENTS': {
+        'securitySchemes': {
+            'bearerAuth': {
+                'type': 'http',
+                'scheme': 'bearer',
+                'bearerFormat': 'JWT',
+            }
+        }
+    },
 }
 
+# =============================================================================
+# JWT Configuration (djangorestframework-simplejwt)
+# =============================================================================
+SIMPLE_JWT = {
+    # Token Lifetimes (per SRS v1.1 - 24h access token)
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=24),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+
+    # Refresh Token Rotation (enhanced security)
+    'ROTATE_REFRESH_TOKENS': True,
+    'BLACKLIST_AFTER_ROTATION': True,
+
+    # Token Types
+    'AUTH_HEADER_TYPES': ('Bearer',),
+    'AUTH_HEADER_NAME': 'HTTP_AUTHORIZATION',
+
+    # Claims
+    'USER_ID_FIELD': 'id',
+    'USER_ID_CLAIM': 'user_id',
+
+    # Token Settings
+    'TOKEN_TYPE_CLAIM': 'token_type',
+    'JTI_CLAIM': 'jti',
+
+    # Signing
+    'ALGORITHM': 'HS256',
+    'SIGNING_KEY': SECRET_KEY,
+
+    # Sliding Token (not used, but configured)
+    'SLIDING_TOKEN_LIFETIME': timedelta(hours=24),
+    'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=7),
+}
+
+# Password Reset Token Expiry
+PASSWORD_RESET_TIMEOUT = 3600  # 1 hour in seconds
+
+# =============================================================================
+# Email Configuration (for password reset)
+# =============================================================================
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # Console for dev
+# For production, use SMTP:
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
+# EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', '')
+# EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'noreply@caliente.mx')
+
+# Frontend domain for password reset links
+FRONTEND_DOMAIN = os.getenv('FRONTEND_DOMAIN', 'localhost:3000')
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

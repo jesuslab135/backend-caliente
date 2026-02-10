@@ -8,5 +8,9 @@ router = DefaultRouter()
 register_all_viewsets(router, Viewsets)
 
 urlpatterns = [
+    # Authentication endpoints (not auto-registered)
+    path("auth/", include('api.urls_auth')),
+
+    # Auto-registered model viewsets
     path("", include(router.urls)),
 ]

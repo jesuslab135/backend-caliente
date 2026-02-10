@@ -2,6 +2,7 @@ asgiref==3.11.0
 attrs==25.4.0
 Django==6.0.1
 djangorestframework==3.16.1
+djangorestframework-simplejwt==5.4.0
 drf-spectacular==0.29.0
 inflection==0.5.1
 jsonschema==4.26.0
@@ -16,3 +17,4 @@ sqlparse==0.5.5
 typing_extensions==4.15.0
 uritemplate==4.2.0
 wheel==0.42.0
+django-cors-headers==4.7.0
