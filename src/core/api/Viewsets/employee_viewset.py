@@ -3,6 +3,7 @@ from api.models import Employee
 
 from rest_framework import viewsets
 
+
 class EmployeeViewSet(viewsets.ModelViewSet):
-    queryset = Employee.objects.all()
+    queryset = Employee.objects.select_related('user', 'team').all()
     serializer_class = EmployeeSerializer

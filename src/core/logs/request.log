@@ -208,3 +208,241 @@ WARNING 2026-02-09 07:51:59,274 logging_middleware 2356 131541324089024 CLIENT E
 WARNING 2026-02-09 07:51:59,276 log 2356 131541324089024 Bad Request: /api/auth/logout/
 INFO 2026-02-09 07:59:05,333 logging_middleware 2356 131541324089024 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4304, "ip": "172.18.0.1", "user_id": "Anonymous"}
 INFO 2026-02-09 07:59:09,788 logging_middleware 2356 131541324089024 SUCCESS: {"method": "POST", "path": "/api/auth/logout/", "status": 200, "duration": 0.0314, "ip": "172.18.0.1", "user_id": 1}
+INFO 2026-02-10 19:57:35,971 logging_middleware 173 137549362755264 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4894, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-10 20:00:32,532 logging_middleware 173 137549362755264 SUCCESS: {"method": "POST", "path": "/api/auth/logout/", "status": 200, "duration": 0.039, "ip": "172.18.0.1", "user_id": 1}
+INFO 2026-02-10 20:01:06,014 logging_middleware 173 137549362755264 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4089, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-10 20:01:38,190 logging_middleware 173 137549362755264 SUCCESS: {"method": "POST", "path": "/api/auth/logout/", "status": 200, "duration": 0.0283, "ip": "172.18.0.1", "user_id": 1}
+INFO 2026-02-13 16:34:40,126 logging_middleware 322 137011526719168 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.479, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-13 16:54:55,680 logging_middleware 322 137011526719168 SUCCESS: {"method": "POST", "path": "/api/auth/logout/", "status": 200, "duration": 0.0803, "ip": "172.18.0.1", "user_id": 1}
+INFO 2026-02-13 16:56:07,236 logging_middleware 322 137011526719168 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4169, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-13 17:12:01,716 logging_middleware 76 127022718252736 SUCCESS: {"method": "GET", "path": "/api/auth/me/", "status": 200, "duration": 0.0759, "ip": "172.18.0.1", "user_id": 1}
+INFO 2026-02-13 17:12:06,145 logging_middleware 76 127022718252736 SUCCESS: {"method": "POST", "path": "/api/auth/logout/", "status": 200, "duration": 0.0479, "ip": "172.18.0.1", "user_id": 1}
+INFO 2026-02-13 17:12:20,207 logging_middleware 76 127022718252736 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4596, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-13 17:12:36,737 logging_middleware 76 127022718252736 SUCCESS: {"method": "POST", "path": "/api/auth/logout/", "status": 200, "duration": 0.0299, "ip": "172.18.0.1", "user_id": 1}
+INFO 2026-02-13 17:12:49,582 logging_middleware 76 127022718252736 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4347, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-13 17:12:53,100 logging_middleware 76 127022718252736 SUCCESS: {"method": "POST", "path": "/api/auth/logout/", "status": 200, "duration": 0.0245, "ip": "172.18.0.1", "user_id": 2}
+INFO 2026-02-13 17:13:27,471 logging_middleware 76 127022718252736 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4182, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-13 17:32:23,264 logging_middleware 114 135788653360832 SUCCESS: {"method": "GET", "path": "/api/auth/me/", "status": 200, "duration": 0.0786, "ip": "172.18.0.1", "user_id": 3}
+INFO 2026-02-13 17:32:35,164 logging_middleware 114 135788653360832 SUCCESS: {"method": "GET", "path": "/api/auth/me/", "status": 200, "duration": 0.0408, "ip": "172.18.0.1", "user_id": 3}
+INFO 2026-02-13 17:32:41,777 logging_middleware 114 135788653360832 SUCCESS: {"method": "POST", "path": "/api/auth/logout/", "status": 200, "duration": 0.0381, "ip": "172.18.0.1", "user_id": 3}
+INFO 2026-02-13 17:32:58,762 logging_middleware 114 135788653360832 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.442, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-13 17:40:12,745 logging_middleware 114 135788653360832 SUCCESS: {"method": "POST", "path": "/api/auth/logout/", "status": 200, "duration": 0.0306, "ip": "172.18.0.1", "user_id": 1}
+INFO 2026-02-13 17:42:51,646 logging_middleware 114 135788653360832 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.432, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-13 18:16:03,636 logging_middleware 60 131691389109952 SUCCESS: {"method": "GET", "path": "/api/auth/me/", "status": 200, "duration": 0.0694, "ip": "172.18.0.1", "user_id": 1}
+INFO 2026-02-13 19:10:19,480 logging_middleware 60 131691389109952 SUCCESS: {"method": "GET", "path": "/api/auth/me/", "status": 200, "duration": 0.1004, "ip": "172.18.0.1", "user_id": 1}
+WARNING 2026-02-13 21:34:12,719 logging_middleware 1673 135339407865536 CLIENT ERROR: {"method": "GET", "path": "/api/auth/me/", "status": 401, "duration": 0.0586, "ip": "172.18.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-13 21:34:12,722 log 1673 135339407865536 Unauthorized: /api/auth/me/
+ERROR 2026-02-13 21:34:12,950 log 1673 135339407865536 Internal Server Error: /api/auth/token/refresh/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/django/views/generic/base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework/serializers.py", line 447, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/rest_framework_simplejwt/serializers.py", line 116, in validate
+    user := get_user_model().objects.get(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/django/db/models/query.py", line 639, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+ERROR 2026-02-13 21:34:12,955 logging_middleware 1673 135339407865536 SERVER ERROR: {"method": "POST", "path": "/api/auth/token/refresh/", "status": 500, "duration": 0.1062, "ip": "172.18.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-13 21:34:13,128 logging_middleware 1673 135339407865536 CLIENT ERROR: {"method": "POST", "path": "/api/auth/logout/", "status": 401, "duration": 0.0181, "ip": "172.18.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-13 21:34:13,130 log 1673 135339407865536 Unauthorized: /api/auth/logout/
+INFO 2026-02-13 21:34:55,687 logging_middleware 1673 135339407865536 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4519, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-13 22:00:56,969 logging_middleware 1673 135339407865536 SUCCESS: {"method": "POST", "path": "/api/auth/logout/", "status": 200, "duration": 0.0545, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:01:41,226 logging_middleware 1673 135339407865536 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4106, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-13 22:01:41,950 logging_middleware 1673 135339398407872 SUCCESS: {"method": "GET", "path": "/api/shiftcycleconfigs/", "status": 200, "duration": 0.068, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:01:41,971 logging_middleware 1673 135339407865536 SUCCESS: {"method": "GET", "path": "/api/shiftcategories/", "status": 200, "duration": 0.0752, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:01:41,977 logging_middleware 1673 135339175831232 SUCCESS: {"method": "GET", "path": "/api/employees/", "status": 200, "duration": 0.1233, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:01:41,981 logging_middleware 1673 135339184223936 SUCCESS: {"method": "GET", "path": "/api/shifttypes/", "status": 200, "duration": 0.1099, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:01:42,079 logging_middleware 1673 135339398407872 SUCCESS: {"method": "GET", "path": "/api/schedules/", "status": 200, "duration": 0.0239, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:24,195 logging_middleware 1673 135339398407872 SUCCESS: {"method": "GET", "path": "/api/auth/me/", "status": 200, "duration": 0.0387, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:24,982 logging_middleware 1673 135339407865536 SUCCESS: {"method": "GET", "path": "/api/shiftcycleconfigs/", "status": 200, "duration": 0.0727, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:25,019 logging_middleware 1673 135339175831232 SUCCESS: {"method": "GET", "path": "/api/shiftcategories/", "status": 200, "duration": 0.1056, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:25,035 logging_middleware 1673 135339398407872 SUCCESS: {"method": "GET", "path": "/api/employees/", "status": 200, "duration": 0.1329, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:25,041 logging_middleware 1673 135339184223936 SUCCESS: {"method": "GET", "path": "/api/shifttypes/", "status": 200, "duration": 0.1342, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:25,152 logging_middleware 1673 135339184223936 SUCCESS: {"method": "GET", "path": "/api/schedules/", "status": 200, "duration": 0.027, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:29,973 logging_middleware 1673 135339184223936 SUCCESS: {"method": "GET", "path": "/api/auth/me/", "status": 200, "duration": 0.0405, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:30,683 logging_middleware 1673 135339407865536 SUCCESS: {"method": "GET", "path": "/api/shiftcycleconfigs/", "status": 200, "duration": 0.0498, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:30,704 logging_middleware 1673 135339175831232 SUCCESS: {"method": "GET", "path": "/api/shiftcategories/", "status": 200, "duration": 0.0729, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:30,717 logging_middleware 1673 135339184223936 SUCCESS: {"method": "GET", "path": "/api/employees/", "status": 200, "duration": 0.0902, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:30,720 logging_middleware 1673 135339398407872 SUCCESS: {"method": "GET", "path": "/api/shifttypes/", "status": 200, "duration": 0.0915, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:30,795 logging_middleware 1673 135339398407872 SUCCESS: {"method": "GET", "path": "/api/schedules/", "status": 200, "duration": 0.0279, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:33,462 logging_middleware 1673 135339398407872 SUCCESS: {"method": "GET", "path": "/api/auth/me/", "status": 200, "duration": 0.0555, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:34,184 logging_middleware 1673 135339407865536 SUCCESS: {"method": "GET", "path": "/api/shiftcycleconfigs/", "status": 200, "duration": 0.0747, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:34,207 logging_middleware 1673 135339175831232 SUCCESS: {"method": "GET", "path": "/api/shiftcategories/", "status": 200, "duration": 0.0949, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:34,228 logging_middleware 1673 135339398407872 SUCCESS: {"method": "GET", "path": "/api/employees/", "status": 200, "duration": 0.1259, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:34,232 logging_middleware 1673 135339184223936 SUCCESS: {"method": "GET", "path": "/api/shifttypes/", "status": 200, "duration": 0.1255, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:02:34,323 logging_middleware 1673 135339184223936 SUCCESS: {"method": "GET", "path": "/api/schedules/", "status": 200, "duration": 0.0196, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:10,512 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0203, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:10,514 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:13,548 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0203, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:13,551 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:14,176 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0164, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:14,178 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:14,708 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0173, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:14,710 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:15,422 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0176, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:15,424 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:15,956 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0192, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:15,958 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:16,513 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0169, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:16,515 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:17,008 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0171, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:17,010 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:17,553 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0171, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:17,555 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:20,615 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0224, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:20,618 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:21,084 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0165, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:21,087 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:21,566 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0162, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:21,568 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:23,661 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0176, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:23,664 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:24,169 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.017, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:24,171 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:24,882 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0162, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:24,885 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:25,462 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0146, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:25,464 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:27,049 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0165, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:27,052 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:28,937 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0222, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:28,940 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:29,500 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0156, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:29,502 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:29,945 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0152, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:29,948 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:30,389 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.0169, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:30,392 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:31,236 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.017, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:31,237 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:03:31,642 logging_middleware 1673 135339184223936 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/grid-edit/", "status": 405, "duration": 0.016, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:03:31,644 log 1673 135339184223936 Method Not Allowed: /api/schedules/grid-edit/
+WARNING 2026-02-13 22:07:46,343 logging_middleware 1673 135339167438528 CLIENT ERROR: {"method": "POST", "path": "/api/auth/login/", "status": 400, "duration": 0.003, "ip": "127.0.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-13 22:07:46,345 log 1673 135339167438528 Bad Request: /api/auth/login/
+INFO 2026-02-13 22:07:59,392 logging_middleware 1673 135339167438528 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4317, "ip": "127.0.0.1", "user_id": "Anonymous"}
+INFO 2026-02-13 22:08:06,410 logging_middleware 1673 135339167438528 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4219, "ip": "127.0.0.1", "user_id": "Anonymous"}
+INFO 2026-02-13 22:08:06,441 logging_middleware 1673 135339159045824 SUCCESS: {"method": "GET", "path": "/api/employees/", "status": 200, "duration": 0.0264, "ip": "127.0.0.1", "user_id": 21}
+INFO 2026-02-13 22:08:54,566 logging_middleware 1673 135339159045824 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4465, "ip": "127.0.0.1", "user_id": "Anonymous"}
+INFO 2026-02-13 22:08:54,599 logging_middleware 1673 135339167438528 SUCCESS: {"method": "GET", "path": "/api/shifttypes/", "status": 200, "duration": 0.0283, "ip": "127.0.0.1", "user_id": 21}
+INFO 2026-02-13 22:08:54,626 logging_middleware 1673 135339167438528 SUCCESS: {"method": "GET", "path": "/api/shiftcategories/", "status": 200, "duration": 0.0193, "ip": "127.0.0.1", "user_id": 21}
+INFO 2026-02-13 22:08:54,654 logging_middleware 1673 135339159045824 SUCCESS: {"method": "GET", "path": "/api/schedules/", "status": 200, "duration": 0.0228, "ip": "127.0.0.1", "user_id": 21}
+INFO 2026-02-13 22:10:24,140 logging_middleware 1673 135339175831232 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4229, "ip": "127.0.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-13 22:10:24,165 logging_middleware 1673 135339407865536 CLIENT ERROR: {"method": "POST", "path": "/api/schedules/", "status": 400, "duration": 0.0187, "ip": "127.0.0.1", "user_id": 21}
+WARNING 2026-02-13 22:10:24,166 log 1673 135339407865536 Bad Request: /api/schedules/
+INFO 2026-02-13 22:10:30,810 logging_middleware 1673 135339407865536 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4013, "ip": "127.0.0.1", "user_id": "Anonymous"}
+INFO 2026-02-13 22:10:30,861 logging_middleware 1673 135339175831232 SUCCESS: {"method": "POST", "path": "/api/schedules/", "status": 201, "duration": 0.0453, "ip": "127.0.0.1", "user_id": 21}
+WARNING 2026-02-13 22:22:46,340 logging_middleware 222 127828063409856 CLIENT ERROR: {"method": "GET", "path": "/api/employees/", "status": 401, "duration": 0.0011, "ip": "127.0.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-13 22:22:46,343 log 222 127828063409856 Unauthorized: /api/employees/
+WARNING 2026-02-13 22:22:51,717 logging_middleware 222 127828063409856 CLIENT ERROR: {"method": "POST", "path": "/api/auth/login/", "status": 400, "duration": 0.0004, "ip": "127.0.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-13 22:22:51,719 log 222 127828063409856 Bad Request: /api/auth/login/
+WARNING 2026-02-13 22:22:56,803 logging_middleware 222 127828063409856 CLIENT ERROR: {"method": "POST", "path": "/api/auth/login/", "status": 400, "duration": 0.0008, "ip": "127.0.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-13 22:22:56,808 log 222 127828063409856 Bad Request: /api/auth/login/
+WARNING 2026-02-13 22:23:01,464 logging_middleware 222 127828063409856 CLIENT ERROR: {"method": "POST", "path": "/api/auth/login/", "status": 400, "duration": 0.0003, "ip": "127.0.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-13 22:23:01,466 log 222 127828063409856 Bad Request: /api/auth/login/
+WARNING 2026-02-13 22:23:07,095 logging_middleware 222 127828063409856 CLIENT ERROR: {"method": "POST", "path": "/api/auth/login/", "status": 400, "duration": 0.0004, "ip": "127.0.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-13 22:23:07,097 log 222 127828063409856 Bad Request: /api/auth/login/
+INFO 2026-02-13 22:23:18,614 logging_middleware 222 127828063409856 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.458, "ip": "127.0.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-13 22:23:29,923 logging_middleware 222 127828063409856 CLIENT ERROR: {"method": "GET", "path": "/api/employees/", "status": 401, "duration": 0.0004, "ip": "127.0.0.1", "user_id": "Anonymous"}
+WARNING 2026-02-13 22:23:29,925 log 222 127828063409856 Unauthorized: /api/employees/
+INFO 2026-02-13 22:23:37,479 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/employees/", "status": 200, "duration": 0.0225, "ip": "127.0.0.1", "user_id": 21}
+INFO 2026-02-13 22:24:14,249 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/auth/me/", "status": 200, "duration": 0.0328, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:24:15,153 logging_middleware 222 127828037134016 SUCCESS: {"method": "GET", "path": "/api/shiftcycleconfigs/", "status": 200, "duration": 0.0589, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:24:15,172 logging_middleware 222 127828045543104 SUCCESS: {"method": "GET", "path": "/api/shiftcategories/", "status": 200, "duration": 0.0841, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:24:15,192 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/shifttypes/", "status": 200, "duration": 0.1104, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:24:15,200 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/employees/", "status": 200, "duration": 0.1293, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:24:15,250 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/schedules/", "status": 200, "duration": 0.0253, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:24:20,408 logging_middleware 222 127828063409856 SUCCESS: {"method": "POST", "path": "/api/auth/logout/", "status": 200, "duration": 0.0286, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:24:41,291 logging_middleware 222 127828063409856 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.4004, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-13 22:24:41,416 logging_middleware 222 127828037134016 SUCCESS: {"method": "GET", "path": "/api/shiftcycleconfigs/", "status": 200, "duration": 0.0704, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:24:41,435 logging_middleware 222 127828045543104 SUCCESS: {"method": "GET", "path": "/api/shiftcategories/", "status": 200, "duration": 0.0862, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:24:41,452 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/shifttypes/", "status": 200, "duration": 0.1092, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:24:41,458 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/employees/", "status": 200, "duration": 0.1178, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:24:41,496 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/schedules/", "status": 200, "duration": 0.0221, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:25:28,232 logging_middleware 222 127828037134016 SUCCESS: {"method": "GET", "path": "/api/shiftcycleconfigs/", "status": 200, "duration": 0.0509, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:25:28,252 logging_middleware 222 127828045543104 SUCCESS: {"method": "GET", "path": "/api/shiftcategories/", "status": 200, "duration": 0.0758, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:25:28,269 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/shifttypes/", "status": 200, "duration": 0.0904, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:25:28,274 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/employees/", "status": 200, "duration": 0.1002, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:25:28,309 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/schedules/", "status": 200, "duration": 0.0218, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:25:33,470 logging_middleware 222 127828037134016 SUCCESS: {"method": "GET", "path": "/api/shiftcycleconfigs/", "status": 200, "duration": 0.0646, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:25:33,495 logging_middleware 222 127828045543104 SUCCESS: {"method": "GET", "path": "/api/shiftcategories/", "status": 200, "duration": 0.0879, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:25:33,511 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/shifttypes/", "status": 200, "duration": 0.1024, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:25:33,516 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/employees/", "status": 200, "duration": 0.1131, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:25:33,557 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/schedules/", "status": 200, "duration": 0.0263, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:30:21,170 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/auth/me/", "status": 200, "duration": 0.028, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:30:21,921 logging_middleware 222 127828037134016 SUCCESS: {"method": "GET", "path": "/api/shiftcycleconfigs/", "status": 200, "duration": 0.0728, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:30:21,936 logging_middleware 222 127828045543104 SUCCESS: {"method": "GET", "path": "/api/shiftcategories/", "status": 200, "duration": 0.0926, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:30:21,966 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/shifttypes/", "status": 200, "duration": 0.1276, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:30:21,978 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/employees/", "status": 200, "duration": 0.1446, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:30:22,009 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/schedules/", "status": 200, "duration": 0.021, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:30:24,999 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/employees/", "status": 200, "duration": 0.0374, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:30:25,002 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/teams/", "status": 200, "duration": 0.0324, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:31:22,266 logging_middleware 222 127828037134016 SUCCESS: {"method": "GET", "path": "/api/shiftcycleconfigs/", "status": 200, "duration": 0.0686, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:31:22,292 logging_middleware 222 127828045543104 SUCCESS: {"method": "GET", "path": "/api/shiftcategories/", "status": 200, "duration": 0.0994, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:31:22,310 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/shifttypes/", "status": 200, "duration": 0.1145, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:31:22,314 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/employees/", "status": 200, "duration": 0.1236, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:31:22,347 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/schedules/", "status": 200, "duration": 0.0215, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:31:25,497 logging_middleware 222 127828053952192 SUCCESS: {"method": "POST", "path": "/api/schedules/", "status": 201, "duration": 0.0366, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:31:26,704 logging_middleware 222 127828053952192 SUCCESS: {"method": "POST", "path": "/api/schedules/", "status": 201, "duration": 0.027, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:31:29,885 logging_middleware 222 127828053952192 SUCCESS: {"method": "POST", "path": "/api/schedules/", "status": 201, "duration": 0.029, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:31:30,901 logging_middleware 222 127828053952192 SUCCESS: {"method": "POST", "path": "/api/schedules/", "status": 201, "duration": 0.0294, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:31:32,479 logging_middleware 222 127828053952192 CLIENT ERROR: {"method": "PATCH", "path": "/api/schedules/8550620c-f614-4ef4-bd3d-9c450ee0e26d/", "status": 404, "duration": 0.0151, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:31:32,482 log 222 127828053952192 Not Found: /api/schedules/8550620c-f614-4ef4-bd3d-9c450ee0e26d/
+INFO 2026-02-13 22:31:34,846 logging_middleware 222 127828053952192 SUCCESS: {"method": "POST", "path": "/api/schedules/", "status": 201, "duration": 0.0296, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:31:35,454 logging_middleware 222 127828053952192 CLIENT ERROR: {"method": "PATCH", "path": "/api/schedules/3049ed79-d79a-47eb-bb12-c0ab4bfab203/", "status": 404, "duration": 0.0153, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:31:35,455 log 222 127828053952192 Not Found: /api/schedules/3049ed79-d79a-47eb-bb12-c0ab4bfab203/
+WARNING 2026-02-13 22:31:36,258 logging_middleware 222 127828053952192 CLIENT ERROR: {"method": "PATCH", "path": "/api/schedules/3049ed79-d79a-47eb-bb12-c0ab4bfab203/", "status": 404, "duration": 0.0183, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:31:36,260 log 222 127828053952192 Not Found: /api/schedules/3049ed79-d79a-47eb-bb12-c0ab4bfab203/
+WARNING 2026-02-13 22:31:37,038 logging_middleware 222 127828053952192 CLIENT ERROR: {"method": "PATCH", "path": "/api/schedules/3049ed79-d79a-47eb-bb12-c0ab4bfab203/", "status": 404, "duration": 0.0158, "ip": "172.18.0.1", "user_id": 21}
+WARNING 2026-02-13 22:31:37,041 log 222 127828053952192 Not Found: /api/schedules/3049ed79-d79a-47eb-bb12-c0ab4bfab203/
+INFO 2026-02-13 22:31:59,959 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/teams/", "status": 200, "duration": 0.0191, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:31:59,975 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/employees/", "status": 200, "duration": 0.0366, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:32:06,064 logging_middleware 222 127828037134016 SUCCESS: {"method": "GET", "path": "/api/shiftcycleconfigs/", "status": 200, "duration": 0.0594, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:32:06,088 logging_middleware 222 127828045543104 SUCCESS: {"method": "GET", "path": "/api/shiftcategories/", "status": 200, "duration": 0.0863, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:32:06,103 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/shifttypes/", "status": 200, "duration": 0.0975, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:32:06,118 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/employees/", "status": 200, "duration": 0.119, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:32:06,160 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/schedules/", "status": 200, "duration": 0.0223, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:32:13,681 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/teams/", "status": 200, "duration": 0.0207, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:32:13,693 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/employees/", "status": 200, "duration": 0.0348, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:32:35,239 logging_middleware 222 127828053952192 SUCCESS: {"method": "POST", "path": "/api/auth/logout/", "status": 200, "duration": 0.0259, "ip": "172.18.0.1", "user_id": 21}
+INFO 2026-02-13 22:32:49,176 logging_middleware 222 127828053952192 SUCCESS: {"method": "POST", "path": "/api/auth/login/", "status": 200, "duration": 0.3997, "ip": "172.18.0.1", "user_id": "Anonymous"}
+INFO 2026-02-13 22:32:49,312 logging_middleware 222 127828037134016 SUCCESS: {"method": "GET", "path": "/api/shiftcycleconfigs/", "status": 200, "duration": 0.0794, "ip": "172.18.0.1", "user_id": 28}
+INFO 2026-02-13 22:32:49,320 logging_middleware 222 127828045543104 SUCCESS: {"method": "GET", "path": "/api/shiftcategories/", "status": 200, "duration": 0.0843, "ip": "172.18.0.1", "user_id": 28}
+INFO 2026-02-13 22:32:49,343 logging_middleware 222 127828063409856 SUCCESS: {"method": "GET", "path": "/api/shifttypes/", "status": 200, "duration": 0.1125, "ip": "172.18.0.1", "user_id": 28}
+INFO 2026-02-13 22:32:49,350 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/employees/", "status": 200, "duration": 0.1249, "ip": "172.18.0.1", "user_id": 28}
+INFO 2026-02-13 22:32:49,385 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/schedules/", "status": 200, "duration": 0.0217, "ip": "172.18.0.1", "user_id": 28}
+INFO 2026-02-13 22:32:55,817 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/schedules/", "status": 200, "duration": 0.0223, "ip": "172.18.0.1", "user_id": 28}
+INFO 2026-02-13 22:32:55,989 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/schedules/", "status": 200, "duration": 0.0199, "ip": "172.18.0.1", "user_id": 28}
+INFO 2026-02-13 22:32:56,211 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/schedules/", "status": 200, "duration": 0.022, "ip": "172.18.0.1", "user_id": 28}
+INFO 2026-02-13 22:32:56,953 logging_middleware 222 127828053952192 SUCCESS: {"method": "GET", "path": "/api/schedules/", "status": 200, "duration": 0.0196, "ip": "172.18.0.1", "user_id": 28}
+INFO 2026-02-13 22:33:22,280 logging_middleware 222 127828053952192 SUCCESS: {"method": "POST", "path": "/api/auth/logout/", "status": 200, "duration": 0.0253, "ip": "172.18.0.1", "user_id": 28}

@@ -171,6 +171,7 @@ class Employee(TimeStampedModel, UUIDModel):
         """Roles disponibles para empleados."""
         MONITOR_TRADER = 'MONITOR_TRADER', _('Monitor Trader')
         INPLAY_TRADER = 'INPLAY_TRADER', _('In-Play Trader')
+        PREMATCH_TRADER = 'PREMATCH_TRADER', _('Pre-Match Trader')
         MANAGER = 'MANAGER', _('Manager/Supervisor')
         ADMIN = 'ADMIN', _('Administrador')
     
@@ -223,6 +224,11 @@ class Employee(TimeStampedModel, UUIDModel):
         default=True,
         db_index=True,
         help_text=_('Indica si el empleado está activo. Usar para soft delete.')
+    )
+    exclude_from_grid = models.BooleanField(
+        _('excluir de grilla'),
+        default=False,
+        help_text=_('Si es True, el empleado no aparece en la grilla de horarios')
     )
     hire_date = models.DateField(
         _('fecha de contratación'),
