@@ -31,31 +31,23 @@ DB_PASSWORD = os.getenv('DB_PASSWORD')
 DB_NAME = os.getenv('DB_NAME')
 HOST = os.getenv('HOST')
 PORT = os.getenv('PORT')
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY', 'dev-insecure-key-change-in-production')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# En produccion DEBUG=False, en staging DEBUG=True, en local DEBUG=True
+DEBUG = os.getenv('DEBUG', 'True').lower() in ('true', '1', 'yes')
 
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    'localhost:3000',
-    'localhost:8000',
-    'localhost:8080',
-    'localhost:5173',
-    '127.0.0.1:3000',
-    '127.0.0.1:8000',
-    '127.0.0.1:8080',
-    '127.0.0.1:5173'
-]
+ALLOWED_HOSTS = os.getenv(
+    'ALLOWED_HOSTS',
+    'localhost,127.0.0.1'
+).split(',')
 
 # =============================================================================
 # CORS Configuration (django-cors-headers)
 # =============================================================================
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
-    'http://127.0.0.1:5173',
-]
+CORS_ALLOWED_ORIGINS = os.getenv(
+    'CORS_ALLOWED_ORIGINS',
+    'http://localhost:5173,http://127.0.0.1:5173'
+).split(',')
 
 
 # Application definition
@@ -158,7 +150,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # Console for 
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'noreply@caliente.mx')
 
 # Frontend domain for password reset links
-FRONTEND_DOMAIN = os.getenv('FRONTEND_DOMAIN', 'localhost:3000')
+FRONTEND_DOMAIN = os.getenv('FRONTEND_DOMAIN', 'localhost:5173')
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -242,6 +234,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # LOGGER

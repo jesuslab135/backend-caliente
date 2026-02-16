@@ -1,0 +1,79 @@
+# =========================================================
+# CI/CD Pipeline — Caliente Backend
+#
+# develop → staging.jesuslab135.com
+# main    → app.jesuslab135.com
+# =========================================================
+name: Deploy Backend
+
+on:
+  push:
+    branches: [develop, main]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Clonar el codigo
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Determinar el entorno segun la rama
+      - name: Set environment variables
+        run: |
+          if [ "${{ github.ref_name }}" = "main" ]; then
+            echo "ENV_TAG=prod" >> $GITHUB_ENV
+            echo "COMPOSE_SERVICE=backend_prod" >> $GITHUB_ENV
+          else
+            echo "ENV_TAG=staging" >> $GITHUB_ENV
+            echo "COMPOSE_SERVICE=backend_staging" >> $GITHUB_ENV
+          fi
+
+      # 3. Login a GitHub Container Registry
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # 4. Construir y subir la imagen Docker
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/caliente-backend:${{ env.ENV_TAG }}
+            ghcr.io/${{ github.repository_owner }}/caliente-backend:${{ env.ENV_TAG }}-${{ github.sha }}
+
+      # 5. Desplegar en el VPS via SSH
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            cd /opt/caliente
+
+            # Login a GHCR en el VPS
+            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+            # Bajar la nueva imagen y reiniciar solo este servicio
+            docker compose pull ${{ env.COMPOSE_SERVICE }}
+            docker compose up -d ${{ env.COMPOSE_SERVICE }}
+
+            # Esperar a que el contenedor arranque
+            sleep 5
+
+            # Ejecutar migraciones
+            docker compose exec -T ${{ env.COMPOSE_SERVICE }} python3 manage.py migrate --noinput
+
+            # Limpiar imagenes viejas
+            docker image prune -f
