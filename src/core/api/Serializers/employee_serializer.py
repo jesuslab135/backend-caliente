@@ -24,6 +24,14 @@ class EmployeeTeamNestedSerializer(serializers.ModelSerializer):
 class EmployeeSerializer(serializers.ModelSerializer):
     user = EmployeeUserNestedSerializer(read_only=True)
     team = EmployeeTeamNestedSerializer(read_only=True)
+    team_uuid = serializers.SlugRelatedField(
+        queryset=Team.objects.all(),
+        slug_field='uuid',
+        source='team',
+        required=False,
+        allow_null=True,
+        write_only=True,
+    )
 
     class Meta:
         model = Employee

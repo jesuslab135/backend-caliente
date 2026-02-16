@@ -1,387 +1,1073 @@
-INFO 2026-01-25 05:32:03,735 autoreload 1452 134759965278336 Watching for file changes with StatReloader
-WARNING 2026-01-25 05:32:22,746 log 1452 134759833401024 "GET / HTTP/1.1" 404 2829
-WARNING 2026-01-25 05:32:22,927 log 1452 134759833401024 "GET /favicon.ico HTTP/1.1" 404 2880
-INFO 2026-01-25 05:32:37,058 log 1452 134759833401024 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
-INFO 2026-01-25 05:32:37,458 log 1452 134759833401024 "GET /api/schema/ HTTP/1.1" 200 79520
-INFO 2026-01-25 05:32:58,832 log 1452 134759833401024 "GET /api/users/ HTTP/1.1" 200 2
-INFO 2026-01-25 05:33:09,062 log 1452 134759833401024 "GET /api/groups/ HTTP/1.1" 200 2
-INFO 2026-01-28 17:52:21,057 autoreload 23 133931112480896 Watching for file changes with StatReloader
-INFO 2026-01-28 17:53:46,073 autoreload 23 133931112480896 /app/core/api/urls.py changed, reloading.
-INFO 2026-01-28 17:53:47,269 autoreload 27 128051222581376 Watching for file changes with StatReloader
-INFO 2026-01-28 17:53:51,339 autoreload 34 123964911263872 Watching for file changes with StatReloader
-INFO 2026-01-28 17:56:33,396 autoreload 42 136432224202880 Watching for file changes with StatReloader
-INFO 2026-01-28 17:57:05,626 autoreload 42 136432224202880 /app/core/api/Viewsets/location_log_viewset.py changed, reloading.
-INFO 2026-01-28 17:57:06,313 autoreload 46 140379754762368 Watching for file changes with StatReloader
-INFO 2026-01-28 17:57:09,771 autoreload 46 140379754762368 /app/core/api/Viewsets/location_log_viewset.py changed, reloading.
-INFO 2026-01-28 17:57:10,897 autoreload 50 132668766359680 Watching for file changes with StatReloader
-INFO 2026-01-28 17:57:30,163 autoreload 50 132668766359680 /app/core/api/Viewsets/location_log_viewset.py changed, reloading.
-INFO 2026-01-28 17:57:30,811 autoreload 54 133442948546688 Watching for file changes with StatReloader
-INFO 2026-01-28 17:57:33,926 autoreload 54 133442948546688 /app/core/api/Viewsets/location_log_viewset.py changed, reloading.
-INFO 2026-01-28 17:57:34,568 autoreload 58 129378682548352 Watching for file changes with StatReloader
-INFO 2026-01-28 17:57:39,934 log 58 129378621437632 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
-INFO 2026-01-28 17:57:40,460 log 58 129378621437632 "GET /api/schema/ HTTP/1.1" 200 403762
-INFO 2026-02-04 20:04:34,326 autoreload 38 139705484947584 Watching for file changes with StatReloader
-INFO 2026-02-04 20:12:17,837 autoreload 37 135767324340352 Watching for file changes with StatReloader
-INFO 2026-02-04 20:13:21,240 autoreload 50 129014456295552 Watching for file changes with StatReloader
-INFO 2026-02-04 20:13:28,698 log 50 129014395184832 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
-INFO 2026-02-04 20:13:29,279 log 50 129014395184832 "GET /api/schema/ HTTP/1.1" 200 403762
-INFO 2026-02-04 20:13:32,362 log 50 129014395184832 "GET /api/ HTTP/1.1" 200 9364
-INFO 2026-02-04 20:13:32,407 log 50 129014308009664 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
-INFO 2026-02-04 20:13:32,409 log 50 129014299616960 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
-INFO 2026-02-04 20:13:32,414 log 50 129014395184832 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
-INFO 2026-02-04 20:13:32,475 log 50 129014299616960 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
-INFO 2026-02-04 20:13:32,484 log 50 129014395184832 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
-INFO 2026-02-04 20:13:32,489 log 50 129014308009664 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
-INFO 2026-02-04 20:13:32,496 log 50 129014299616960 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
-INFO 2026-02-04 20:13:32,498 log 50 129014395184832 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
-INFO 2026-02-04 20:13:32,503 log 50 129014299616960 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
-INFO 2026-02-04 20:13:32,507 log 50 129014395184832 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
-INFO 2026-02-04 20:13:32,515 log 50 129014395184832 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
-INFO 2026-02-04 20:13:32,570 log 50 129014395184832 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
-WARNING 2026-02-04 20:13:33,259 log 50 129014395184832 "GET / HTTP/1.1" 404 2829
-WARNING 2026-02-04 20:13:33,517 log 50 129014395184832 "GET /favicon.ico HTTP/1.1" 404 2880
-INFO 2026-02-04 20:13:56,708 log 50 129014395184832 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
-INFO 2026-02-04 20:13:57,108 log 50 129014395184832 "GET /api/schema/ HTTP/1.1" 200 403762
-INFO 2026-02-04 20:30:01,194 autoreload 118 136789829128320 Watching for file changes with StatReloader
-INFO 2026-02-04 20:32:40,276 autoreload 439 128508937093248 Watching for file changes with StatReloader
-WARNING 2026-02-04 20:32:47,513 log 439 128508877027008 "GET / HTTP/1.1" 404 2829
-INFO 2026-02-04 20:32:53,591 log 439 128508877027008 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
-INFO 2026-02-04 20:32:53,731 log 439 128508877027008 "GET /api/schema/ HTTP/1.1" 200 197
-INFO 2026-02-04 20:49:18,537 autoreload 2376 134506336178304 Watching for file changes with StatReloader
-INFO 2026-02-04 20:49:24,252 log 2376 134506276112064 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
-INFO 2026-02-04 20:49:24,381 log 2376 134506276112064 "GET /api/schema/ HTTP/1.1" 200 197
-INFO 2026-02-04 20:49:25,100 log 2376 134506276112064 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
-INFO 2026-02-04 20:49:25,170 log 2376 134506276112064 "GET /api/schema/ HTTP/1.1" 200 197
-INFO 2026-02-04 20:49:25,568 log 2376 134506276112064 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
-INFO 2026-02-04 20:49:25,648 log 2376 134506276112064 "GET /api/schema/ HTTP/1.1" 200 197
-INFO 2026-02-04 20:49:25,987 log 2376 134506276112064 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
-INFO 2026-02-04 20:49:26,055 log 2376 134506276112064 "GET /api/schema/ HTTP/1.1" 200 197
-INFO 2026-02-04 20:49:26,403 log 2376 134506276112064 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
-INFO 2026-02-04 20:49:26,475 log 2376 134506276112064 "GET /api/schema/ HTTP/1.1" 200 197
-INFO 2026-02-04 20:49:27,856 log 2376 134506276112064 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4647
-INFO 2026-02-04 20:49:27,940 log 2376 134506276112064 "GET /api/schema/ HTTP/1.1" 200 197
-INFO 2026-02-04 20:49:50,828 autoreload 2376 134506336178304 /app/core/core/settings.py changed, reloading.
-INFO 2026-02-04 20:49:51,616 autoreload 2446 132512696930432 Watching for file changes with StatReloader
-INFO 2026-02-04 20:49:56,288 autoreload 2446 132512696930432 /app/core/core/settings.py changed, reloading.
-INFO 2026-02-04 20:49:57,057 autoreload 2460 134577825124480 Watching for file changes with StatReloader
-INFO 2026-02-04 20:50:02,585 log 2460 134577697846976 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4655
-INFO 2026-02-04 20:50:02,841 log 2460 134577697846976 "GET /api/schema/ HTTP/1.1" 200 194
-INFO 2026-02-04 21:09:54,124 autoreload 4803 127631907655808 Watching for file changes with StatReloader
-INFO 2026-02-04 21:09:58,632 log 4803 127631847589568 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4655
-ERROR 2026-02-04 21:09:58,951 log 4803 127631847589568 "GET /api/schema/ HTTP/1.1" 500 177000
-ERROR 2026-02-04 21:09:59,025 log 4803 127631847589568 "GET /api/schema/ HTTP/1.1" 500 177000
-INFO 2026-02-04 21:12:28,952 autoreload 4803 127631907655808 /app/core/api/Serializers/employee_serializer.py changed, reloading.
-INFO 2026-02-04 21:12:30,147 autoreload 5109 127052866080896 Watching for file changes with StatReloader
-INFO 2026-02-04 21:13:26,734 autoreload 5226 123529279570048 Watching for file changes with StatReloader
-INFO 2026-02-04 21:13:31,707 log 5226 123529219503808 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4655
-INFO 2026-02-04 21:13:32,093 log 5226 123529219503808 "GET /api/schema/ HTTP/1.1" 200 199828
-INFO 2026-02-05 20:36:31,141 autoreload 313 138148937478272 Watching for file changes with StatReloader
-INFO 2026-02-05 20:36:56,895 autoreload 376 133377701007488 Watching for file changes with StatReloader
-INFO 2026-02-05 20:36:59,740 log 376 133377640941248 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4655
-INFO 2026-02-05 20:37:00,177 log 376 133377640941248 "GET /api/schema/ HTTP/1.1" 200 199828
-INFO 2026-02-06 19:19:28,701 autoreload 340 129175249043584 Watching for file changes with StatReloader
-INFO 2026-02-06 19:20:47,487 log 340 129175187928768 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4655
-INFO 2026-02-06 19:20:47,954 log 340 129175187928768 "GET /api/schema/ HTTP/1.1" 200 250638
-INFO 2026-02-06 19:21:44,067 log 340 129175187928768 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4655
-INFO 2026-02-06 19:21:44,449 log 340 129175187928768 "GET /api/schema/ HTTP/1.1" 200 250638
-INFO 2026-02-08 22:31:11,435 autoreload 392 135722049618048 Watching for file changes with StatReloader
-INFO 2026-02-08 22:31:13,617 log 392 135721989551808 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4655
-INFO 2026-02-08 22:31:14,141 log 392 135721989551808 "GET /api/schema/ HTTP/1.1" 200 250638
-WARNING 2026-02-08 22:33:23,783 log 392 135721906075328 "OPTIONS /api/auth/login/ HTTP/1.1" 401 58
-INFO 2026-02-09 06:47:33,744 autoreload 130 129864469524608 Watching for file changes with StatReloader
-INFO 2026-02-09 06:49:21,763 autoreload 348 135145153831040 Watching for file changes with StatReloader
-WARNING 2026-02-09 06:53:25,600 log 348 135145092716224 "OPTIONS /api/auth/login/ HTTP/1.1" 401 58
-INFO 2026-02-09 07:14:02,882 autoreload 92 125832046469248 Watching for file changes with StatReloader
-WARNING 2026-02-09 07:17:22,182 log 92 125831985354432 "OPTIONS /api/auth/login/ HTTP/1.1" 401 58
-INFO 2026-02-09 07:17:57,010 autoreload 92 125832046469248 /app/core/core/settings.py changed, reloading.
-INFO 2026-02-09 07:17:57,942 autoreload 551 134159642505344 Watching for file changes with StatReloader
-INFO 2026-02-09 07:18:00,357 autoreload 551 134159642505344 /app/core/core/settings.py changed, reloading.
-INFO 2026-02-09 07:18:01,177 autoreload 561 131787445883008 Watching for file changes with StatReloader
-INFO 2026-02-09 07:18:10,317 autoreload 561 131787445883008 /app/core/core/settings.py changed, reloading.
-INFO 2026-02-09 07:18:11,112 autoreload 585 129745810268288 Watching for file changes with StatReloader
-INFO 2026-02-09 07:18:13,465 autoreload 585 129745810268288 /app/core/core/settings.py changed, reloading.
-INFO 2026-02-09 07:18:14,217 autoreload 595 138623231479936 Watching for file changes with StatReloader
-INFO 2026-02-09 07:18:19,896 autoreload 595 138623231479936 /app/core/core/settings.py changed, reloading.
-INFO 2026-02-09 07:18:20,615 autoreload 611 132906741780608 Watching for file changes with StatReloader
-INFO 2026-02-09 07:18:23,940 autoreload 611 132906741780608 /app/core/core/settings.py changed, reloading.
-INFO 2026-02-09 07:18:24,740 autoreload 623 125483703025792 Watching for file changes with StatReloader
-INFO 2026-02-09 07:18:26,989 autoreload 623 125483703025792 /app/core/core/settings.py changed, reloading.
-INFO 2026-02-09 07:18:27,690 autoreload 633 125071749128320 Watching for file changes with StatReloader
-INFO 2026-02-09 07:18:29,990 autoreload 633 125071749128320 /app/core/core/settings.py changed, reloading.
-INFO 2026-02-09 07:18:30,744 autoreload 643 130274470334592 Watching for file changes with StatReloader
-INFO 2026-02-09 07:21:36,600 autoreload 643 130274470334592 /app/core/core/settings.py changed, reloading.
-INFO 2026-02-09 07:21:37,303 autoreload 1007 132163365376128 Watching for file changes with StatReloader
-INFO 2026-02-09 07:21:45,787 autoreload 1007 132163365376128 /app/core/core/settings.py changed, reloading.
-INFO 2026-02-09 07:21:46,370 autoreload 1029 127795178897536 Watching for file changes with StatReloader
-INFO 2026-02-09 07:21:56,910 autoreload 1029 127795178897536 /app/core/core/settings.py changed, reloading.
-INFO 2026-02-09 07:21:57,594 autoreload 1055 128669398712448 Watching for file changes with StatReloader
-INFO 2026-02-09 07:22:22,373 autoreload 1055 128669398712448 /app/core/core/settings.py changed, reloading.
-INFO 2026-02-09 07:22:22,941 autoreload 1107 135669202579584 Watching for file changes with StatReloader
-INFO 2026-02-09 07:29:55,891 autoreload 218 132517496078464 Watching for file changes with StatReloader
-INFO 2026-02-09 07:30:20,599 autoreload 279 134938039754880 Watching for file changes with StatReloader
-INFO 2026-02-09 07:35:12,854 log 279 134937978640064 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
-WARNING 2026-02-09 07:35:12,925 log 279 134937978640064 "POST /api/auth/login/ HTTP/1.1" 400 41
-INFO 2026-02-09 07:48:07,929 autoreload 2356 131541385203840 Watching for file changes with StatReloader
-INFO 2026-02-09 07:49:58,826 auth_viewset 2356 131541324089024 User logged in: admin@caliente.mx
-INFO 2026-02-09 07:49:58,836 log 2356 131541324089024 "POST /api/auth/login/ HTTP/1.1" 200 1174
-INFO 2026-02-09 07:50:46,298 log 2356 131541324089024 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
-WARNING 2026-02-09 07:50:46,328 log 2356 131541324089024 "POST /api/auth/logout/ HTTP/1.1" 400 39
-INFO 2026-02-09 07:51:04,914 auth_viewset 2356 131541324089024 User logged in: admin@caliente.mx
-INFO 2026-02-09 07:51:04,920 log 2356 131541324089024 "POST /api/auth/login/ HTTP/1.1" 200 1174
-WARNING 2026-02-09 07:51:08,941 log 2356 131541324089024 "POST /api/auth/logout/ HTTP/1.1" 400 39
-INFO 2026-02-09 07:51:18,560 auth_viewset 2356 131541324089024 User logged in: manager@caliente.mx
-INFO 2026-02-09 07:51:18,568 log 2356 131541324089024 "POST /api/auth/login/ HTTP/1.1" 200 1282
-WARNING 2026-02-09 07:51:31,382 log 2356 131541324089024 "POST /api/auth/logout/ HTTP/1.1" 400 39
-INFO 2026-02-09 07:51:44,146 auth_viewset 2356 131541324089024 User logged in: trader@caliente.mx
-INFO 2026-02-09 07:51:44,159 log 2356 131541324089024 "POST /api/auth/login/ HTTP/1.1" 200 1297
-WARNING 2026-02-09 07:51:59,277 log 2356 131541324089024 "POST /api/auth/logout/ HTTP/1.1" 400 39
-INFO 2026-02-09 07:59:05,327 auth_viewset 2356 131541324089024 User logged in: admin@caliente.mx
-INFO 2026-02-09 07:59:05,335 log 2356 131541324089024 "POST /api/auth/login/ HTTP/1.1" 200 1174
-INFO 2026-02-09 07:59:09,786 auth_viewset 2356 131541324089024 User logged out: admin@caliente.mx
-INFO 2026-02-09 07:59:09,790 log 2356 131541324089024 "POST /api/auth/logout/ HTTP/1.1" 200 53
-INFO 2026-02-10 19:56:11,667 autoreload 173 137549423870080 Watching for file changes with StatReloader
-INFO 2026-02-10 19:57:35,474 log 173 137549362755264 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
-INFO 2026-02-10 19:57:35,967 auth_viewset 173 137549362755264 User logged in: admin@caliente.mx
-INFO 2026-02-10 19:57:35,974 log 173 137549362755264 "POST /api/auth/login/ HTTP/1.1" 200 1174
-INFO 2026-02-10 20:00:32,489 log 173 137549362755264 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
-INFO 2026-02-10 20:00:32,530 auth_viewset 173 137549362755264 User logged out: admin@caliente.mx
-INFO 2026-02-10 20:00:32,534 log 173 137549362755264 "POST /api/auth/logout/ HTTP/1.1" 200 53
-INFO 2026-02-10 20:01:06,009 auth_viewset 173 137549362755264 User logged in: admin@caliente.mx
-INFO 2026-02-10 20:01:06,015 log 173 137549362755264 "POST /api/auth/login/ HTTP/1.1" 200 1174
-INFO 2026-02-10 20:01:38,188 auth_viewset 173 137549362755264 User logged out: admin@caliente.mx
-INFO 2026-02-10 20:01:38,192 log 173 137549362755264 "POST /api/auth/logout/ HTTP/1.1" 200 53
-INFO 2026-02-13 16:34:21,591 autoreload 322 137011587833984 Watching for file changes with StatReloader
-INFO 2026-02-13 16:34:39,640 log 322 137011526719168 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
-INFO 2026-02-13 16:34:40,122 auth_viewset 322 137011526719168 User logged in: admin@caliente.mx
-INFO 2026-02-13 16:34:40,129 log 322 137011526719168 "POST /api/auth/login/ HTTP/1.1" 200 1174
-INFO 2026-02-13 16:54:55,595 log 322 137011526719168 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
-INFO 2026-02-13 16:54:55,678 auth_viewset 322 137011526719168 User logged out: admin@caliente.mx
-INFO 2026-02-13 16:54:55,682 log 322 137011526719168 "POST /api/auth/logout/ HTTP/1.1" 200 53
-INFO 2026-02-13 16:56:07,232 auth_viewset 322 137011526719168 User logged in: admin@caliente.mx
-INFO 2026-02-13 16:56:07,237 log 322 137011526719168 "POST /api/auth/login/ HTTP/1.1" 200 1174
-INFO 2026-02-13 17:10:52,090 autoreload 76 127022852055168 Watching for file changes with StatReloader
-INFO 2026-02-13 17:12:01,092 log 76 127022718252736 "OPTIONS /api/auth/me/ HTTP/1.1" 200 0
-INFO 2026-02-13 17:12:01,620 log 76 127022718252736 "OPTIONS /api/auth/me/ HTTP/1.1" 200 0
-INFO 2026-02-13 17:12:01,719 log 76 127022718252736 "GET /api/auth/me/ HTTP/1.1" 200 504
-INFO 2026-02-13 17:12:06,143 auth_viewset 76 127022718252736 User logged out: admin@caliente.mx
-INFO 2026-02-13 17:12:06,147 log 76 127022718252736 "POST /api/auth/logout/ HTTP/1.1" 200 53
-INFO 2026-02-13 17:12:20,203 auth_viewset 76 127022718252736 User logged in: admin@caliente.mx
-INFO 2026-02-13 17:12:20,209 log 76 127022718252736 "POST /api/auth/login/ HTTP/1.1" 200 1174
-INFO 2026-02-13 17:12:36,735 auth_viewset 76 127022718252736 User logged out: admin@caliente.mx
-INFO 2026-02-13 17:12:36,739 log 76 127022718252736 "POST /api/auth/logout/ HTTP/1.1" 200 53
-INFO 2026-02-13 17:12:49,570 auth_viewset 76 127022718252736 User logged in: manager@caliente.mx
-INFO 2026-02-13 17:12:49,584 log 76 127022718252736 "POST /api/auth/login/ HTTP/1.1" 200 1282
-INFO 2026-02-13 17:12:53,099 auth_viewset 76 127022718252736 User logged out: manager@caliente.mx
-INFO 2026-02-13 17:12:53,102 log 76 127022718252736 "POST /api/auth/logout/ HTTP/1.1" 200 53
-INFO 2026-02-13 17:13:27,465 auth_viewset 76 127022718252736 User logged in: trader@caliente.mx
-INFO 2026-02-13 17:13:27,473 log 76 127022718252736 "POST /api/auth/login/ HTTP/1.1" 200 1297
-INFO 2026-02-13 17:32:13,023 autoreload 114 135788714475648 Watching for file changes with StatReloader
-INFO 2026-02-13 17:32:23,271 log 114 135788653360832 "GET /api/auth/me/ HTTP/1.1" 200 600
-INFO 2026-02-13 17:32:35,114 log 114 135788653360832 "OPTIONS /api/auth/me/ HTTP/1.1" 200 0
-INFO 2026-02-13 17:32:35,169 log 114 135788653360832 "GET /api/auth/me/ HTTP/1.1" 200 600
-INFO 2026-02-13 17:32:41,775 auth_viewset 114 135788653360832 User logged out: trader@caliente.mx
-INFO 2026-02-13 17:32:41,778 log 114 135788653360832 "POST /api/auth/logout/ HTTP/1.1" 200 53
-INFO 2026-02-13 17:32:58,758 auth_viewset 114 135788653360832 User logged in: admin@caliente.mx
-INFO 2026-02-13 17:32:58,763 log 114 135788653360832 "POST /api/auth/login/ HTTP/1.1" 200 1174
-INFO 2026-02-13 17:40:12,743 auth_viewset 114 135788653360832 User logged out: admin@caliente.mx
-INFO 2026-02-13 17:40:12,747 log 114 135788653360832 "POST /api/auth/logout/ HTTP/1.1" 200 53
-INFO 2026-02-13 17:42:51,642 auth_viewset 114 135788653360832 User logged in: admin@caliente.mx
-INFO 2026-02-13 17:42:51,647 log 114 135788653360832 "POST /api/auth/login/ HTTP/1.1" 200 1174
-INFO 2026-02-13 18:15:33,442 autoreload 60 131691450224768 Watching for file changes with StatReloader
-INFO 2026-02-13 18:16:03,643 log 60 131691389109952 "GET /api/auth/me/ HTTP/1.1" 200 504
-INFO 2026-02-13 19:10:19,486 log 60 131691389109952 "GET /api/auth/me/ HTTP/1.1" 200 504
-INFO 2026-02-13 21:08:41,369 autoreload 60 131691450224768 /app/core/api/models.py changed, reloading.
-INFO 2026-02-13 21:08:43,327 autoreload 18616 131085600784512 Watching for file changes with StatReloader
-INFO 2026-02-13 21:08:45,858 autoreload 18616 131085600784512 /app/core/api/models.py changed, reloading.
-INFO 2026-02-13 21:08:46,676 autoreload 18628 131856780652672 Watching for file changes with StatReloader
-INFO 2026-02-13 21:31:58,547 autoreload 1673 135339468980352 Watching for file changes with StatReloader
-INFO 2026-02-13 21:34:12,650 log 1673 135339407865536 "OPTIONS /api/auth/me/ HTTP/1.1" 200 0
-WARNING 2026-02-13 21:34:12,726 log 1673 135339407865536 "GET /api/auth/me/ HTTP/1.1" 401 51
-INFO 2026-02-13 21:34:12,844 log 1673 135339407865536 "OPTIONS /api/auth/token/refresh/ HTTP/1.1" 200 0
-ERROR 2026-02-13 21:34:12,957 log 1673 135339407865536 "POST /api/auth/token/refresh/ HTTP/1.1" 500 19844
-INFO 2026-02-13 21:34:13,061 log 1673 135339407865536 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
-WARNING 2026-02-13 21:34:13,133 log 1673 135339407865536 "POST /api/auth/logout/ HTTP/1.1" 401 51
-INFO 2026-02-13 21:34:55,231 log 1673 135339407865536 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
-INFO 2026-02-13 21:34:55,680 auth_viewset 1673 135339407865536 User logged in: felix.egana@caliente.mx
-INFO 2026-02-13 21:34:55,689 log 1673 135339407865536 "POST /api/auth/login/ HTTP/1.1" 200 1268
-INFO 2026-02-13 22:00:56,967 auth_viewset 1673 135339407865536 User logged out: felix.egana@caliente.mx
-INFO 2026-02-13 22:00:56,972 log 1673 135339407865536 "POST /api/auth/logout/ HTTP/1.1" 200 53
-INFO 2026-02-13 22:01:41,218 auth_viewset 1673 135339407865536 User logged in: felix.egana@caliente.mx
-INFO 2026-02-13 22:01:41,228 log 1673 135339407865536 "POST /api/auth/login/ HTTP/1.1" 200 1268
-INFO 2026-02-13 22:01:41,833 log 1673 135339407865536 "OPTIONS /api/employees/ HTTP/1.1" 200 0
-INFO 2026-02-13 22:01:41,842 log 1673 135339407865536 "OPTIONS /api/shiftcategories/ HTTP/1.1" 200 0
-INFO 2026-02-13 22:01:41,851 log 1673 135339184223936 "OPTIONS /api/shiftcycleconfigs/ HTTP/1.1" 200 0
-INFO 2026-02-13 22:01:41,861 log 1673 135339398407872 "OPTIONS /api/shifttypes/ HTTP/1.1" 200 0
-INFO 2026-02-13 22:01:41,955 log 1673 135339398407872 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
-INFO 2026-02-13 22:01:41,983 log 1673 135339407865536 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
-INFO 2026-02-13 22:01:41,986 log 1673 135339175831232 "GET /api/employees/ HTTP/1.1" 200 5271
-INFO 2026-02-13 22:01:41,989 log 1673 135339184223936 "GET /api/shifttypes/ HTTP/1.1" 200 6571
-INFO 2026-02-13 22:01:42,006 log 1673 135339398407872 "OPTIONS /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 0
-INFO 2026-02-13 22:01:42,081 log 1673 135339398407872 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 2
-INFO 2026-02-13 22:02:24,201 log 1673 135339398407872 "GET /api/auth/me/ HTTP/1.1" 200 579
-INFO 2026-02-13 22:02:24,992 log 1673 135339407865536 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
-INFO 2026-02-13 22:02:25,025 log 1673 135339175831232 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
-INFO 2026-02-13 22:02:25,045 log 1673 135339398407872 "GET /api/employees/ HTTP/1.1" 200 5271
-INFO 2026-02-13 22:02:25,048 log 1673 135339184223936 "GET /api/shifttypes/ HTTP/1.1" 200 6571
-INFO 2026-02-13 22:02:25,157 log 1673 135339184223936 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 2
-INFO 2026-02-13 22:02:29,975 log 1673 135339184223936 "GET /api/auth/me/ HTTP/1.1" 200 579
-INFO 2026-02-13 22:02:30,689 log 1673 135339407865536 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
-INFO 2026-02-13 22:02:30,710 log 1673 135339175831232 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
-INFO 2026-02-13 22:02:30,723 log 1673 135339184223936 "GET /api/employees/ HTTP/1.1" 200 5271
-INFO 2026-02-13 22:02:30,727 log 1673 135339398407872 "GET /api/shifttypes/ HTTP/1.1" 200 6571
-INFO 2026-02-13 22:02:30,800 log 1673 135339398407872 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 2
-INFO 2026-02-13 22:02:33,397 log 1673 135339398407872 "OPTIONS /api/auth/me/ HTTP/1.1" 200 0
-INFO 2026-02-13 22:02:33,465 log 1673 135339398407872 "GET /api/auth/me/ HTTP/1.1" 200 579
-INFO 2026-02-13 22:02:34,201 log 1673 135339407865536 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
-INFO 2026-02-13 22:02:34,219 log 1673 135339175831232 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
-INFO 2026-02-13 22:02:34,235 log 1673 135339398407872 "GET /api/employees/ HTTP/1.1" 200 5271
-INFO 2026-02-13 22:02:34,238 log 1673 135339184223936 "GET /api/shifttypes/ HTTP/1.1" 200 6571
-INFO 2026-02-13 22:02:34,325 log 1673 135339184223936 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 2
-INFO 2026-02-13 22:03:10,487 log 1673 135339184223936 "OPTIONS /api/schedules/grid-edit/ HTTP/1.1" 200 0
-WARNING 2026-02-13 22:03:10,516 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:13,554 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:14,180 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:14,712 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:15,428 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:15,960 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:16,517 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:17,012 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:17,558 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:20,619 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:21,088 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:21,571 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:23,667 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:24,173 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:24,887 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:25,466 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:27,054 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:28,944 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:29,504 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:29,950 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:30,394 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:31,240 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-WARNING 2026-02-13 22:03:31,645 log 1673 135339184223936 "POST /api/schedules/grid-edit/ HTTP/1.1" 405 41
-ERROR 2026-02-13 22:06:29,805 log 1673 135339167438528 Invalid HTTP_HOST header: 'backend_caliente:8000'. The domain name provided is not valid according to RFC 1034/1035.
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.12/dist-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/django/utils/deprecation.py", line 308, in __call__
-    response = self.process_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-           ^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/dist-packages/django/http/request.py", line 205, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'backend_caliente:8000'. The domain name provided is not valid according to RFC 1034/1035.
-WARNING 2026-02-13 22:06:29,808 log 1673 135339167438528 "POST /api/auth/login/ HTTP/1.1" 400 68193
-WARNING 2026-02-13 22:07:46,346 log 1673 135339167438528 "POST /api/auth/login/ HTTP/1.1" 400 76
-INFO 2026-02-13 22:07:59,382 auth_viewset 1673 135339167438528 User logged in: felix.egana@caliente.mx
-INFO 2026-02-13 22:07:59,394 log 1673 135339167438528 "POST /api/auth/login/ HTTP/1.1" 200 1268
-INFO 2026-02-13 22:08:06,399 auth_viewset 1673 135339167438528 User logged in: felix.egana@caliente.mx
-INFO 2026-02-13 22:08:06,412 log 1673 135339167438528 "POST /api/auth/login/ HTTP/1.1" 200 1268
-INFO 2026-02-13 22:08:06,446 log 1673 135339159045824 "GET /api/employees/ HTTP/1.1" 200 5271
-INFO 2026-02-13 22:08:54,551 auth_viewset 1673 135339159045824 User logged in: felix.egana@caliente.mx
-INFO 2026-02-13 22:08:54,568 log 1673 135339159045824 "POST /api/auth/login/ HTTP/1.1" 200 1268
-INFO 2026-02-13 22:08:54,602 log 1673 135339167438528 "GET /api/shifttypes/ HTTP/1.1" 200 6571
-INFO 2026-02-13 22:08:54,628 log 1673 135339167438528 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
-INFO 2026-02-13 22:08:54,656 log 1673 135339159045824 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 2
-INFO 2026-02-13 22:10:24,132 auth_viewset 1673 135339175831232 User logged in: felix.egana@caliente.mx
-INFO 2026-02-13 22:10:24,143 log 1673 135339175831232 "POST /api/auth/login/ HTTP/1.1" 200 1268
-WARNING 2026-02-13 22:10:24,168 log 1673 135339407865536 "POST /api/schedules/ HTTP/1.1" 400 81
-INFO 2026-02-13 22:10:30,803 auth_viewset 1673 135339407865536 User logged in: felix.egana@caliente.mx
-INFO 2026-02-13 22:10:30,812 log 1673 135339407865536 "POST /api/auth/login/ HTTP/1.1" 200 1268
-INFO 2026-02-13 22:10:30,863 log 1673 135339175831232 "POST /api/schedules/ HTTP/1.1" 201 399
-INFO 2026-02-13 22:19:47,902 autoreload 1673 135339468980352 /app/core/api/Serializers/employee_serializer.py changed, reloading.
-INFO 2026-02-13 22:19:49,493 autoreload 7281 135095107301504 Watching for file changes with StatReloader
-INFO 2026-02-13 22:19:54,148 autoreload 7281 135095107301504 /app/core/api/Viewsets/employee_viewset.py changed, reloading.
-INFO 2026-02-13 22:19:54,956 autoreload 7297 130362459115648 Watching for file changes with StatReloader
-INFO 2026-02-13 22:22:07,666 autoreload 222 127828124524672 Watching for file changes with StatReloader
-WARNING 2026-02-13 22:22:46,345 log 222 127828063409856 "GET /api/employees/ HTTP/1.1" 401 58
-WARNING 2026-02-13 22:22:51,721 log 222 127828063409856 "POST /api/auth/login/ HTTP/1.1" 400 76
-WARNING 2026-02-13 22:22:56,812 log 222 127828063409856 "POST /api/auth/login/ HTTP/1.1" 400 76
-WARNING 2026-02-13 22:23:01,468 log 222 127828063409856 "POST /api/auth/login/ HTTP/1.1" 400 76
-WARNING 2026-02-13 22:23:07,099 log 222 127828063409856 "POST /api/auth/login/ HTTP/1.1" 400 76
-INFO 2026-02-13 22:23:18,608 auth_viewset 222 127828063409856 User logged in: felix.egana@caliente.mx
-INFO 2026-02-13 22:23:18,617 log 222 127828063409856 "POST /api/auth/login/ HTTP/1.1" 200 1268
-WARNING 2026-02-13 22:23:29,926 log 222 127828063409856 "GET /api/employees/ HTTP/1.1" 401 107
-INFO 2026-02-13 22:23:37,481 log 222 127828063409856 "GET /api/employees/ HTTP/1.1" 200 8187
-INFO 2026-02-13 22:24:14,251 log 222 127828063409856 "GET /api/auth/me/ HTTP/1.1" 200 579
-INFO 2026-02-13 22:24:15,158 log 222 127828037134016 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
-INFO 2026-02-13 22:24:15,183 log 222 127828045543104 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
-INFO 2026-02-13 22:24:15,204 log 222 127828053952192 "GET /api/shifttypes/ HTTP/1.1" 200 6571
-INFO 2026-02-13 22:24:15,209 log 222 127828063409856 "GET /api/employees/ HTTP/1.1" 200 8187
-INFO 2026-02-13 22:24:15,253 log 222 127828063409856 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 401
-INFO 2026-02-13 22:24:20,407 auth_viewset 222 127828063409856 User logged out: felix.egana@caliente.mx
-INFO 2026-02-13 22:24:20,411 log 222 127828063409856 "POST /api/auth/logout/ HTTP/1.1" 200 53
-INFO 2026-02-13 22:24:41,285 auth_viewset 222 127828063409856 User logged in: felix.egana@caliente.mx
-INFO 2026-02-13 22:24:41,293 log 222 127828063409856 "POST /api/auth/login/ HTTP/1.1" 200 1268
-INFO 2026-02-13 22:24:41,423 log 222 127828037134016 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
-INFO 2026-02-13 22:24:41,442 log 222 127828045543104 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
-INFO 2026-02-13 22:24:41,460 log 222 127828053952192 "GET /api/shifttypes/ HTTP/1.1" 200 6571
-INFO 2026-02-13 22:24:41,463 log 222 127828063409856 "GET /api/employees/ HTTP/1.1" 200 8187
-INFO 2026-02-13 22:24:41,498 log 222 127828063409856 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 401
-INFO 2026-02-13 22:25:28,240 log 222 127828037134016 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
-INFO 2026-02-13 22:25:28,259 log 222 127828045543104 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
-INFO 2026-02-13 22:25:28,276 log 222 127828053952192 "GET /api/shifttypes/ HTTP/1.1" 200 6571
-INFO 2026-02-13 22:25:28,280 log 222 127828063409856 "GET /api/employees/ HTTP/1.1" 200 8187
-INFO 2026-02-13 22:25:28,311 log 222 127828063409856 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 401
-INFO 2026-02-13 22:25:33,482 log 222 127828037134016 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
-INFO 2026-02-13 22:25:33,501 log 222 127828045543104 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
-INFO 2026-02-13 22:25:33,518 log 222 127828053952192 "GET /api/shifttypes/ HTTP/1.1" 200 6571
-INFO 2026-02-13 22:25:33,522 log 222 127828063409856 "GET /api/employees/ HTTP/1.1" 200 8187
-INFO 2026-02-13 22:25:33,560 log 222 127828063409856 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 401
-INFO 2026-02-13 22:30:21,172 log 222 127828063409856 "GET /api/auth/me/ HTTP/1.1" 200 579
-INFO 2026-02-13 22:30:21,927 log 222 127828037134016 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
-INFO 2026-02-13 22:30:21,942 log 222 127828045543104 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
-INFO 2026-02-13 22:30:21,970 log 222 127828053952192 "GET /api/shifttypes/ HTTP/1.1" 200 6571
-INFO 2026-02-13 22:30:21,980 log 222 127828063409856 "GET /api/employees/ HTTP/1.1" 200 8187
-INFO 2026-02-13 22:30:22,011 log 222 127828063409856 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 401
-INFO 2026-02-13 22:30:24,965 log 222 127828053952192 "OPTIONS /api/teams/ HTTP/1.1" 200 0
-INFO 2026-02-13 22:30:25,007 log 222 127828063409856 "GET /api/employees/ HTTP/1.1" 200 8187
-INFO 2026-02-13 22:30:25,011 log 222 127828053952192 "GET /api/teams/ HTTP/1.1" 200 273
-INFO 2026-02-13 22:31:22,278 log 222 127828037134016 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
-INFO 2026-02-13 22:31:22,300 log 222 127828045543104 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
-INFO 2026-02-13 22:31:22,316 log 222 127828063409856 "GET /api/shifttypes/ HTTP/1.1" 200 6571
-INFO 2026-02-13 22:31:22,319 log 222 127828053952192 "GET /api/employees/ HTTP/1.1" 200 8187
-INFO 2026-02-13 22:31:22,349 log 222 127828053952192 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 401
-INFO 2026-02-13 22:31:25,457 log 222 127828053952192 "OPTIONS /api/schedules/ HTTP/1.1" 200 0
-INFO 2026-02-13 22:31:25,499 log 222 127828053952192 "POST /api/schedules/ HTTP/1.1" 201 399
-INFO 2026-02-13 22:31:26,706 log 222 127828053952192 "POST /api/schedules/ HTTP/1.1" 201 399
-INFO 2026-02-13 22:31:29,888 log 222 127828053952192 "POST /api/schedules/ HTTP/1.1" 201 399
-INFO 2026-02-13 22:31:30,903 log 222 127828053952192 "POST /api/schedules/ HTTP/1.1" 201 399
-INFO 2026-02-13 22:31:32,459 log 222 127828053952192 "OPTIONS /api/schedules/8550620c-f614-4ef4-bd3d-9c450ee0e26d/ HTTP/1.1" 200 0
-WARNING 2026-02-13 22:31:32,483 log 222 127828053952192 "PATCH /api/schedules/8550620c-f614-4ef4-bd3d-9c450ee0e26d/ HTTP/1.1" 404 23
-INFO 2026-02-13 22:31:34,848 log 222 127828053952192 "POST /api/schedules/ HTTP/1.1" 201 399
-INFO 2026-02-13 22:31:35,435 log 222 127828053952192 "OPTIONS /api/schedules/3049ed79-d79a-47eb-bb12-c0ab4bfab203/ HTTP/1.1" 200 0
-WARNING 2026-02-13 22:31:35,457 log 222 127828053952192 "PATCH /api/schedules/3049ed79-d79a-47eb-bb12-c0ab4bfab203/ HTTP/1.1" 404 23
-WARNING 2026-02-13 22:31:36,262 log 222 127828053952192 "PATCH /api/schedules/3049ed79-d79a-47eb-bb12-c0ab4bfab203/ HTTP/1.1" 404 23
-WARNING 2026-02-13 22:31:37,043 log 222 127828053952192 "PATCH /api/schedules/3049ed79-d79a-47eb-bb12-c0ab4bfab203/ HTTP/1.1" 404 23
-INFO 2026-02-13 22:31:59,963 log 222 127828063409856 "GET /api/teams/ HTTP/1.1" 200 273
-INFO 2026-02-13 22:31:59,981 log 222 127828053952192 "GET /api/employees/ HTTP/1.1" 200 8187
-INFO 2026-02-13 22:32:06,073 log 222 127828037134016 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
-INFO 2026-02-13 22:32:06,096 log 222 127828045543104 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
-INFO 2026-02-13 22:32:06,110 log 222 127828063409856 "GET /api/shifttypes/ HTTP/1.1" 200 6571
-INFO 2026-02-13 22:32:06,128 log 222 127828053952192 "GET /api/employees/ HTTP/1.1" 200 8187
-INFO 2026-02-13 22:32:06,163 log 222 127828053952192 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 2401
-INFO 2026-02-13 22:32:13,683 log 222 127828063409856 "GET /api/teams/ HTTP/1.1" 200 273
-INFO 2026-02-13 22:32:13,699 log 222 127828053952192 "GET /api/employees/ HTTP/1.1" 200 8187
-INFO 2026-02-13 22:32:35,237 auth_viewset 222 127828053952192 User logged out: felix.egana@caliente.mx
-INFO 2026-02-13 22:32:35,241 log 222 127828053952192 "POST /api/auth/logout/ HTTP/1.1" 200 53
-INFO 2026-02-13 22:32:49,170 auth_viewset 222 127828053952192 User logged in: jorge.duenas@caliente.mx
-INFO 2026-02-13 22:32:49,178 log 222 127828053952192 "POST /api/auth/login/ HTTP/1.1" 200 1312
-INFO 2026-02-13 22:32:49,324 log 222 127828037134016 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
-INFO 2026-02-13 22:32:49,330 log 222 127828045543104 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
-INFO 2026-02-13 22:32:49,351 log 222 127828063409856 "GET /api/shifttypes/ HTTP/1.1" 200 6571
-INFO 2026-02-13 22:32:49,355 log 222 127828053952192 "GET /api/employees/ HTTP/1.1" 200 8187
-INFO 2026-02-13 22:32:49,388 log 222 127828053952192 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 2401
-INFO 2026-02-13 22:32:55,792 log 222 127828053952192 "OPTIONS /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 0
-INFO 2026-02-13 22:32:55,820 log 222 127828053952192 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 2401
-INFO 2026-02-13 22:32:55,965 log 222 127828053952192 "OPTIONS /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 0
-INFO 2026-02-13 22:32:55,991 log 222 127828053952192 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 2401
-INFO 2026-02-13 22:32:56,185 log 222 127828053952192 "OPTIONS /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 0
-INFO 2026-02-13 22:32:56,214 log 222 127828053952192 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 2401
-INFO 2026-02-13 22:32:56,956 log 222 127828053952192 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 2401
-INFO 2026-02-13 22:33:22,279 auth_viewset 222 127828053952192 User logged out: jorge.duenas@caliente.mx
-INFO 2026-02-13 22:33:22,282 log 222 127828053952192 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 17:12:16,759 autoreload 93 132676465021056 Watching for file changes with StatReloader
+INFO 2026-02-16 17:12:53,639 log 93 132676403906240 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-02-16 17:12:54,099 auth_viewset 93 132676403906240 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 17:12:54,112 log 93 132676403906240 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 17:12:54,596 log 93 132676403906240 "OPTIONS /api/employees/ HTTP/1.1" 200 0
+INFO 2026-02-16 17:12:54,609 log 93 132676403906240 "OPTIONS /api/shiftcategories/ HTTP/1.1" 200 0
+INFO 2026-02-16 17:12:54,612 log 93 132676395497152 "OPTIONS /api/shifttypes/ HTTP/1.1" 200 0
+INFO 2026-02-16 17:12:54,613 log 93 132676387088064 "OPTIONS /api/shiftcycleconfigs/ HTTP/1.1" 200 0
+INFO 2026-02-16 17:12:54,699 log 93 132676395497152 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:12:54,709 log 93 132676170282688 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 17:12:54,732 log 93 132676387088064 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 17:12:54,734 log 93 132676403906240 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 17:12:54,751 log 93 132676395497152 "OPTIONS /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 0
+INFO 2026-02-16 17:12:54,877 log 93 132676395497152 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185925
+INFO 2026-02-16 17:13:02,351 log 93 132676395497152 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 185925
+INFO 2026-02-16 17:13:03,031 log 93 132676395497152 "OPTIONS /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 0
+INFO 2026-02-16 17:13:03,159 log 93 132676395497152 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 185925
+INFO 2026-02-16 17:15:26,143 log 93 132676395497152 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:15:26,151 log 93 132676403906240 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:16:53,296 log 93 132676170282688 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:16:53,308 log 93 132676387088064 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 17:16:53,333 log 93 132676403906240 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 17:16:53,336 log 93 132676395497152 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 17:16:53,427 log 93 132676395497152 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185925
+INFO 2026-02-16 17:16:55,477 log 93 132676395497152 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 185925
+INFO 2026-02-16 17:16:56,568 log 93 132676395497152 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 185925
+INFO 2026-02-16 17:16:57,026 log 93 132676395497152 "OPTIONS /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 0
+INFO 2026-02-16 17:16:57,216 log 93 132676395497152 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 185925
+INFO 2026-02-16 17:16:57,460 log 93 132676395497152 "OPTIONS /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 0
+INFO 2026-02-16 17:16:57,594 log 93 132676395497152 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 185925
+INFO 2026-02-16 17:16:57,923 log 93 132676395497152 "OPTIONS /api/schedules/?date_from=2026-03-23&date_to=2026-03-29 HTTP/1.1" 200 0
+INFO 2026-02-16 17:16:58,115 log 93 132676395497152 "GET /api/schedules/?date_from=2026-03-23&date_to=2026-03-29 HTTP/1.1" 200 185925
+INFO 2026-02-16 17:16:58,383 log 93 132676395497152 "OPTIONS /api/schedules/?date_from=2026-03-30&date_to=2026-04-05 HTTP/1.1" 200 0
+INFO 2026-02-16 17:16:58,562 log 93 132676395497152 "GET /api/schedules/?date_from=2026-03-30&date_to=2026-04-05 HTTP/1.1" 200 185925
+INFO 2026-02-16 17:17:06,547 log 93 132676395497152 "OPTIONS /api/schedules/generate/ HTTP/1.1" 200 0
+INFO 2026-02-16 17:17:08,844 log 93 132676395497152 "POST /api/schedules/generate/ HTTP/1.1" 201 424
+INFO 2026-02-16 17:17:09,010 log 93 132676395497152 "GET /api/schedules/?date_from=2026-03-30&date_to=2026-04-05 HTTP/1.1" 200 360260
+INFO 2026-02-16 17:18:31,640 log 93 132676395497152 "OPTIONS /api/schedules/808e1640-cb0d-42bb-a55d-519f0fbdfcf2/ HTTP/1.1" 200 0
+WARNING 2026-02-16 17:18:31,711 log 93 132676395497152 "PATCH /api/schedules/808e1640-cb0d-42bb-a55d-519f0fbdfcf2/ HTTP/1.1" 404 23
+WARNING 2026-02-16 17:18:32,239 log 93 132676395497152 "PATCH /api/schedules/808e1640-cb0d-42bb-a55d-519f0fbdfcf2/ HTTP/1.1" 404 23
+WARNING 2026-02-16 17:18:32,822 log 93 132676395497152 "PATCH /api/schedules/808e1640-cb0d-42bb-a55d-519f0fbdfcf2/ HTTP/1.1" 404 23
+WARNING 2026-02-16 17:18:33,492 log 93 132676395497152 "DELETE /api/schedules/808e1640-cb0d-42bb-a55d-519f0fbdfcf2/ HTTP/1.1" 404 23
+INFO 2026-02-16 17:19:38,318 autoreload 968 139192398942336 Watching for file changes with StatReloader
+WARNING 2026-02-16 17:19:52,692 log 968 139192337827520 "POST /api/auth/login/ HTTP/1.1" 400 41
+INFO 2026-02-16 17:19:58,934 auth_viewset 968 139192337827520 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 17:19:58,943 log 968 139192337827520 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 17:19:59,089 log 968 139192105432768 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:19:59,105 log 968 139192321009344 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 17:19:59,120 log 968 139192329418432 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 17:19:59,122 log 968 139192337827520 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 17:19:59,155 log 968 139192337827520 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 2801
+WARNING 2026-02-16 17:20:01,112 log 968 139192337827520 "PATCH /api/schedules/7d5bb44e-9443-48de-973f-d6a22986209e/ HTTP/1.1" 404 23
+WARNING 2026-02-16 17:20:01,675 log 968 139192337827520 "PATCH /api/schedules/7d5bb44e-9443-48de-973f-d6a22986209e/ HTTP/1.1" 404 23
+WARNING 2026-02-16 17:20:02,245 log 968 139192337827520 "PATCH /api/schedules/7d5bb44e-9443-48de-973f-d6a22986209e/ HTTP/1.1" 404 23
+WARNING 2026-02-16 17:20:02,891 log 968 139192337827520 "DELETE /api/schedules/7d5bb44e-9443-48de-973f-d6a22986209e/ HTTP/1.1" 404 23
+INFO 2026-02-16 17:20:04,276 log 968 139192337827520 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:04,964 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:05,344 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:05,593 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:05,801 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-23&date_to=2026-03-29 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:05,957 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-30&date_to=2026-04-05 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:06,102 log 968 139192337827520 "OPTIONS /api/schedules/?date_from=2026-04-06&date_to=2026-04-12 HTTP/1.1" 200 0
+INFO 2026-02-16 17:20:06,129 log 968 139192337827520 "GET /api/schedules/?date_from=2026-04-06&date_to=2026-04-12 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:06,269 log 968 139192337827520 "OPTIONS /api/schedules/?date_from=2026-04-13&date_to=2026-04-19 HTTP/1.1" 200 0
+INFO 2026-02-16 17:20:06,295 log 968 139192337827520 "GET /api/schedules/?date_from=2026-04-13&date_to=2026-04-19 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:06,439 log 968 139192337827520 "OPTIONS /api/schedules/?date_from=2026-04-20&date_to=2026-04-26 HTTP/1.1" 200 0
+INFO 2026-02-16 17:20:06,464 log 968 139192337827520 "GET /api/schedules/?date_from=2026-04-20&date_to=2026-04-26 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:07,076 log 968 139192337827520 "GET /api/schedules/?date_from=2026-04-13&date_to=2026-04-19 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:07,252 log 968 139192337827520 "GET /api/schedules/?date_from=2026-04-06&date_to=2026-04-12 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:07,400 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-30&date_to=2026-04-05 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:07,539 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-23&date_to=2026-03-29 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:07,664 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:07,789 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:07,919 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:08,057 log 968 139192337827520 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:08,205 log 968 139192337827520 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 2801
+WARNING 2026-02-16 17:20:10,001 log 968 139192337827520 "PATCH /api/schedules/7d5bb44e-9443-48de-973f-d6a22986209e/ HTTP/1.1" 404 23
+WARNING 2026-02-16 17:20:10,890 log 968 139192337827520 "PATCH /api/schedules/7d5bb44e-9443-48de-973f-d6a22986209e/ HTTP/1.1" 404 23
+WARNING 2026-02-16 17:20:11,270 log 968 139192337827520 "PATCH /api/schedules/7d5bb44e-9443-48de-973f-d6a22986209e/ HTTP/1.1" 404 23
+WARNING 2026-02-16 17:20:12,034 log 968 139192337827520 "DELETE /api/schedules/7d5bb44e-9443-48de-973f-d6a22986209e/ HTTP/1.1" 404 23
+INFO 2026-02-16 17:20:19,459 log 968 139192337827520 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:19,633 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:19,769 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:19,922 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:20,062 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-23&date_to=2026-03-29 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:20,213 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-30&date_to=2026-04-05 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:20,349 log 968 139192337827520 "GET /api/schedules/?date_from=2026-04-06&date_to=2026-04-12 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:20,486 log 968 139192337827520 "GET /api/schedules/?date_from=2026-04-13&date_to=2026-04-19 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:21,048 log 968 139192337827520 "GET /api/schedules/?date_from=2026-04-06&date_to=2026-04-12 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:21,226 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-30&date_to=2026-04-05 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:21,349 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-23&date_to=2026-03-29 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:21,476 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:21,600 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:21,724 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:21,863 log 968 139192337827520 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:21,969 log 968 139192337827520 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:22,121 log 968 139192337827520 "OPTIONS /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 0
+INFO 2026-02-16 17:20:22,149 log 968 139192337827520 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:22,997 log 968 139192337827520 "OPTIONS /api/schedules/?date_from=2026-02-02&date_to=2026-02-08 HTTP/1.1" 200 0
+INFO 2026-02-16 17:20:23,024 log 968 139192337827520 "GET /api/schedules/?date_from=2026-02-02&date_to=2026-02-08 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:20:24,458 log 968 139192337827520 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 2801
+INFO 2026-02-16 17:23:25,968 log 968 139192337827520 "POST /api/schedules/generate/ HTTP/1.1" 201 424
+INFO 2026-02-16 17:23:26,050 log 968 139192337827520 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 186308
+INFO 2026-02-16 17:23:28,942 log 968 139192337827520 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 186308
+INFO 2026-02-16 17:23:29,298 log 968 139192337827520 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 186308
+INFO 2026-02-16 17:23:29,593 log 968 139192337827520 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 186308
+INFO 2026-02-16 17:24:15,945 auth_viewset 968 139192337827520 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 17:24:15,949 log 968 139192337827520 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 17:24:25,219 auth_viewset 968 139192337827520 User logged in: milton.najera@caliente.mx
+INFO 2026-02-16 17:24:25,228 log 968 139192337827520 "POST /api/auth/login/ HTTP/1.1" 200 1320
+INFO 2026-02-16 17:24:25,389 log 968 139192105432768 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:24:25,415 log 968 139192321009344 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 17:24:25,445 log 968 139192329418432 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 17:24:25,450 log 968 139192337827520 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 17:24:25,562 log 968 139192337827520 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 186308
+INFO 2026-02-16 17:24:32,256 autoreload 968 139192398942336 /app/core/api/Viewsets/schedule_viewset.py changed, reloading.
+INFO 2026-02-16 17:24:33,035 autoreload 1569 127784619700352 Watching for file changes with StatReloader
+INFO 2026-02-16 17:24:35,620 autoreload 1569 127784619700352 /app/core/api/Viewsets/sport_event_viewset.py changed, reloading.
+INFO 2026-02-16 17:24:36,544 autoreload 1579 130276138705024 Watching for file changes with StatReloader
+INFO 2026-02-16 17:24:39,248 autoreload 1579 130276138705024 /app/core/api/Viewsets/vacation_viewset.py changed, reloading.
+INFO 2026-02-16 17:24:40,039 autoreload 1590 137305002238080 Watching for file changes with StatReloader
+INFO 2026-02-16 17:24:47,454 auth_viewset 1590 137304869959360 User logged out: milton.najera@caliente.mx
+INFO 2026-02-16 17:24:47,460 log 1590 137304869959360 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 17:24:55,075 auth_viewset 1590 137304869959360 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 17:24:55,084 log 1590 137304869959360 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 17:24:55,222 log 1590 137304844781248 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:24:55,240 log 1590 137304853173952 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 17:24:55,254 log 1590 137304861566656 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 17:24:55,257 log 1590 137304869959360 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 17:24:55,345 log 1590 137304869959360 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 186308
+INFO 2026-02-16 17:24:57,121 log 1590 137304861566656 "GET /api/teams/ HTTP/1.1" 200 273
+INFO 2026-02-16 17:24:57,134 log 1590 137304869959360 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 17:25:16,988 log 1590 137304869959360 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:25:16,993 log 1590 137304861566656 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:26:40,488 autoreload 184 126436515328128 Watching for file changes with StatReloader
+INFO 2026-02-16 17:26:46,439 auth_viewset 184 126436387059392 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 17:26:46,444 log 184 126436387059392 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 17:27:03,366 auth_viewset 184 126436387059392 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 17:27:03,375 log 184 126436387059392 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 17:27:04,055 log 184 126436360816320 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:27:04,059 log 184 126436369225408 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 17:27:04,076 log 184 126436377618112 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 17:27:04,078 log 184 126436387059392 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 17:27:04,165 log 184 126436387059392 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185884
+INFO 2026-02-16 17:27:15,934 log 184 126436387059392 "POST /api/schedules/generate/ HTTP/1.1" 201 489
+INFO 2026-02-16 17:27:16,051 log 184 126436387059392 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185884
+INFO 2026-02-16 17:27:24,797 log 184 126436387059392 "POST /api/schedules/generate/ HTTP/1.1" 201 489
+INFO 2026-02-16 17:27:24,916 log 184 126436387059392 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185884
+INFO 2026-02-16 17:28:30,205 log 184 126436387059392 "POST /api/schedules/ HTTP/1.1" 201 402
+INFO 2026-02-16 17:28:39,673 log 184 126436387059392 "POST /api/schedules/ HTTP/1.1" 201 402
+INFO 2026-02-16 17:28:41,157 log 184 126436387059392 "OPTIONS /api/schedules/27a15753-c59d-4621-bbdb-425a418250c2/ HTTP/1.1" 200 0
+INFO 2026-02-16 17:28:41,204 log 184 126436387059392 "PATCH /api/schedules/27a15753-c59d-4621-bbdb-425a418250c2/ HTTP/1.1" 200 402
+INFO 2026-02-16 17:28:41,405 log 184 126436387059392 "PATCH /api/schedules/27a15753-c59d-4621-bbdb-425a418250c2/ HTTP/1.1" 200 402
+INFO 2026-02-16 17:28:41,999 log 184 126436387059392 "PATCH /api/schedules/27a15753-c59d-4621-bbdb-425a418250c2/ HTTP/1.1" 200 366
+INFO 2026-02-16 17:44:23,120 log 184 126436387059392 "OPTIONS /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 0
+INFO 2026-02-16 17:44:23,231 log 184 126436387059392 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 186654
+INFO 2026-02-16 17:44:23,871 log 184 126436387059392 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 186654
+INFO 2026-02-16 17:44:24,116 log 184 126436387059392 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 186654
+INFO 2026-02-16 17:44:24,447 log 184 126436387059392 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 186654
+INFO 2026-02-16 17:44:24,563 log 184 126436387059392 "GET /api/schedules/?date_from=2026-03-23&date_to=2026-03-29 HTTP/1.1" 200 186654
+INFO 2026-02-16 17:44:24,746 log 184 126436387059392 "GET /api/schedules/?date_from=2026-03-30&date_to=2026-04-05 HTTP/1.1" 200 186654
+INFO 2026-02-16 17:44:24,936 log 184 126436387059392 "GET /api/schedules/?date_from=2026-04-06&date_to=2026-04-12 HTTP/1.1" 200 186654
+INFO 2026-02-16 17:44:25,111 log 184 126436387059392 "GET /api/schedules/?date_from=2026-04-13&date_to=2026-04-19 HTTP/1.1" 200 186654
+INFO 2026-02-16 17:44:31,335 log 184 126436387059392 "POST /api/schedules/generate/ HTTP/1.1" 201 424
+INFO 2026-02-16 17:44:31,465 log 184 126436387059392 "GET /api/schedules/?date_from=2026-04-13&date_to=2026-04-19 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:44:40,582 log 184 126436387059392 "GET /api/schedules/?date_from=2026-04-20&date_to=2026-04-26 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:44:40,716 log 184 126436387059392 "OPTIONS /api/schedules/?date_from=2026-04-27&date_to=2026-05-03 HTTP/1.1" 200 0
+INFO 2026-02-16 17:44:40,883 log 184 126436387059392 "GET /api/schedules/?date_from=2026-04-27&date_to=2026-05-03 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:44:40,935 log 184 126436387059392 "OPTIONS /api/schedules/?date_from=2026-05-04&date_to=2026-05-10 HTTP/1.1" 200 0
+INFO 2026-02-16 17:44:41,056 log 184 126436387059392 "GET /api/schedules/?date_from=2026-05-04&date_to=2026-05-10 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:44:42,525 log 184 126436387059392 "GET /api/schedules/?date_from=2026-04-27&date_to=2026-05-03 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:45:12,121 log 184 126436387059392 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+INFO 2026-02-16 17:45:12,196 auth_viewset 184 126436387059392 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 17:45:12,200 log 184 126436387059392 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 17:45:20,340 auth_viewset 184 126436387059392 User logged in: milton.najera@caliente.mx
+INFO 2026-02-16 17:45:20,349 log 184 126436387059392 "POST /api/auth/login/ HTTP/1.1" 200 1320
+INFO 2026-02-16 17:45:20,504 log 184 126436360816320 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:45:20,516 log 184 126436369225408 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 17:45:20,530 log 184 126436377618112 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 17:45:20,532 log 184 126436387059392 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 17:45:20,658 log 184 126436387059392 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:45:26,089 log 184 126436387059392 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:45:26,378 log 184 126436387059392 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:45:26,670 log 184 126436387059392 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:45:27,799 log 184 126436387059392 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:45:28,744 log 184 126436387059392 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:45:28,902 log 184 126436387059392 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:45:56,268 log 184 126436387059392 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:45:56,619 log 184 126436387059392 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:45:56,875 log 184 126436387059392 "GET /api/schedules/?date_from=2026-03-23&date_to=2026-03-29 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:45:57,040 log 184 126436387059392 "GET /api/schedules/?date_from=2026-03-30&date_to=2026-04-05 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:45:57,220 log 184 126436387059392 "GET /api/schedules/?date_from=2026-04-06&date_to=2026-04-12 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:45:57,376 log 184 126436387059392 "GET /api/schedules/?date_from=2026-04-13&date_to=2026-04-19 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:45:57,612 log 184 126436387059392 "GET /api/schedules/?date_from=2026-04-20&date_to=2026-04-26 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:45:57,768 log 184 126436387059392 "GET /api/schedules/?date_from=2026-04-27&date_to=2026-05-03 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:45:59,899 log 184 126436387059392 "GET /api/schedules/?date_from=2026-04-20&date_to=2026-04-26 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:00,063 log 184 126436377618112 "GET /api/schedules/?date_from=2026-04-13&date_to=2026-04-19 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:00,285 log 184 126436387059392 "GET /api/schedules/?date_from=2026-04-06&date_to=2026-04-12 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:06,301 log 184 126436387059392 "GET /api/schedules/?date_from=2026-03-30&date_to=2026-04-05 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:06,553 log 184 126436387059392 "GET /api/schedules/?date_from=2026-03-23&date_to=2026-03-29 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:06,667 log 184 126436377618112 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:07,731 log 184 126436377618112 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:13,702 log 184 126436377618112 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:13,995 log 184 126436377618112 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:14,288 log 184 126436377618112 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:15,221 log 184 126436377618112 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:15,649 log 184 126436377618112 "GET /api/schedules/?date_from=2026-03-23&date_to=2026-03-29 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:15,846 log 184 126436377618112 "GET /api/schedules/?date_from=2026-03-30&date_to=2026-04-05 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:16,617 auth_viewset 184 126436377618112 User logged out: milton.najera@caliente.mx
+INFO 2026-02-16 17:46:16,621 log 184 126436377618112 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 17:46:24,157 auth_viewset 184 126436377618112 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 17:46:24,165 log 184 126436377618112 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 17:46:24,297 log 184 126436360816320 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:46:24,330 log 184 126436369225408 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 17:46:24,353 log 184 126436387059392 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 17:46:24,360 log 184 126436377618112 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 17:46:24,560 log 184 126436377618112 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:26,279 log 184 126436377618112 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:26,501 log 184 126436377618112 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:26,677 log 184 126436377618112 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:26,909 log 184 126436377618112 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:27,155 log 184 126436377618112 "GET /api/schedules/?date_from=2026-03-23&date_to=2026-03-29 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:27,544 log 184 126436377618112 "GET /api/schedules/?date_from=2026-03-30&date_to=2026-04-05 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:27,821 log 184 126436377618112 "GET /api/schedules/?date_from=2026-04-06&date_to=2026-04-12 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:28,378 log 184 126436377618112 "GET /api/schedules/?date_from=2026-04-13&date_to=2026-04-19 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:28,730 log 184 126436377618112 "GET /api/schedules/?date_from=2026-04-20&date_to=2026-04-26 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:29,045 log 184 126436377618112 "GET /api/schedules/?date_from=2026-04-27&date_to=2026-05-03 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:29,283 log 184 126436377618112 "GET /api/schedules/?date_from=2026-05-04&date_to=2026-05-10 HTTP/1.1" 200 361402
+INFO 2026-02-16 17:46:36,436 log 184 126436377618112 "POST /api/schedules/generate/ HTTP/1.1" 201 424
+INFO 2026-02-16 17:46:36,660 log 184 126436377618112 "GET /api/schedules/?date_from=2026-05-04&date_to=2026-05-10 HTTP/1.1" 200 542075
+INFO 2026-02-16 17:47:55,531 log 184 126436387059392 "GET /api/teams/ HTTP/1.1" 200 273
+INFO 2026-02-16 17:47:55,552 log 184 126436377618112 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 17:48:01,664 auth_viewset 184 126436377618112 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 17:48:01,669 log 184 126436377618112 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 17:49:26,476 autoreload 2846 136581041881216 Watching for file changes with StatReloader
+INFO 2026-02-16 17:49:28,533 auth_viewset 2846 136580981814976 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 17:49:28,542 log 2846 136580981814976 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 17:49:28,676 log 2846 136580882749120 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:49:28,695 log 2846 136580891141824 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 17:49:28,710 log 2846 136580899534528 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 17:49:28,714 log 2846 136580981814976 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 17:49:28,745 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 3571
+INFO 2026-02-16 17:50:27,561 log 2846 136580981814976 "PATCH /api/schedules/7d5bb44e-9443-48de-973f-d6a22986209e/ HTTP/1.1" 200 399
+INFO 2026-02-16 17:50:27,919 log 2846 136580981814976 "PATCH /api/schedules/7d5bb44e-9443-48de-973f-d6a22986209e/ HTTP/1.1" 200 399
+INFO 2026-02-16 17:50:28,332 log 2846 136580981814976 "PATCH /api/schedules/7d5bb44e-9443-48de-973f-d6a22986209e/ HTTP/1.1" 200 363
+INFO 2026-02-16 17:50:28,806 log 2846 136580981814976 "DELETE /api/schedules/7d5bb44e-9443-48de-973f-d6a22986209e/ HTTP/1.1" 204 0
+INFO 2026-02-16 17:50:29,469 log 2846 136580981814976 "OPTIONS /api/schedules/1ca53ebf-e5c4-408f-b9aa-c506e9b64475/ HTTP/1.1" 200 0
+INFO 2026-02-16 17:50:29,503 log 2846 136580981814976 "PATCH /api/schedules/1ca53ebf-e5c4-408f-b9aa-c506e9b64475/ HTTP/1.1" 200 402
+INFO 2026-02-16 17:50:29,771 log 2846 136580981814976 "PATCH /api/schedules/1ca53ebf-e5c4-408f-b9aa-c506e9b64475/ HTTP/1.1" 200 402
+INFO 2026-02-16 17:50:30,089 log 2846 136580981814976 "PATCH /api/schedules/1ca53ebf-e5c4-408f-b9aa-c506e9b64475/ HTTP/1.1" 200 402
+INFO 2026-02-16 17:50:30,564 log 2846 136580981814976 "PATCH /api/schedules/1ca53ebf-e5c4-408f-b9aa-c506e9b64475/ HTTP/1.1" 200 366
+INFO 2026-02-16 17:50:31,369 log 2846 136580981814976 "DELETE /api/schedules/1ca53ebf-e5c4-408f-b9aa-c506e9b64475/ HTTP/1.1" 204 0
+INFO 2026-02-16 17:50:32,108 log 2846 136580981814976 "DELETE /api/schedules/27a15753-c59d-4621-bbdb-425a418250c2/ HTTP/1.1" 204 0
+INFO 2026-02-16 17:50:32,440 log 2846 136580981814976 "POST /api/schedules/ HTTP/1.1" 201 402
+INFO 2026-02-16 17:50:32,911 log 2846 136580981814976 "OPTIONS /api/schedules/6e362c79-065b-4dfe-91ab-7216b56f76e1/ HTTP/1.1" 200 0
+INFO 2026-02-16 17:50:32,945 log 2846 136580981814976 "PATCH /api/schedules/6e362c79-065b-4dfe-91ab-7216b56f76e1/ HTTP/1.1" 200 402
+INFO 2026-02-16 17:50:33,239 log 2846 136580981814976 "PATCH /api/schedules/6e362c79-065b-4dfe-91ab-7216b56f76e1/ HTTP/1.1" 200 402
+INFO 2026-02-16 17:50:33,564 log 2846 136580981814976 "PATCH /api/schedules/6e362c79-065b-4dfe-91ab-7216b56f76e1/ HTTP/1.1" 200 366
+INFO 2026-02-16 17:50:33,972 log 2846 136580981814976 "DELETE /api/schedules/6e362c79-065b-4dfe-91ab-7216b56f76e1/ HTTP/1.1" 204 0
+INFO 2026-02-16 17:50:35,479 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 2401
+INFO 2026-02-16 17:50:35,676 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 2401
+INFO 2026-02-16 17:50:35,820 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 2401
+INFO 2026-02-16 17:50:36,135 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 2401
+INFO 2026-02-16 17:50:36,338 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-23&date_to=2026-03-29 HTTP/1.1" 200 2401
+INFO 2026-02-16 17:50:36,923 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 2401
+INFO 2026-02-16 17:50:37,092 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 2401
+INFO 2026-02-16 17:50:37,418 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 2401
+INFO 2026-02-16 17:50:37,688 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 2401
+INFO 2026-02-16 17:50:37,937 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 2401
+INFO 2026-02-16 17:50:38,258 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 2401
+INFO 2026-02-16 17:50:38,992 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-02&date_to=2026-02-08 HTTP/1.1" 200 2401
+INFO 2026-02-16 17:50:40,063 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 2401
+INFO 2026-02-16 17:50:43,025 log 2846 136580981814976 "OPTIONS /api/schedules/c3f5f0f2-5a1d-4043-8750-4b6f3d7dcb92/ HTTP/1.1" 200 0
+INFO 2026-02-16 17:50:43,063 log 2846 136580981814976 "PATCH /api/schedules/c3f5f0f2-5a1d-4043-8750-4b6f3d7dcb92/ HTTP/1.1" 200 399
+INFO 2026-02-16 17:50:43,351 log 2846 136580981814976 "PATCH /api/schedules/c3f5f0f2-5a1d-4043-8750-4b6f3d7dcb92/ HTTP/1.1" 200 399
+INFO 2026-02-16 17:50:43,706 log 2846 136580981814976 "PATCH /api/schedules/c3f5f0f2-5a1d-4043-8750-4b6f3d7dcb92/ HTTP/1.1" 200 363
+INFO 2026-02-16 17:50:44,179 log 2846 136580981814976 "DELETE /api/schedules/c3f5f0f2-5a1d-4043-8750-4b6f3d7dcb92/ HTTP/1.1" 204 0
+INFO 2026-02-16 17:50:44,876 log 2846 136580981814976 "OPTIONS /api/schedules/ac8f0dc7-53c1-475c-b5d8-b3a8ac0e68bc/ HTTP/1.1" 200 0
+INFO 2026-02-16 17:50:44,919 log 2846 136580981814976 "PATCH /api/schedules/ac8f0dc7-53c1-475c-b5d8-b3a8ac0e68bc/ HTTP/1.1" 200 399
+INFO 2026-02-16 17:50:45,150 log 2846 136580981814976 "PATCH /api/schedules/ac8f0dc7-53c1-475c-b5d8-b3a8ac0e68bc/ HTTP/1.1" 200 399
+INFO 2026-02-16 17:50:45,438 log 2846 136580981814976 "PATCH /api/schedules/ac8f0dc7-53c1-475c-b5d8-b3a8ac0e68bc/ HTTP/1.1" 200 363
+INFO 2026-02-16 17:50:45,791 log 2846 136580981814976 "DELETE /api/schedules/ac8f0dc7-53c1-475c-b5d8-b3a8ac0e68bc/ HTTP/1.1" 204 0
+INFO 2026-02-16 17:50:54,380 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:50:55,054 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:50:56,281 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:50:56,982 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:50:57,812 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-02&date_to=2026-02-08 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:50:59,022 log 2846 136580981814976 "OPTIONS /api/schedules/?date_from=2026-01-26&date_to=2026-02-01 HTTP/1.1" 200 0
+INFO 2026-02-16 17:50:59,048 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-01-26&date_to=2026-02-01 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:50:59,582 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-02&date_to=2026-02-08 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:50:59,763 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:50:59,934 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:51:00,074 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:51:00,248 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:51:00,400 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:51:00,851 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:51:01,041 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:51:01,231 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:51:26,779 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:51:27,025 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:51:27,248 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:51:27,714 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:51:48,260 log 2846 136580981814976 "POST /api/schedules/generate/ HTTP/1.1" 201 424
+INFO 2026-02-16 17:51:48,338 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:52:08,359 auth_viewset 2846 136580981814976 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 17:52:08,363 log 2846 136580981814976 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 17:52:15,988 auth_viewset 2846 136580981814976 User logged in: milton.najera@caliente.mx
+INFO 2026-02-16 17:52:15,998 log 2846 136580981814976 "POST /api/auth/login/ HTTP/1.1" 200 1320
+INFO 2026-02-16 17:52:16,102 log 2846 136580882749120 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:52:16,117 log 2846 136580891141824 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 17:52:16,131 log 2846 136580899534528 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 17:52:16,133 log 2846 136580981814976 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 17:52:16,265 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:52:22,417 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:52:22,666 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:52:22,910 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:52:23,137 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:52:23,886 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-23&date_to=2026-03-29 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:52:24,103 log 2846 136580981814976 "GET /api/schedules/?date_from=2026-03-30&date_to=2026-04-05 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:52:26,510 log 2846 136580981814976 "GET /api/swaprequests/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:52:26,568 log 2846 136580899534528 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 17:52:36,759 log 2846 136580882749120 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:52:36,774 log 2846 136580891141824 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 17:52:36,794 log 2846 136580981814976 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 17:52:36,797 log 2846 136580899534528 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 17:52:36,888 log 2846 136580899534528 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:52:40,573 log 2846 136580899534528 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:52:40,873 log 2846 136580899534528 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:52:52,432 log 2846 136580899534528 "GET /api/swaprequests/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:52:52,447 log 2846 136580981814976 "GET /api/employees/ HTTP/1.1" 200 8187
+WARNING 2026-02-16 17:53:16,864 log 2846 136580899534528 "POST /api/swaprequests/ HTTP/1.1" 400 207
+INFO 2026-02-16 17:53:27,458 log 2846 136580882749120 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:53:27,460 log 2846 136580891141824 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 17:53:27,479 log 2846 136580981814976 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 17:53:27,481 log 2846 136580899534528 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 17:53:27,556 log 2846 136580899534528 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:53:28,698 log 2846 136580899534528 "GET /api/vacations/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:53:55,393 auth_viewset 2846 136580899534528 User logged out: milton.najera@caliente.mx
+INFO 2026-02-16 17:53:55,397 log 2846 136580899534528 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 17:54:36,365 auth_viewset 2846 136580899534528 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 17:54:36,375 log 2846 136580899534528 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 17:54:36,507 log 2846 136580882749120 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:54:36,526 log 2846 136580891141824 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 17:54:36,556 log 2846 136580981814976 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 17:54:36,562 log 2846 136580899534528 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 17:54:36,681 log 2846 136580899534528 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:54:40,244 log 2846 136580899534528 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:54:40,398 log 2846 136580899534528 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:54:40,542 log 2846 136580899534528 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:54:40,711 log 2846 136580899534528 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:54:41,445 log 2846 136580899534528 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 185253
+INFO 2026-02-16 17:55:02,312 autoreload 3510 134091344605312 Watching for file changes with StatReloader
+INFO 2026-02-16 17:55:04,797 log 3510 134091284539072 "OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+INFO 2026-02-16 17:55:04,885 log 3510 134091284539072 "GET /api/auth/me/ HTTP/1.1" 200 579
+INFO 2026-02-16 17:55:05,030 log 3510 134091258263232 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 17:55:05,053 log 3510 134091266672320 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 17:55:05,077 log 3510 134091284539072 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 17:55:05,096 log 3510 134091275081408 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 17:55:05,251 log 3510 134091275081408 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 17:59:30,655 autoreload 4039 138377090429056 Watching for file changes with StatReloader
+INFO 2026-02-16 18:00:05,060 log 4039 138377029314240 "GET /api/auth/me/ HTTP/1.1" 200 579
+INFO 2026-02-16 18:00:05,941 log 4039 138377011447488 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 18:00:05,950 log 4039 138376799844032 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:00:05,975 log 4039 138377019856576 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 18:00:05,978 log 4039 138377029314240 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 18:00:06,015 log 4039 138377029314240 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:00:25,893 auth_viewset 4039 138377029314240 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 18:00:25,897 log 4039 138377029314240 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 18:10:33,647 auth_viewset 4039 138377029314240 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 18:10:33,656 log 4039 138377029314240 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 18:10:33,787 log 4039 138376799844032 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:10:33,799 log 4039 138377011447488 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 18:10:33,811 log 4039 138377019856576 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 18:10:33,814 log 4039 138377029314240 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 18:10:33,845 log 4039 138377029314240 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:10:37,106 log 4039 138377019856576 "GET /api/teams/ HTTP/1.1" 200 273
+INFO 2026-02-16 18:10:37,128 log 4039 138377029314240 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 18:11:46,677 log 4039 138377029314240 "OPTIONS /api/auth/register/ HTTP/1.1" 200 0
+WARNING 2026-02-16 18:11:46,748 log 4039 138377029314240 "POST /api/auth/register/ HTTP/1.1" 400 64
+INFO 2026-02-16 18:15:04,669 autoreload 4039 138377090429056 /app/core/api/Serializers/auth_serializers.py changed, reloading.
+INFO 2026-02-16 18:15:06,209 autoreload 5863 138782017036416 Watching for file changes with StatReloader
+INFO 2026-02-16 18:15:32,656 autoreload 5863 138782017036416 /app/core/api/Serializers/employee_serializer.py changed, reloading.
+INFO 2026-02-16 18:15:33,434 autoreload 5929 135351116341376 Watching for file changes with StatReloader
+INFO 2026-02-16 18:16:22,340 autoreload 68 133883415048320 Watching for file changes with StatReloader
+INFO 2026-02-16 18:16:29,673 auth_viewset 68 133883353933504 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 18:16:29,679 log 68 133883353933504 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 18:16:37,600 auth_viewset 68 133883353933504 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 18:16:37,615 log 68 133883353933504 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 18:16:37,811 log 68 133883336066752 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 18:16:37,822 log 68 133883123201728 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:16:37,846 log 68 133883344475840 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 18:16:37,849 log 68 133883353933504 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 18:16:37,886 log 68 133883353933504 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:16:39,691 log 68 133883344475840 "GET /api/teams/ HTTP/1.1" 200 273
+INFO 2026-02-16 18:16:39,723 log 68 133883353933504 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 18:17:08,137 auth_viewset 68 133883353933504 New user registered by admin felix.egana@caliente.mx: test@example.com
+INFO 2026-02-16 18:17:08,145 log 68 133883353933504 "POST /api/auth/register/ HTTP/1.1" 201 615
+INFO 2026-02-16 18:17:08,191 log 68 133883353933504 "GET /api/employees/ HTTP/1.1" 200 8663
+INFO 2026-02-16 18:17:19,098 log 68 133883353933504 "OPTIONS /api/employees/63ba34b2-5b39-4f3c-b347-4ba04d8a12c4/ HTTP/1.1" 200 0
+INFO 2026-02-16 18:17:19,142 log 68 133883353933504 "DELETE /api/employees/63ba34b2-5b39-4f3c-b347-4ba04d8a12c4/ HTTP/1.1" 204 0
+INFO 2026-02-16 18:17:19,216 log 68 133883353933504 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 18:17:35,870 log 68 133883353933504 "OPTIONS /api/employees/23895e4a-25f7-4284-a05d-611863bc88a6/ HTTP/1.1" 200 0
+INFO 2026-02-16 18:17:35,907 log 68 133883353933504 "PATCH /api/employees/23895e4a-25f7-4284-a05d-611863bc88a6/ HTTP/1.1" 200 486
+INFO 2026-02-16 18:17:35,984 log 68 133883353933504 "GET /api/employees/ HTTP/1.1" 200 8188
+INFO 2026-02-16 18:17:45,623 log 68 133883353933504 "PATCH /api/employees/23895e4a-25f7-4284-a05d-611863bc88a6/ HTTP/1.1" 200 485
+INFO 2026-02-16 18:17:45,658 log 68 133883353933504 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 18:29:03,306 log 68 133883353933504 "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4655
+INFO 2026-02-16 18:29:03,806 log 68 133883353933504 "GET /api/schema/ HTTP/1.1" 200 259387
+INFO 2026-02-16 18:31:51,774 autoreload 68 133883415048320 /app/core/api/Viewsets/league_viewset.py changed, reloading.
+INFO 2026-02-16 18:31:53,157 autoreload 1890 129606515970176 Watching for file changes with StatReloader
+INFO 2026-02-16 18:33:53,268 log 1890 129606454855360 "GET /api/auth/me/ HTTP/1.1" 200 579
+INFO 2026-02-16 18:33:53,335 log 1890 129606454855360 "OPTIONS /api/teams/ HTTP/1.1" 200 0
+INFO 2026-02-16 18:33:53,404 log 1890 129606454855360 "GET /api/teams/ HTTP/1.1" 200 273
+INFO 2026-02-16 18:33:53,411 log 1890 129606446446272 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 18:33:55,584 auth_viewset 1890 129606454855360 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 18:33:55,587 log 1890 129606454855360 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 18:34:02,329 auth_viewset 1890 129606454855360 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 18:34:02,339 log 1890 129606454855360 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 18:34:02,529 log 1890 129606436988608 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 18:34:02,535 log 1890 129606428579520 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:34:02,555 log 1890 129606446446272 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 18:34:02,558 log 1890 129606454855360 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 18:34:02,592 log 1890 129606454855360 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:34:07,910 auth_viewset 1890 129606454855360 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 18:34:07,915 log 1890 129606454855360 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 18:34:49,571 autoreload 62 137159544594560 Watching for file changes with StatReloader
+INFO 2026-02-16 18:35:10,881 auth_viewset 62 137159483479744 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 18:35:10,899 log 62 137159483479744 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 18:35:11,591 log 62 137159465612992 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 18:35:11,597 log 62 137159457203904 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:35:11,628 log 62 137159474022080 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 18:35:11,633 log 62 137159483479744 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 18:35:11,693 log 62 137159483479744 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:35:14,629 log 62 137159483479744 "OPTIONS /api/sportevents/ HTTP/1.1" 200 0
+INFO 2026-02-16 18:35:14,630 log 62 137159474022080 "OPTIONS /api/leagues/ HTTP/1.1" 200 0
+INFO 2026-02-16 18:35:14,685 log 62 137159483479744 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:35:14,697 log 62 137159474022080 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:37:46,296 log 62 137159457203904 "OPTIONS /api/swaprequests/ HTTP/1.1" 200 0
+INFO 2026-02-16 18:37:46,364 log 62 137159457203904 "GET /api/swaprequests/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:37:48,365 log 62 137159457203904 "OPTIONS /api/vacations/ HTTP/1.1" 200 0
+INFO 2026-02-16 18:37:48,402 log 62 137159457203904 "GET /api/vacations/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:37:49,347 log 62 137159457203904 "OPTIONS /api/systemsettingss/ HTTP/1.1" 200 0
+INFO 2026-02-16 18:37:49,391 log 62 137159457203904 "GET /api/systemsettingss/ HTTP/1.1" 200 295
+INFO 2026-02-16 18:37:50,192 log 62 137159457203904 "GET /api/swaprequests/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:37:50,793 log 62 137159457203904 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:37:50,807 log 62 137159465612992 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:37:51,696 log 62 137159457203904 "GET /api/teams/ HTTP/1.1" 200 273
+INFO 2026-02-16 18:37:51,722 log 62 137159465612992 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 18:37:52,066 log 62 137159483479744 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:37:52,084 log 62 137159474022080 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 18:37:52,098 log 62 137159457203904 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 18:37:52,101 log 62 137159465612992 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 18:37:52,134 log 62 137159465612992 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:38:30,108 log 62 137159457203904 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:38:30,115 log 62 137159465612992 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:39:04,295 log 62 137159483479744 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:39:04,329 log 62 137159474022080 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 18:39:04,354 log 62 137159457203904 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 18:39:04,359 log 62 137159465612992 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 18:39:04,394 log 62 137159465612992 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:39:07,737 log 62 137159465612992 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:39:08,057 log 62 137159465612992 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:39:08,362 log 62 137159465612992 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:39:08,616 log 62 137159465612992 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:39:08,814 log 62 137159465612992 "GET /api/schedules/?date_from=2026-03-23&date_to=2026-03-29 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:39:08,994 log 62 137159465612992 "GET /api/schedules/?date_from=2026-03-30&date_to=2026-04-05 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:39:09,146 log 62 137159465612992 "GET /api/schedules/?date_from=2026-04-06&date_to=2026-04-12 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:39:09,290 log 62 137159465612992 "GET /api/schedules/?date_from=2026-04-13&date_to=2026-04-19 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:39:09,482 log 62 137159465612992 "GET /api/schedules/?date_from=2026-04-20&date_to=2026-04-26 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:39:10,050 log 62 137159465612992 "GET /api/schedules/?date_from=2026-04-13&date_to=2026-04-19 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:39:10,208 log 62 137159465612992 "GET /api/schedules/?date_from=2026-04-06&date_to=2026-04-12 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:39:10,366 log 62 137159465612992 "GET /api/schedules/?date_from=2026-03-30&date_to=2026-04-05 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:39:10,640 log 62 137159465612992 "GET /api/schedules/?date_from=2026-03-23&date_to=2026-03-29 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:39:10,856 log 62 137159465612992 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:45:39,768 autoreload 78 123486217879680 Watching for file changes with StatReloader
+INFO 2026-02-16 18:46:00,333 auth_viewset 78 123486156764864 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 18:46:00,343 log 78 123486156764864 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 18:46:01,156 log 78 123486072727232 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 18:46:01,170 log 78 123486064334528 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:46:01,194 log 78 123486081119936 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 18:46:01,198 log 78 123486156764864 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 18:46:01,233 log 78 123486156764864 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 18:46:03,647 log 78 123486156764864 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:46:05,322 log 78 123486081119936 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:46:05,327 log 78 123486156764864 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:46:07,027 log 78 123486156764864 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:46:21,087 log 78 123486156764864 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:46:21,094 log 78 123486081119936 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:46:27,348 log 78 123486081119936 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:46:50,142 log 78 123486081119936 "POST /api/leagues/ HTTP/1.1" 201 228
+INFO 2026-02-16 18:46:50,169 log 78 123486081119936 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:46:54,079 log 78 123486081119936 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:46:54,083 log 78 123486156764864 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:48:16,014 log 78 123486156764864 "POST /api/sportevents/ HTTP/1.1" 201 297
+INFO 2026-02-16 18:48:16,040 log 78 123486156764864 "GET /api/sportevents/ HTTP/1.1" 200 299
+INFO 2026-02-16 18:48:26,794 log 78 123486156764864 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:48:34,732 log 78 123486156764864 "OPTIONS /api/leagues/9c8386a7-954e-4741-be0e-f9d0abe09ff9/ HTTP/1.1" 200 0
+INFO 2026-02-16 18:48:34,772 log 78 123486156764864 "PATCH /api/leagues/9c8386a7-954e-4741-be0e-f9d0abe09ff9/ HTTP/1.1" 200 233
+INFO 2026-02-16 18:48:34,840 log 78 123486156764864 "GET /api/leagues/ HTTP/1.1" 200 235
+INFO 2026-02-16 18:48:40,094 log 78 123486156764864 "PATCH /api/leagues/9c8386a7-954e-4741-be0e-f9d0abe09ff9/ HTTP/1.1" 200 228
+INFO 2026-02-16 18:48:40,120 log 78 123486156764864 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:48:46,704 log 78 123486156764864 "DELETE /api/leagues/9c8386a7-954e-4741-be0e-f9d0abe09ff9/ HTTP/1.1" 204 0
+INFO 2026-02-16 18:48:46,729 log 78 123486156764864 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:48:48,385 log 78 123486081119936 "GET /api/teams/ HTTP/1.1" 200 273
+INFO 2026-02-16 18:48:48,407 log 78 123486156764864 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 18:48:48,813 log 78 123486156764864 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:48:48,815 log 78 123486081119936 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:48:51,449 log 78 123486081119936 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:49:09,178 log 78 123486081119936 "POST /api/leagues/ HTTP/1.1" 201 228
+INFO 2026-02-16 18:49:09,203 log 78 123486081119936 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:49:11,853 log 78 123486081119936 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:49:11,857 log 78 123486156764864 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:49:41,340 log 78 123486156764864 "POST /api/sportevents/ HTTP/1.1" 201 313
+INFO 2026-02-16 18:49:41,371 log 78 123486156764864 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 18:49:51,994 log 78 123486156764864 "OPTIONS /api/sportevents/f7f3fcb9-7bf0-4b5f-a2e2-83eb69b3c8b1/ HTTP/1.1" 200 0
+INFO 2026-02-16 18:49:52,028 log 78 123486156764864 "PATCH /api/sportevents/f7f3fcb9-7bf0-4b5f-a2e2-83eb69b3c8b1/ HTTP/1.1" 200 318
+INFO 2026-02-16 18:49:52,095 log 78 123486156764864 "GET /api/sportevents/ HTTP/1.1" 200 320
+INFO 2026-02-16 18:50:03,017 log 78 123486156764864 "PATCH /api/sportevents/f7f3fcb9-7bf0-4b5f-a2e2-83eb69b3c8b1/ HTTP/1.1" 200 313
+INFO 2026-02-16 18:50:03,048 log 78 123486156764864 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 18:50:05,809 log 78 123486156764864 "DELETE /api/sportevents/f7f3fcb9-7bf0-4b5f-a2e2-83eb69b3c8b1/ HTTP/1.1" 204 0
+INFO 2026-02-16 18:50:05,835 log 78 123486156764864 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:50:10,424 log 78 123486156764864 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:50:12,206 log 78 123486081119936 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:50:12,209 log 78 123486156764864 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 18:50:40,438 log 78 123486156764864 "POST /api/sportevents/ HTTP/1.1" 201 313
+INFO 2026-02-16 18:50:40,473 log 78 123486156764864 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 18:50:43,402 log 78 123486156764864 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:50:44,401 log 78 123486156764864 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 18:50:44,403 log 78 123486081119936 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:50:45,831 log 78 123486081119936 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:50:46,568 log 78 123486156764864 "GET /api/teams/ HTTP/1.1" 200 273
+INFO 2026-02-16 18:50:46,590 log 78 123486081119936 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 18:50:51,672 log 78 123486081119936 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 18:50:51,679 log 78 123486156764864 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:50:59,152 log 78 123486156764864 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:51:12,981 log 78 123486156764864 "OPTIONS /api/leagues/805b412b-f3b2-4760-b424-ce4c520b98fc/ HTTP/1.1" 200 0
+INFO 2026-02-16 18:51:13,015 log 78 123486156764864 "PATCH /api/leagues/805b412b-f3b2-4760-b424-ce4c520b98fc/ HTTP/1.1" 200 228
+INFO 2026-02-16 18:51:13,084 log 78 123486156764864 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:51:27,805 log 78 123486156764864 "GET /api/auth/me/ HTTP/1.1" 200 579
+INFO 2026-02-16 18:51:27,885 log 78 123486156764864 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:51:31,427 log 78 123486156764864 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 18:51:31,431 log 78 123486081119936 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:51:32,809 log 78 123486081119936 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:56:22,654 log 78 123486156764864 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:56:22,661 log 78 123486081119936 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 18:56:23,731 log 78 123486081119936 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:56:53,777 log 78 123486156764864 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:56:53,780 log 78 123486081119936 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 18:57:04,470 log 78 123486156764864 "GET /api/teams/ HTTP/1.1" 200 273
+INFO 2026-02-16 18:57:04,487 log 78 123486081119936 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 18:57:36,358 autoreload 78 123486217879680 /app/core/api/Viewsets/sport_event_viewset.py changed, reloading.
+INFO 2026-02-16 18:57:37,794 autoreload 1474 136914104946816 Watching for file changes with StatReloader
+INFO 2026-02-16 18:59:03,658 autoreload 1474 136914104946816 /app/core/api/Viewsets/sport_event_viewset.py changed, reloading.
+INFO 2026-02-16 18:59:04,428 autoreload 1685 131451783602304 Watching for file changes with StatReloader
+INFO 2026-02-16 18:59:11,163 autoreload 1685 131451783602304 /app/core/api/Viewsets/sport_event_viewset.py changed, reloading.
+INFO 2026-02-16 18:59:11,941 autoreload 1703 125529704439936 Watching for file changes with StatReloader
+INFO 2026-02-16 18:59:23,854 log 1703 125529643325120 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:59:24,549 log 1703 125529643325120 "GET /api/auth/me/ HTTP/1.1" 200 579
+INFO 2026-02-16 18:59:24,921 log 1703 125529643325120 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:59:25,833 log 1703 125529643325120 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 18:59:25,841 log 1703 125529633867456 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:59:26,720 log 1703 125529633867456 "GET /api/auth/me/ HTTP/1.1" 200 579
+INFO 2026-02-16 18:59:26,775 log 1703 125529633867456 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 18:59:26,779 log 1703 125529643325120 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:59:29,937 log 1703 125529633867456 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:59:32,432 log 1703 125529633867456 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 18:59:32,447 log 1703 125529643325120 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:59:33,214 log 1703 125529643325120 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 18:59:54,999 autoreload 1703 125529704439936 /app/core/api/Viewsets/sport_event_viewset.py changed, reloading.
+INFO 2026-02-16 18:59:55,743 autoreload 1819 125592243032192 Watching for file changes with StatReloader
+INFO 2026-02-16 19:00:14,262 log 1819 125592181917376 "GET /api/auth/me/ HTTP/1.1" 200 579
+INFO 2026-02-16 19:00:14,336 log 1819 125592181917376 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 19:00:16,337 log 1819 125592181917376 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 19:00:16,348 log 1819 125592172459712 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 19:00:16,795 log 1819 125592172459712 "GET /api/auth/me/ HTTP/1.1" 200 579
+INFO 2026-02-16 19:00:16,873 log 1819 125592181917376 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 19:00:16,876 log 1819 125592172459712 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 19:00:18,317 log 1819 125592172459712 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 19:01:08,659 autoreload 77 134211212324992 Watching for file changes with StatReloader
+INFO 2026-02-16 19:01:16,056 log 77 134211083171520 "GET /api/auth/me/ HTTP/1.1" 200 579
+INFO 2026-02-16 19:01:16,572 log 77 134211083171520 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 19:01:17,879 auth_viewset 77 134211083171520 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 19:01:17,883 log 77 134211083171520 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:01:27,051 auth_viewset 77 134211083171520 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 19:01:27,060 log 77 134211083171520 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 19:01:27,606 log 77 134211083171520 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:01:27,622 log 77 134211056944832 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:01:27,627 log 77 134211065337536 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:01:27,632 log 77 134211073730240 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:01:27,687 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:01:30,494 log 77 134211065337536 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 19:01:30,516 log 77 134211073730240 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 19:01:31,833 log 77 134211073730240 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 19:01:32,578 log 77 134211073730240 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 19:01:32,584 log 77 134211065337536 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 19:01:34,890 log 77 134211065337536 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 19:01:36,079 log 77 134211065337536 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 19:01:36,081 log 77 134211073730240 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 19:03:13,955 log 77 134211073730240 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 19:03:40,058 log 77 134211073730240 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 19:03:40,081 log 77 134211065337536 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 19:07:35,916 log 77 134211056944832 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:07:35,943 log 77 134211065337536 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:07:35,970 log 77 134211083171520 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:07:35,975 log 77 134211073730240 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:07:36,019 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:07:37,600 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:07:37,876 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:07:38,036 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:07:38,254 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:07:44,689 log 77 134211073730240 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 19:07:45,651 log 77 134211073730240 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 19:07:45,656 log 77 134211083171520 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 19:08:15,633 log 77 134211083171520 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 19:08:23,084 log 77 134211083171520 "OPTIONS /api/leagues/import/ HTTP/1.1" 200 0
+WARNING 2026-02-16 19:08:23,137 log 77 134211083171520 "POST /api/leagues/import/ HTTP/1.1" 400 65
+INFO 2026-02-16 19:09:49,774 log 77 134211083171520 "GET /api/auth/me/ HTTP/1.1" 200 579
+INFO 2026-02-16 19:09:49,974 log 77 134211083171520 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 19:09:54,594 log 77 134211083171520 "POST /api/leagues/import/ HTTP/1.1" 201 26
+INFO 2026-02-16 19:09:54,622 log 77 134211083171520 "GET /api/leagues/ HTTP/1.1" 200 696
+INFO 2026-02-16 19:10:07,618 log 77 134211083171520 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 19:10:07,622 log 77 134211073730240 "GET /api/leagues/ HTTP/1.1" 200 696
+INFO 2026-02-16 19:10:11,242 log 77 134211073730240 "OPTIONS /api/sportevents/import/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:10:11,321 log 77 134211073730240 "POST /api/sportevents/import/ HTTP/1.1" 201 26
+INFO 2026-02-16 19:10:11,407 log 77 134211073730240 "GET /api/sportevents/ HTTP/1.1" 200 1571
+INFO 2026-02-16 19:10:20,549 log 77 134211073730240 "OPTIONS /api/sportevents/58c41e92-56be-4b14-93a5-4a7068e2bd4d/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:10:20,585 log 77 134211073730240 "DELETE /api/sportevents/58c41e92-56be-4b14-93a5-4a7068e2bd4d/ HTTP/1.1" 204 0
+INFO 2026-02-16 19:10:20,652 log 77 134211073730240 "GET /api/sportevents/ HTTP/1.1" 200 1257
+INFO 2026-02-16 19:10:22,894 log 77 134211073730240 "OPTIONS /api/sportevents/7aa416e6-14e4-4d96-a33d-594de8ae6c55/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:10:22,923 log 77 134211073730240 "DELETE /api/sportevents/7aa416e6-14e4-4d96-a33d-594de8ae6c55/ HTTP/1.1" 204 0
+INFO 2026-02-16 19:10:22,993 log 77 134211073730240 "GET /api/sportevents/ HTTP/1.1" 200 948
+INFO 2026-02-16 19:10:28,009 log 77 134211073730240 "OPTIONS /api/sportevents/658cde66-a0f5-498e-939b-4857bb35f544/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:10:28,042 log 77 134211073730240 "DELETE /api/sportevents/658cde66-a0f5-498e-939b-4857bb35f544/ HTTP/1.1" 204 0
+INFO 2026-02-16 19:10:28,110 log 77 134211073730240 "GET /api/sportevents/ HTTP/1.1" 200 626
+INFO 2026-02-16 19:10:30,928 log 77 134211073730240 "OPTIONS /api/sportevents/6048e0cb-5c4a-4df9-a334-a7abc56a7f93/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:10:30,959 log 77 134211073730240 "DELETE /api/sportevents/6048e0cb-5c4a-4df9-a334-a7abc56a7f93/ HTTP/1.1" 204 0
+INFO 2026-02-16 19:10:31,027 log 77 134211073730240 "GET /api/sportevents/ HTTP/1.1" 200 315
+INFO 2026-02-16 19:10:34,015 log 77 134211073730240 "OPTIONS /api/sportevents/94bc7418-8200-4e79-8224-98f090003d7c/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:10:34,047 log 77 134211073730240 "DELETE /api/sportevents/94bc7418-8200-4e79-8224-98f090003d7c/ HTTP/1.1" 204 0
+INFO 2026-02-16 19:10:34,115 log 77 134211073730240 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:10:35,232 log 77 134211073730240 "GET /api/leagues/ HTTP/1.1" 200 696
+INFO 2026-02-16 19:10:37,591 log 77 134211073730240 "OPTIONS /api/leagues/18e33abf-6c08-4e59-a669-ddaf48d0c793/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:10:37,622 log 77 134211073730240 "DELETE /api/leagues/18e33abf-6c08-4e59-a669-ddaf48d0c793/ HTTP/1.1" 204 0
+INFO 2026-02-16 19:10:37,694 log 77 134211073730240 "GET /api/leagues/ HTTP/1.1" 200 470
+INFO 2026-02-16 19:10:39,311 log 77 134211073730240 "OPTIONS /api/leagues/6d08b0ea-62cc-4b73-92be-f76a2ebc03b0/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:10:39,360 log 77 134211073730240 "DELETE /api/leagues/6d08b0ea-62cc-4b73-92be-f76a2ebc03b0/ HTTP/1.1" 204 0
+INFO 2026-02-16 19:10:39,425 log 77 134211073730240 "GET /api/leagues/ HTTP/1.1" 200 230
+INFO 2026-02-16 19:10:41,211 log 77 134211073730240 "DELETE /api/leagues/805b412b-f3b2-4760-b424-ce4c520b98fc/ HTTP/1.1" 204 0
+INFO 2026-02-16 19:10:41,237 log 77 134211073730240 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:10:49,584 log 77 134211073730240 "GET /api/swaprequests/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:10:51,306 log 77 134211073730240 "GET /api/vacations/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:10:52,069 log 77 134211073730240 "GET /api/swaprequests/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:10:55,791 auth_viewset 77 134211073730240 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 19:10:55,795 log 77 134211073730240 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:11:13,556 auth_viewset 77 134211073730240 User logged in: milton.najera@caliente.mx
+INFO 2026-02-16 19:11:13,564 log 77 134211073730240 "POST /api/auth/login/ HTTP/1.1" 200 1320
+INFO 2026-02-16 19:11:13,719 log 77 134211056944832 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:11:13,733 log 77 134211065337536 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:11:13,747 log 77 134211083171520 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:11:13,752 log 77 134211073730240 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:11:13,781 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:17,612 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:17,784 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:17,930 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:18,072 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:18,205 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-23&date_to=2026-03-29 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:18,323 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-30&date_to=2026-04-05 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:18,461 log 77 134211073730240 "GET /api/schedules/?date_from=2026-04-06&date_to=2026-04-12 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:18,593 log 77 134211073730240 "GET /api/schedules/?date_from=2026-04-13&date_to=2026-04-19 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:19,136 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:19,338 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:20,183 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:24,561 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:24,735 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-02&date_to=2026-02-08 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:24,881 log 77 134211073730240 "GET /api/schedules/?date_from=2026-01-26&date_to=2026-02-01 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:25,049 log 77 134211073730240 "OPTIONS /api/schedules/?date_from=2026-01-19&date_to=2026-01-25 HTTP/1.1" 200 0
+INFO 2026-02-16 19:11:25,076 log 77 134211073730240 "GET /api/schedules/?date_from=2026-01-19&date_to=2026-01-25 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:25,606 log 77 134211073730240 "GET /api/schedules/?date_from=2026-01-26&date_to=2026-02-01 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:25,765 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-02&date_to=2026-02-08 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:25,905 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:26,024 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:26,272 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:26,470 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:26,652 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:26,862 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:27,486 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:33,497 auth_viewset 77 134211073730240 User logged out: milton.najera@caliente.mx
+INFO 2026-02-16 19:11:33,501 log 77 134211073730240 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:11:39,510 auth_viewset 77 134211073730240 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 19:11:39,517 log 77 134211073730240 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 19:11:39,645 log 77 134211065337536 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:11:39,652 log 77 134211056944832 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:11:39,671 log 77 134211083171520 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:11:39,673 log 77 134211073730240 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:11:39,705 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 1601
+INFO 2026-02-16 19:11:47,241 log 77 134211073730240 "POST /api/schedules/generate/ HTTP/1.1" 201 424
+INFO 2026-02-16 19:11:47,318 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:11:49,973 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:11:50,177 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:11:50,302 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:11:50,565 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:11:50,748 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-23&date_to=2026-03-29 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:11:51,249 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:11:51,438 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:11:51,616 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:11:52,301 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:11:52,465 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:11:52,706 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-09&date_to=2026-02-15 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:11:54,937 auth_viewset 77 134211073730240 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 19:11:54,940 log 77 134211073730240 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:12:12,092 auth_viewset 77 134211073730240 User logged in: milton.najera@caliente.mx
+INFO 2026-02-16 19:12:12,100 log 77 134211073730240 "POST /api/auth/login/ HTTP/1.1" 200 1320
+INFO 2026-02-16 19:12:12,214 log 77 134211065337536 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:12:12,241 log 77 134211056944832 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:12:12,257 log 77 134211083171520 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:12:12,261 log 77 134211073730240 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:12:12,344 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:12:17,290 log 77 134211073730240 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:12:17,493 log 77 134211073730240 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:12:30,780 log 77 134211073730240 "GET /api/swaprequests/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:12:30,805 log 77 134211083171520 "GET /api/employees/ HTTP/1.1" 200 8187
+WARNING 2026-02-16 19:12:51,419 log 77 134211073730240 "POST /api/swaprequests/ HTTP/1.1" 400 207
+INFO 2026-02-16 19:15:03,098 autoreload 77 134211212324992 /app/core/api/Serializers/swap_request_serializer.py changed, reloading.
+INFO 2026-02-16 19:15:04,400 autoreload 1712 138846321164416 Watching for file changes with StatReloader
+INFO 2026-02-16 19:15:18,723 autoreload 1712 138846321164416 /app/core/api/Viewsets/swap_request_viewset.py changed, reloading.
+INFO 2026-02-16 19:15:19,471 autoreload 1746 131951056535680 Watching for file changes with StatReloader
+INFO 2026-02-16 19:16:57,414 autoreload 54 140018856054912 Watching for file changes with StatReloader
+INFO 2026-02-16 19:17:14,863 log 54 140018794940096 "GET /api/auth/me/ HTTP/1.1" 200 605
+INFO 2026-02-16 19:17:15,612 log 54 140018786531008 "OPTIONS /api/employees/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:17:15,703 log 54 140018786531008 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:17:15,725 log 54 140018794940096 "GET /api/swaprequests/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:17:17,787 auth_viewset 54 140018794940096 User logged out: milton.najera@caliente.mx
+INFO 2026-02-16 19:17:17,791 log 54 140018794940096 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:17:37,683 log 54 140018794940096 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:17:38,139 auth_viewset 54 140018794940096 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 19:17:38,149 log 54 140018794940096 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 19:17:38,620 log 54 140018786531008 "OPTIONS /api/shifttypes/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:17:38,626 log 54 140018777073344 "OPTIONS /api/shiftcategories/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:17:38,627 log 54 140018768664256 "OPTIONS /api/shiftcycleconfigs/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:17:38,765 log 54 140018794940096 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:17:38,775 log 54 140018786531008 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:17:38,791 log 54 140018768664256 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:17:38,798 log 54 140018777073344 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:17:38,849 log 54 140018768664256 "OPTIONS /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 0
+INFO 2026-02-16 19:17:39,035 log 54 140018768664256 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:17:39,782 log 54 140018768664256 "GET /api/swaprequests/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:17:41,923 auth_viewset 54 140018768664256 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 19:17:41,929 log 54 140018768664256 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:18:03,168 auth_viewset 54 140018768664256 User logged in: milton.najera@caliente.mx
+INFO 2026-02-16 19:18:03,178 log 54 140018768664256 "POST /api/auth/login/ HTTP/1.1" 200 1320
+INFO 2026-02-16 19:18:03,317 log 54 140018794940096 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:18:03,337 log 54 140018786531008 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:18:03,351 log 54 140018777073344 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:18:03,361 log 54 140018768664256 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:18:03,478 log 54 140018768664256 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:18:04,375 log 54 140018777073344 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:18:04,379 log 54 140018768664256 "GET /api/swaprequests/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:18:19,900 log 54 140018768664256 "POST /api/swaprequests/ HTTP/1.1" 201 1844
+INFO 2026-02-16 19:18:19,940 log 54 140018768664256 "GET /api/swaprequests/ HTTP/1.1" 200 1846
+INFO 2026-02-16 19:18:33,245 auth_viewset 54 140018768664256 User logged out: milton.najera@caliente.mx
+INFO 2026-02-16 19:18:33,249 log 54 140018768664256 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:18:48,109 auth_viewset 54 140018768664256 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 19:18:48,116 log 54 140018768664256 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 19:18:48,240 log 54 140018794940096 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:18:48,267 log 54 140018786531008 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:18:48,288 log 54 140018777073344 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:18:48,290 log 54 140018768664256 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:18:48,388 log 54 140018768664256 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:18:49,590 log 54 140018768664256 "GET /api/swaprequests/ HTTP/1.1" 200 1846
+INFO 2026-02-16 19:18:56,093 auth_viewset 54 140018768664256 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 19:18:56,097 log 54 140018768664256 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:19:02,390 auth_viewset 54 140018768664256 User logged in: milton.najera@caliente.mx
+INFO 2026-02-16 19:19:02,398 log 54 140018768664256 "POST /api/auth/login/ HTTP/1.1" 200 1320
+INFO 2026-02-16 19:19:02,525 log 54 140018794940096 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:19:02,558 log 54 140018786531008 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:19:02,576 log 54 140018777073344 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:19:02,580 log 54 140018768664256 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:19:02,686 log 54 140018768664256 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:19:04,322 log 54 140018777073344 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:19:04,340 log 54 140018768664256 "GET /api/swaprequests/ HTTP/1.1" 200 1846
+INFO 2026-02-16 19:21:01,172 autoreload 54 140018856054912 /app/core/api/Serializers/swap_request_serializer.py changed, reloading.
+INFO 2026-02-16 19:21:01,916 autoreload 534 137007007953024 Watching for file changes with StatReloader
+INFO 2026-02-16 19:22:31,445 log 534 137006946838208 "GET /api/auth/me/ HTTP/1.1" 200 605
+INFO 2026-02-16 19:22:31,603 log 534 137006938429120 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:22:31,609 log 534 137006946838208 "GET /api/swaprequests/ HTTP/1.1" 200 926
+INFO 2026-02-16 19:22:40,808 auth_viewset 534 137006946838208 User logged out: milton.najera@caliente.mx
+INFO 2026-02-16 19:22:40,816 log 534 137006946838208 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:22:52,572 auth_viewset 534 137006946838208 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 19:22:52,582 log 534 137006946838208 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 19:22:52,711 log 534 137006946838208 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:22:52,749 log 534 137006928971456 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:22:52,754 log 534 137006920562368 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:22:52,758 log 534 137006938429120 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:22:52,851 log 534 137006938429120 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:22:55,900 log 534 137006938429120 "GET /api/swaprequests/ HTTP/1.1" 200 926
+INFO 2026-02-16 19:29:12,182 auth_viewset 534 137006920562368 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 19:29:12,187 log 534 137006920562368 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:29:22,711 auth_viewset 534 137006920562368 User logged in: fabian.ochoa@caliente.mx
+INFO 2026-02-16 19:29:22,720 log 534 137006920562368 "POST /api/auth/login/ HTTP/1.1" 200 1304
+INFO 2026-02-16 19:29:22,923 log 534 137006938429120 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:29:22,958 log 534 137006928971456 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:29:22,981 log 534 137006946838208 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:29:22,987 log 534 137006920562368 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:29:23,096 log 534 137006920562368 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:29:24,032 log 534 137006946838208 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:29:24,056 log 534 137006920562368 "GET /api/swaprequests/ HTTP/1.1" 200 926
+INFO 2026-02-16 19:29:38,781 auth_viewset 534 137006920562368 User logged out: fabian.ochoa@caliente.mx
+INFO 2026-02-16 19:29:38,786 log 534 137006920562368 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:29:45,428 auth_viewset 534 137006920562368 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 19:29:45,437 log 534 137006920562368 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 19:29:45,551 log 534 137006938429120 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:29:45,576 log 534 137006928971456 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:29:45,593 log 534 137006946838208 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:29:45,595 log 534 137006920562368 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:29:45,677 log 534 137006920562368 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:29:47,002 log 534 137006920562368 "GET /api/swaprequests/ HTTP/1.1" 200 926
+INFO 2026-02-16 19:29:51,169 auth_viewset 534 137006920562368 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 19:29:51,174 log 534 137006920562368 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:30:02,219 auth_viewset 534 137006920562368 User logged in: fabian.ochoa@caliente.mx
+INFO 2026-02-16 19:30:02,227 log 534 137006920562368 "POST /api/auth/login/ HTTP/1.1" 200 1304
+INFO 2026-02-16 19:30:02,370 log 534 137006938429120 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:30:02,403 log 534 137006928971456 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:30:02,430 log 534 137006946838208 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:30:02,435 log 534 137006920562368 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:30:02,540 log 534 137006920562368 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:30:03,403 log 534 137006946838208 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:30:03,409 log 534 137006920562368 "GET /api/swaprequests/ HTTP/1.1" 200 926
+INFO 2026-02-16 19:30:47,749 log 534 137006920562368 "OPTIONS /api/swaprequests/a9f47a40-70cd-4087-ab4e-30124d115cd4/respond/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:30:47,795 log 534 137006920562368 "PUT /api/swaprequests/a9f47a40-70cd-4087-ab4e-30124d115cd4/respond/ HTTP/1.1" 200 958
+INFO 2026-02-16 19:30:47,873 log 534 137006920562368 "GET /api/swaprequests/ HTTP/1.1" 200 960
+INFO 2026-02-16 19:30:51,865 log 534 137006920562368 "GET /api/auth/me/ HTTP/1.1" 200 591
+INFO 2026-02-16 19:30:52,007 log 534 137006946838208 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:30:52,030 log 534 137006920562368 "GET /api/swaprequests/ HTTP/1.1" 200 960
+INFO 2026-02-16 19:30:58,059 log 534 137006920562368 "GET /api/auth/me/ HTTP/1.1" 200 591
+INFO 2026-02-16 19:30:58,154 log 534 137006946838208 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:30:58,158 log 534 137006920562368 "GET /api/swaprequests/ HTTP/1.1" 200 960
+INFO 2026-02-16 19:32:15,994 log 534 137006920562368 "POST /api/swaprequests/ HTTP/1.1" 201 924
+INFO 2026-02-16 19:32:16,038 log 534 137006920562368 "GET /api/swaprequests/ HTTP/1.1" 200 1885
+INFO 2026-02-16 19:32:20,293 auth_viewset 534 137006920562368 User logged out: fabian.ochoa@caliente.mx
+INFO 2026-02-16 19:32:20,297 log 534 137006920562368 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:32:27,712 auth_viewset 534 137006920562368 User logged in: milton.najera@caliente.mx
+INFO 2026-02-16 19:32:27,720 log 534 137006920562368 "POST /api/auth/login/ HTTP/1.1" 200 1320
+INFO 2026-02-16 19:32:27,862 log 534 137006938429120 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:32:27,888 log 534 137006928971456 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:32:27,904 log 534 137006946838208 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:32:27,907 log 534 137006920562368 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:32:27,984 log 534 137006920562368 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:32:29,293 log 534 137006946838208 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:32:29,363 log 534 137006920562368 "GET /api/swaprequests/ HTTP/1.1" 200 1885
+INFO 2026-02-16 19:32:37,610 log 534 137006920562368 "OPTIONS /api/swaprequests/9941b56b-361e-4955-9914-9e5121aeb4e7/respond/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:32:37,659 log 534 137006920562368 "PUT /api/swaprequests/9941b56b-361e-4955-9914-9e5121aeb4e7/respond/ HTTP/1.1" 200 970
+INFO 2026-02-16 19:32:37,739 log 534 137006920562368 "GET /api/swaprequests/ HTTP/1.1" 200 1931
+INFO 2026-02-16 19:32:45,556 log 534 137006938429120 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:32:45,579 log 534 137006928971456 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:32:45,596 log 534 137006946838208 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:32:45,599 log 534 137006920562368 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:32:45,681 log 534 137006920562368 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:32:47,009 log 534 137006946838208 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:32:47,055 log 534 137006920562368 "GET /api/swaprequests/ HTTP/1.1" 200 1931
+INFO 2026-02-16 19:32:49,416 log 534 137006938429120 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:32:49,436 log 534 137006928971456 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:32:49,480 log 534 137006946838208 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:32:49,485 log 534 137006920562368 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:32:49,601 log 534 137006920562368 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:32:52,719 auth_viewset 534 137006920562368 User logged out: milton.najera@caliente.mx
+INFO 2026-02-16 19:32:52,723 log 534 137006920562368 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:33:15,908 auth_viewset 534 137006920562368 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 19:33:15,916 log 534 137006920562368 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 19:33:16,063 log 534 137006938429120 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:33:16,075 log 534 137006928971456 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:33:16,093 log 534 137006946838208 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:33:16,097 log 534 137006920562368 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:33:16,187 log 534 137006920562368 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185253
+INFO 2026-02-16 19:33:19,498 log 534 137006920562368 "GET /api/swaprequests/ HTTP/1.1" 200 1931
+INFO 2026-02-16 19:33:36,187 log 534 137006920562368 "OPTIONS /api/swaprequests/9941b56b-361e-4955-9914-9e5121aeb4e7/approve/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:33:36,277 log 534 137006920562368 "PUT /api/swaprequests/9941b56b-361e-4955-9914-9e5121aeb4e7/approve/ HTTP/1.1" 200 985
+INFO 2026-02-16 19:33:36,376 log 534 137006920562368 "GET /api/swaprequests/ HTTP/1.1" 200 1946
+INFO 2026-02-16 19:33:54,827 log 534 137006938429120 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:33:54,849 log 534 137006928971456 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:33:54,865 log 534 137006946838208 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:33:54,867 log 534 137006920562368 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:33:54,949 log 534 137006920562368 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185315
+INFO 2026-02-16 19:33:57,561 log 534 137006920562368 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 185315
+INFO 2026-02-16 19:33:59,033 log 534 137006920562368 "OPTIONS /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 0
+INFO 2026-02-16 19:33:59,171 log 534 137006920562368 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 185315
+INFO 2026-02-16 19:34:15,947 auth_viewset 534 137006920562368 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 19:34:15,951 log 534 137006920562368 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:34:23,839 auth_viewset 534 137006920562368 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 19:34:23,847 log 534 137006920562368 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 19:34:23,984 log 534 137006938429120 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:34:24,013 log 534 137006928971456 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:34:24,035 log 534 137006946838208 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:34:24,038 log 534 137006920562368 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:34:24,129 log 534 137006920562368 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185315
+INFO 2026-02-16 19:34:26,724 log 534 137006920562368 "GET /api/vacations/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:34:32,813 auth_viewset 534 137006920562368 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 19:34:32,818 log 534 137006920562368 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:34:39,646 auth_viewset 534 137006920562368 User logged in: milton.najera@caliente.mx
+INFO 2026-02-16 19:34:39,654 log 534 137006920562368 "POST /api/auth/login/ HTTP/1.1" 200 1320
+INFO 2026-02-16 19:34:39,784 log 534 137006938429120 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:34:39,800 log 534 137006928971456 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:34:39,816 log 534 137006946838208 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:34:39,819 log 534 137006920562368 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:34:39,909 log 534 137006920562368 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185315
+INFO 2026-02-16 19:34:40,795 log 534 137006920562368 "GET /api/vacations/ HTTP/1.1" 200 2
+WARNING 2026-02-16 19:35:00,349 log 534 137006920562368 "POST /api/vacations/ HTTP/1.1" 400 40
+INFO 2026-02-16 19:37:22,138 autoreload 534 137007007953024 /app/core/api/Serializers/vacation_serializer.py changed, reloading.
+INFO 2026-02-16 19:37:23,554 autoreload 2450 135063657238656 Watching for file changes with StatReloader
+INFO 2026-02-16 19:37:30,335 autoreload 2450 135063657238656 /app/core/api/Viewsets/vacation_viewset.py changed, reloading.
+INFO 2026-02-16 19:37:31,082 autoreload 2470 135267821752448 Watching for file changes with StatReloader
+INFO 2026-02-16 19:40:01,031 log 2470 135267760637632 "GET /api/auth/me/ HTTP/1.1" 200 605
+INFO 2026-02-16 19:40:01,068 log 2470 135267752228544 "GET /api/vacations/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:42:08,946 log 2470 135267752228544 "POST /api/vacations/ HTTP/1.1" 201 499
+INFO 2026-02-16 19:42:08,978 log 2470 135267752228544 "GET /api/vacations/ HTTP/1.1" 200 501
+INFO 2026-02-16 19:42:14,069 auth_viewset 2470 135267752228544 User logged out: milton.najera@caliente.mx
+INFO 2026-02-16 19:42:14,072 log 2470 135267752228544 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:42:22,280 auth_viewset 2470 135267752228544 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 19:42:22,290 log 2470 135267752228544 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 19:42:22,467 log 2470 135267734361792 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:42:22,470 log 2470 135267742770880 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:42:22,492 log 2470 135267760637632 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:42:22,495 log 2470 135267752228544 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:42:22,583 log 2470 135267752228544 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185315
+INFO 2026-02-16 19:42:24,925 log 2470 135267752228544 "GET /api/vacations/ HTTP/1.1" 200 501
+INFO 2026-02-16 19:42:34,166 log 2470 135267752228544 "OPTIONS /api/vacations/b49f809c-3230-47c3-9b1b-df94c7df8bf5/approve/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:42:34,206 log 2470 135267752228544 "PUT /api/vacations/b49f809c-3230-47c3-9b1b-df94c7df8bf5/approve/ HTTP/1.1" 200 532
+INFO 2026-02-16 19:42:34,277 log 2470 135267752228544 "GET /api/vacations/ HTTP/1.1" 200 534
+INFO 2026-02-16 19:42:40,380 auth_viewset 2470 135267752228544 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 19:42:40,384 log 2470 135267752228544 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:42:50,164 auth_viewset 2470 135267752228544 User logged in: fabian.ochoa@caliente.mx
+INFO 2026-02-16 19:42:50,174 log 2470 135267752228544 "POST /api/auth/login/ HTTP/1.1" 200 1304
+INFO 2026-02-16 19:42:50,362 log 2470 135267734361792 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:42:50,381 log 2470 135267742770880 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:42:50,404 log 2470 135267760637632 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:42:50,409 log 2470 135267752228544 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:42:50,514 log 2470 135267752228544 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185315
+INFO 2026-02-16 19:42:52,627 log 2470 135267752228544 "GET /api/vacations/ HTTP/1.1" 200 534
+INFO 2026-02-16 19:43:06,004 log 2470 135267752228544 "POST /api/vacations/ HTTP/1.1" 201 499
+INFO 2026-02-16 19:43:06,038 log 2470 135267752228544 "GET /api/vacations/ HTTP/1.1" 200 1034
+INFO 2026-02-16 19:43:08,078 auth_viewset 2470 135267752228544 User logged out: fabian.ochoa@caliente.mx
+INFO 2026-02-16 19:43:08,082 log 2470 135267752228544 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:43:14,929 auth_viewset 2470 135267752228544 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 19:43:14,936 log 2470 135267752228544 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 19:43:15,060 log 2470 135267734361792 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:43:15,092 log 2470 135267742770880 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:43:15,115 log 2470 135267760637632 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:43:15,118 log 2470 135267752228544 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:43:15,207 log 2470 135267752228544 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185315
+INFO 2026-02-16 19:43:17,600 log 2470 135267752228544 "GET /api/vacations/ HTTP/1.1" 200 1034
+INFO 2026-02-16 19:43:25,187 log 2470 135267752228544 "OPTIONS /api/vacations/31116c20-f206-46ec-ac5e-30ca66ebdcde/approve/ HTTP/1.1" 200 0
+INFO 2026-02-16 19:43:25,226 log 2470 135267752228544 "PUT /api/vacations/31116c20-f206-46ec-ac5e-30ca66ebdcde/approve/ HTTP/1.1" 200 523
+INFO 2026-02-16 19:43:25,300 log 2470 135267752228544 "GET /api/vacations/ HTTP/1.1" 200 1058
+INFO 2026-02-16 19:43:35,528 auth_viewset 2470 135267752228544 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 19:43:35,532 log 2470 135267752228544 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:43:42,058 auth_viewset 2470 135267752228544 User logged in: fabian.ochoa@caliente.mx
+INFO 2026-02-16 19:43:42,066 log 2470 135267752228544 "POST /api/auth/login/ HTTP/1.1" 200 1304
+INFO 2026-02-16 19:43:42,210 log 2470 135267734361792 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:43:42,220 log 2470 135267742770880 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:43:42,236 log 2470 135267760637632 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:43:42,239 log 2470 135267752228544 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:43:42,319 log 2470 135267752228544 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185315
+INFO 2026-02-16 19:43:43,265 log 2470 135267752228544 "GET /api/vacations/ HTTP/1.1" 200 1058
+INFO 2026-02-16 19:43:50,082 auth_viewset 2470 135267752228544 User logged out: fabian.ochoa@caliente.mx
+INFO 2026-02-16 19:43:50,086 log 2470 135267752228544 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 19:47:38,995 auth_viewset 2470 135267752228544 User logged in: felix.egana@caliente.mx
+INFO 2026-02-16 19:47:39,005 log 2470 135267752228544 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-16 19:47:39,136 log 2470 135267734361792 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 19:47:39,162 log 2470 135267742770880 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 19:47:39,178 log 2470 135267760637632 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 19:47:39,181 log 2470 135267752228544 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 19:47:39,267 log 2470 135267752228544 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185315
+INFO 2026-02-16 20:14:40,309 log 2470 135267734361792 "OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+INFO 2026-02-16 20:14:40,501 log 2470 135267734361792 "GET /api/auth/me/ HTTP/1.1" 200 579
+INFO 2026-02-16 20:14:40,667 log 2470 135267752228544 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 20:14:40,679 log 2470 135267722806976 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:14:40,748 log 2470 135267760637632 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 20:14:40,752 log 2470 135267742770880 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 20:14:41,017 log 2470 135267742770880 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185315
+INFO 2026-02-16 20:14:43,406 log 2470 135267742770880 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+INFO 2026-02-16 20:14:43,438 auth_viewset 2470 135267742770880 User logged out: felix.egana@caliente.mx
+INFO 2026-02-16 20:14:43,442 log 2470 135267742770880 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 20:14:50,279 auth_viewset 2470 135267742770880 User logged in: milton.najera@caliente.mx
+INFO 2026-02-16 20:14:50,287 log 2470 135267742770880 "POST /api/auth/login/ HTTP/1.1" 200 1320
+INFO 2026-02-16 20:14:50,381 log 2470 135267752228544 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:14:50,423 log 2470 135267722806976 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 20:14:50,442 log 2470 135267760637632 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 20:14:50,446 log 2470 135267742770880 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 20:14:50,543 log 2470 135267742770880 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185315
+INFO 2026-02-16 20:15:58,965 autoreload 123 133740548726912 Watching for file changes with StatReloader
+INFO 2026-02-16 20:16:18,559 auth_viewset 123 133740487612096 User logged in: milton.najera@caliente.mx
+INFO 2026-02-16 20:16:18,576 log 123 133740487612096 "POST /api/auth/login/ HTTP/1.1" 200 1320
+INFO 2026-02-16 20:16:19,321 log 123 133740462384832 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:16:19,339 log 123 133740487612096 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 20:16:19,352 log 123 133740470793920 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 20:16:19,356 log 123 133740479203008 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 20:16:19,464 log 123 133740479203008 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185315
+INFO 2026-02-16 20:16:22,054 log 123 133740479203008 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:16:23,029 log 123 133740470793920 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:16:23,049 log 123 133740479203008 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:16:24,477 log 123 133740479203008 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:16:59,043 log 123 133740479203008 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:16:59,046 log 123 133740470793920 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:16:59,738 log 123 133740470793920 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:19:53,411 log 123 133740470793920 "GET /api/auth/me/ HTTP/1.1" 200 605
+INFO 2026-02-16 20:19:53,484 log 123 133740470793920 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:19:55,574 log 123 133740470793920 "OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+INFO 2026-02-16 20:19:55,669 log 123 133740470793920 "GET /api/auth/me/ HTTP/1.1" 200 605
+INFO 2026-02-16 20:19:55,693 log 123 133740479203008 "OPTIONS /api/leagues/ HTTP/1.1" 200 0
+INFO 2026-02-16 20:19:55,755 log 123 133740479203008 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:19:57,409 auth_viewset 123 133740479203008 User logged out: milton.najera@caliente.mx
+INFO 2026-02-16 20:19:57,414 log 123 133740479203008 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-16 20:20:39,348 autoreload 72 128433820532864 Watching for file changes with StatReloader
+INFO 2026-02-16 20:21:00,812 auth_viewset 72 128433759418048 User logged in: milton.najera@caliente.mx
+INFO 2026-02-16 20:21:00,822 log 72 128433759418048 "POST /api/auth/login/ HTTP/1.1" 200 1320
+INFO 2026-02-16 20:21:01,512 log 72 128433665332928 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:21:01,526 log 72 128433673725632 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 20:21:01,544 log 72 128433682118336 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 20:21:01,547 log 72 128433759418048 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 20:21:01,640 log 72 128433759418048 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185315
+INFO 2026-02-16 20:21:02,870 log 72 128433759418048 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:21:02,874 log 72 128433682118336 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:21:04,620 log 72 128433759418048 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:21:06,498 log 72 128433759418048 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:21:06,501 log 72 128433682118336 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:21:08,893 log 72 128433682118336 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:21:12,115 log 72 128433682118336 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:21:12,119 log 72 128433759418048 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:21:12,743 log 72 128433759418048 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:22:23,335 log 72 128433759418048 "GET /api/auth/me/ HTTP/1.1" 200 605
+INFO 2026-02-16 20:22:23,424 log 72 128433759418048 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:22:30,486 log 72 128433759418048 "GET /api/auth/me/ HTTP/1.1" 200 605
+INFO 2026-02-16 20:22:30,557 log 72 128433759418048 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:22:31,805 log 72 128433759418048 "GET /api/auth/me/ HTTP/1.1" 200 605
+INFO 2026-02-16 20:22:31,905 log 72 128433759418048 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:22:32,929 log 72 128433759418048 "GET /api/auth/me/ HTTP/1.1" 200 605
+INFO 2026-02-16 20:22:32,993 log 72 128433759418048 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:22:36,580 log 72 128433759418048 "OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+INFO 2026-02-16 20:22:36,654 log 72 128433759418048 "GET /api/auth/me/ HTTP/1.1" 200 605
+INFO 2026-02-16 20:22:36,687 log 72 128433682118336 "OPTIONS /api/leagues/ HTTP/1.1" 200 0
+INFO 2026-02-16 20:22:36,735 log 72 128433682118336 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:23:09,357 log 72 128433682118336 "GET /api/auth/me/ HTTP/1.1" 200 605
+INFO 2026-02-16 20:23:09,840 log 72 128433682118336 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:23:51,033 log 72 128433682118336 "GET /api/auth/me/ HTTP/1.1" 200 605
+INFO 2026-02-16 20:23:51,102 log 72 128433682118336 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:24:20,269 log 72 128433682118336 "GET /api/auth/me/ HTTP/1.1" 200 605
+INFO 2026-02-16 20:24:20,772 log 72 128433682118336 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:24:34,479 log 72 128433682118336 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:24:34,485 log 72 128433759418048 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:24:35,620 log 72 128433682118336 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 20:24:35,663 log 72 128433759418048 "GET /api/swaprequests/ HTTP/1.1" 200 1946
+INFO 2026-02-16 20:24:36,860 log 72 128433759418048 "GET /api/vacations/ HTTP/1.1" 200 1058
+INFO 2026-02-16 20:24:38,761 log 72 128433665332928 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-16 20:24:38,786 log 72 128433673725632 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-16 20:24:38,804 log 72 128433682118336 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-16 20:24:38,806 log 72 128433759418048 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 20:24:38,888 log 72 128433759418048 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185315
+INFO 2026-02-16 20:24:47,902 log 72 128433759418048 "OPTIONS /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 0
+INFO 2026-02-16 20:24:48,063 log 72 128433759418048 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 185315
+INFO 2026-02-16 20:24:48,155 log 72 128433759418048 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 185315
+INFO 2026-02-16 20:24:48,252 log 72 128433759418048 "OPTIONS /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 0
+INFO 2026-02-16 20:24:48,331 log 72 128433759418048 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 185315
+INFO 2026-02-16 20:24:48,481 log 72 128433759418048 "OPTIONS /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 0
+INFO 2026-02-16 20:24:48,610 log 72 128433759418048 "GET /api/schedules/?date_from=2026-03-16&date_to=2026-03-22 HTTP/1.1" 200 185315
+INFO 2026-02-16 20:24:49,317 log 72 128433759418048 "GET /api/schedules/?date_from=2026-03-09&date_to=2026-03-15 HTTP/1.1" 200 185315
+INFO 2026-02-16 20:24:49,504 log 72 128433759418048 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 185315
+INFO 2026-02-16 20:24:49,678 log 72 128433759418048 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 185315
+INFO 2026-02-16 20:24:49,887 log 72 128433759418048 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 185315
+INFO 2026-02-16 20:24:57,679 log 72 128433759418048 "GET /api/swaprequests/ HTTP/1.1" 200 1946
+INFO 2026-02-16 20:24:57,693 log 72 128433682118336 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-16 20:26:40,898 autoreload 72 128433820532864 /app/core/api/Serializers/swap_request_serializer.py changed, reloading.
+INFO 2026-02-16 20:26:41,770 autoreload 778 133618761302144 Watching for file changes with StatReloader
+INFO 2026-02-16 20:26:55,396 autoreload 778 133618761302144 /app/core/api/Viewsets/swap_request_viewset.py changed, reloading.
+INFO 2026-02-16 20:34:10,983 autoreload 124 134402424979584 Watching for file changes with StatReloader

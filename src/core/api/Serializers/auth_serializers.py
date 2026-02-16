@@ -437,11 +437,12 @@ class RegisterSerializer(serializers.Serializer):
         max_length=20,
         help_text=_('Phone number for notifications')
     )
-    team_id = serializers.PrimaryKeyRelatedField(
+    team_id = serializers.SlugRelatedField(
         queryset=Team.objects.all(),
+        slug_field='uuid',
         required=False,
         allow_null=True,
-        help_text=_('Team ID (optional)')
+        help_text=_('Team UUID (optional)')
     )
     hire_date = serializers.DateField(
         required=False,
