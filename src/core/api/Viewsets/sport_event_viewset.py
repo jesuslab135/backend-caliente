@@ -6,3 +6,4 @@ from rest_framework import viewsets
 class SportEventViewSet(viewsets.ModelViewSet):
     queryset = SportEvent.objects.all()
     serializer_class = SportEventSerializer
+    lookup_field = 'uuid'

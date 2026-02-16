@@ -6,3 +6,4 @@ from rest_framework import viewsets
 class LeagueViewSet(viewsets.ModelViewSet):
     queryset = League.objects.all()
     serializer_class = LeagueSerializer
+    lookup_field = 'uuid'

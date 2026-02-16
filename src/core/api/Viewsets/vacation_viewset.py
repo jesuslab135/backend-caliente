@@ -6,3 +6,4 @@ from rest_framework import viewsets
 class VacationViewSet(viewsets.ModelViewSet):
     queryset = Vacation.objects.all()
     serializer_class = VacationSerializer
+    lookup_field = 'uuid'

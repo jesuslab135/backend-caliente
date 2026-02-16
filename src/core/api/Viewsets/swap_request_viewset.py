@@ -7,3 +7,4 @@ from rest_framework import viewsets
 class SwapRequestViewSet(viewsets.ModelViewSet):
     queryset = SwapRequest.objects.all()
     serializer_class = SwapRequestSerializer
+    lookup_field = 'uuid'
