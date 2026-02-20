@@ -40,6 +40,7 @@ class Command(BaseCommand):
             ('ShiftCycleConfig',      ShiftCycleConfig),
             ('SportEvent',            SportEvent),
             ('League',                League),
+            ('SystemSettings',        SystemSettings),
         ]
         for label, model in flush_order:
             count, _ = model.objects.all().delete()
