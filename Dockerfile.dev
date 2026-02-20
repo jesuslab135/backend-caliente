@@ -14,6 +14,9 @@ WORKDIR /app
 COPY src/requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
+# Instalar solo el browser Chromium (deps de sistema ya en install.sh)
+RUN playwright install chromium
+
 # Copiar código fuente
 COPY src/ /app/
 

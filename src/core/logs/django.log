@@ -1335,3 +1335,334 @@ INFO 2026-02-16 21:34:38,164 autoreload 625 137015515963520 /app/core/api/servic
 INFO 2026-02-16 21:34:38,838 autoreload 639 135624098889856 Watching for file changes with StatReloader
 INFO 2026-02-16 21:34:46,555 autoreload 639 135624098889856 /app/core/api/services/schedule_generator.py changed, reloading.
 INFO 2026-02-16 21:34:47,328 autoreload 659 127888723116160 Watching for file changes with StatReloader
+INFO 2026-02-20 02:33:29,873 autoreload 280 139231407644800 Watching for file changes with StatReloader
+INFO 2026-02-20 02:34:20,084 log 280 139231346529984 "OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+WARNING 2026-02-20 02:34:20,141 log 280 139231346529984 "GET /api/auth/me/ HTTP/1.1" 401 183
+INFO 2026-02-20 02:34:20,279 log 280 139231346529984 "OPTIONS /api/auth/token/refresh/ HTTP/1.1" 200 0
+INFO 2026-02-20 02:34:20,396 log 280 139231346529984 "POST /api/auth/token/refresh/ HTTP/1.1" 200 681
+INFO 2026-02-20 02:34:20,577 log 280 139231346529984 "OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+INFO 2026-02-20 02:34:20,632 log 280 139231346529984 "GET /api/auth/me/ HTTP/1.1" 200 579
+INFO 2026-02-20 02:34:20,869 log 280 139231346529984 "OPTIONS /api/employees/ HTTP/1.1" 200 0
+INFO 2026-02-20 02:34:20,878 log 280 139231325836992 "OPTIONS /api/shifttypes/ HTTP/1.1" 200 0
+INFO 2026-02-20 02:34:20,884 log 280 139231317427904 "OPTIONS /api/shiftcategories/ HTTP/1.1" 200 0
+INFO 2026-02-20 02:34:20,890 log 280 139231309018816 "OPTIONS /api/shiftcycleconfigs/ HTTP/1.1" 200 0
+INFO 2026-02-20 02:34:20,954 log 280 139231346529984 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-20 02:34:20,964 log 280 139231309018816 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-20 02:34:20,972 log 280 139231317427904 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-20 02:34:20,981 log 280 139231325836992 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-20 02:34:21,015 log 280 139231309018816 "OPTIONS /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 0
+INFO 2026-02-20 02:34:21,145 log 280 139231309018816 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 177240
+INFO 2026-02-20 02:34:27,113 log 280 139231325836992 "OPTIONS /api/teams/ HTTP/1.1" 200 0
+INFO 2026-02-20 02:34:27,160 log 280 139231325836992 "GET /api/teams/ HTTP/1.1" 200 273
+INFO 2026-02-20 02:34:27,163 log 280 139231309018816 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-20 02:34:28,356 log 280 139231325836992 "OPTIONS /api/sportevents/ HTTP/1.1" 200 0
+INFO 2026-02-20 02:34:28,357 log 280 139231309018816 "OPTIONS /api/leagues/ HTTP/1.1" 200 0
+INFO 2026-02-20 02:34:28,389 log 280 139231325836992 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-20 02:34:28,393 log 280 139231309018816 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-20 02:34:29,685 log 280 139231309018816 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-20 02:34:30,670 log 280 139231309018816 "OPTIONS /api/swaprequests/ HTTP/1.1" 200 0
+INFO 2026-02-20 02:34:30,712 log 280 139231309018816 "GET /api/swaprequests/ HTTP/1.1" 200 2
+INFO 2026-02-20 02:34:31,605 log 280 139231309018816 "OPTIONS /api/vacations/ HTTP/1.1" 200 0
+INFO 2026-02-20 02:34:31,640 log 280 139231309018816 "GET /api/vacations/ HTTP/1.1" 200 1058
+INFO 2026-02-20 02:34:32,967 log 280 139231309018816 "OPTIONS /api/systemsettingss/ HTTP/1.1" 200 0
+INFO 2026-02-20 02:34:32,993 log 280 139231309018816 "GET /api/systemsettingss/ HTTP/1.1" 200 295
+INFO 2026-02-20 02:34:34,846 log 280 139231346529984 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-20 02:34:34,871 log 280 139231317427904 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-20 02:34:34,892 log 280 139231325836992 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-20 02:34:34,895 log 280 139231309018816 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-20 02:34:34,971 log 280 139231309018816 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 177240
+INFO 2026-02-20 02:34:38,472 log 280 139231309018816 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+INFO 2026-02-20 02:34:38,552 auth_viewset 280 139231309018816 User logged out: felix.egana@caliente.mx
+INFO 2026-02-20 02:34:38,555 log 280 139231309018816 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-20 03:07:47,080 log 280 139231317427904 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-02-20 03:07:47,548 auth_viewset 280 139231317427904 User logged in: felix.egana@caliente.mx
+INFO 2026-02-20 03:07:47,558 log 280 139231317427904 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-20 03:07:47,673 log 280 139231309018816 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-20 03:07:47,682 log 280 139231346529984 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-20 03:07:47,697 log 280 139231317427904 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-20 03:07:47,700 log 280 139231325836992 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-20 03:07:47,779 log 280 139231325836992 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 177240
+INFO 2026-02-20 03:07:51,165 log 280 139231317427904 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-20 03:07:51,169 log 280 139231325836992 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-20 03:07:53,057 log 280 139231325836992 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-20 03:07:53,985 log 280 139231325836992 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-20 03:07:53,988 log 280 139231317427904 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-20 03:21:21,813 autoreload 280 139231407644800 /app/core/api/models.py changed, reloading.
+INFO 2026-02-20 03:21:23,437 autoreload 5848 132652722180224 Watching for file changes with StatReloader
+INFO 2026-02-20 03:21:25,809 autoreload 5848 132652722180224 /app/core/api/models.py changed, reloading.
+INFO 2026-02-20 03:21:26,551 autoreload 5860 131381905629312 Watching for file changes with StatReloader
+INFO 2026-02-20 03:23:14,341 autoreload 5860 131381905629312 /app/core/api/Serializers/sport_event_serializer.py changed, reloading.
+INFO 2026-02-20 03:23:15,654 autoreload 6072 135815177138304 Watching for file changes with StatReloader
+INFO 2026-02-20 03:25:50,079 autoreload 6072 135815177138304 /app/core/api/Viewsets/sport_event_viewset.py changed, reloading.
+INFO 2026-02-20 03:25:51,729 autoreload 6376 131736741576832 Watching for file changes with StatReloader
+WARNING 2026-02-20 03:34:57,865 log 6376 131736680462016 "GET /api/sportevents/calendar/month/?year=2026 HTTP/1.1" 401 58
+WARNING 2026-02-20 03:35:03,864 log 6376 131736680462016 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 401 58
+WARNING 2026-02-20 03:35:14,553 log 6376 131736680462016 "POST /api/auth/login/ HTTP/1.1" 400 76
+WARNING 2026-02-20 03:35:22,506 log 6376 131736680462016 "POST /api/auth/login/ HTTP/1.1" 400 76
+WARNING 2026-02-20 03:35:25,928 log 6376 131736680462016 "POST /api/auth/login/ HTTP/1.1" 400 76
+WARNING 2026-02-20 03:35:30,306 log 6376 131736680462016 "POST /api/auth/login/ HTTP/1.1" 400 76
+WARNING 2026-02-20 03:35:37,261 log 6376 131736680462016 "POST /api/auth/login/ HTTP/1.1" 400 76
+INFO 2026-02-20 03:35:57,827 log 6376 131736680462016 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 2
+INFO 2026-02-20 03:36:04,008 log 6376 131736680462016 "GET /api/sportevents/calendar/day/?date=2026-02-19 HTTP/1.1" 200 2
+INFO 2026-02-20 03:36:04,087 log 6376 131736680462016 "GET /api/sportevents/sports/ HTTP/1.1" 200 2
+WARNING 2026-02-20 03:36:36,710 log 6376 131736680462016 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 401 107
+INFO 2026-02-20 03:36:47,571 log 6376 131736680462016 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 547
+INFO 2026-02-20 03:36:52,913 log 6376 131736680462016 "GET /api/sportevents/calendar/day/?date=2026-02-19 HTTP/1.1" 200 1603
+INFO 2026-02-20 03:37:05,152 log 6376 131736680462016 "GET /api/sportevents/sports/ HTTP/1.1" 200 45
+INFO 2026-02-20 03:37:05,228 log 6376 131736680462016 "GET /api/sportevents/calendar/month/?year=2026&month=2&sport=Football HTTP/1.1" 200 231
+INFO 2026-02-20 03:40:40,522 autoreload 8199 125430714626176 Watching for file changes with StatReloader
+INFO 2026-02-20 03:41:07,969 log 8199 125430653511360 "GET /api/auth/me/ HTTP/1.1" 200 579
+INFO 2026-02-20 03:41:08,467 log 8199 125430560454336 "GET /api/leagues/ HTTP/1.1" 200 1149
+ERROR 2026-02-20 03:41:08,565 log 8199 125430653511360 "GET /api/sportevents/ HTTP/1.1" 500 20744
+INFO 2026-02-20 03:41:10,185 auth_viewset 8199 125430653511360 User logged out: felix.egana@caliente.mx
+INFO 2026-02-20 03:41:10,188 log 8199 125430653511360 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-20 03:41:18,876 auth_viewset 8199 125430653511360 User logged in: felix.egana@caliente.mx
+INFO 2026-02-20 03:41:18,883 log 8199 125430653511360 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-20 03:41:19,470 log 8199 125430543668928 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-20 03:41:19,486 log 8199 125430552061632 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-20 03:41:19,506 log 8199 125430560454336 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-20 03:41:19,509 log 8199 125430653511360 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-20 03:41:19,597 log 8199 125430653511360 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 177240
+INFO 2026-02-20 03:41:20,748 log 8199 125430653511360 "OPTIONS /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 0
+INFO 2026-02-20 03:41:20,759 log 8199 125430560454336 "OPTIONS /api/sportevents/sports/ HTTP/1.1" 200 0
+INFO 2026-02-20 03:41:20,810 log 8199 125430560454336 "GET /api/sportevents/sports/ HTTP/1.1" 200 45
+INFO 2026-02-20 03:41:20,813 log 8199 125430552061632 "GET /api/leagues/ HTTP/1.1" 200 1149
+INFO 2026-02-20 03:41:20,839 log 8199 125430653511360 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 547
+INFO 2026-02-20 03:41:30,411 log 8199 125430653511360 "OPTIONS /api/sportevents/calendar/month/?year=2026&month=3 HTTP/1.1" 200 0
+INFO 2026-02-20 03:41:30,438 log 8199 125430653511360 "GET /api/sportevents/calendar/month/?year=2026&month=3 HTTP/1.1" 200 2
+INFO 2026-02-20 03:41:31,466 log 8199 125430653511360 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 547
+INFO 2026-02-20 03:41:35,567 log 8199 125430653511360 "OPTIONS /api/sportevents/calendar/day/?date=2026-02-19 HTTP/1.1" 200 0
+INFO 2026-02-20 03:41:35,594 log 8199 125430653511360 "GET /api/sportevents/calendar/day/?date=2026-02-19 HTTP/1.1" 200 1603
+INFO 2026-02-20 03:41:42,899 log 8199 125430653511360 "GET /api/leagues/ HTTP/1.1" 200 1149
+INFO 2026-02-20 03:41:48,614 log 8199 125430560454336 "GET /api/leagues/ HTTP/1.1" 200 1149
+ERROR 2026-02-20 03:41:48,658 log 8199 125430653511360 "GET /api/sportevents/ HTTP/1.1" 500 20744
+INFO 2026-02-20 03:41:51,109 log 8199 125430560454336 "GET /api/teams/ HTTP/1.1" 200 273
+INFO 2026-02-20 03:41:51,124 log 8199 125430653511360 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-20 03:41:52,261 log 8199 125430560454336 "GET /api/leagues/ HTTP/1.1" 200 1149
+ERROR 2026-02-20 03:41:52,300 log 8199 125430653511360 "GET /api/sportevents/ HTTP/1.1" 500 20744
+INFO 2026-02-20 03:42:24,263 log 8199 125430653511360 "GET /api/vacations/ HTTP/1.1" 200 1058
+INFO 2026-02-20 03:42:25,139 log 8199 125430653511360 "GET /api/swaprequests/ HTTP/1.1" 200 2
+INFO 2026-02-20 03:42:26,005 log 8199 125430543668928 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-20 03:42:26,031 log 8199 125430552061632 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-20 03:42:26,045 log 8199 125430560454336 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-20 03:42:26,048 log 8199 125430653511360 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-20 03:42:26,128 log 8199 125430653511360 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 177240
+INFO 2026-02-20 03:42:26,677 log 8199 125430560454336 "GET /api/teams/ HTTP/1.1" 200 273
+INFO 2026-02-20 03:42:26,690 log 8199 125430653511360 "GET /api/employees/ HTTP/1.1" 200 8187
+ERROR 2026-02-20 03:42:46,243 log 8199 125430535276224 "GET /api/sportevents/ HTTP/1.1" 500 136275
+ERROR 2026-02-20 03:42:56,504 log 8199 125430535276224 "GET /api/sportevents/ HTTP/1.1" 500 20184
+INFO 2026-02-20 03:43:05,937 autoreload 8199 125430714626176 /app/core/api/Serializers/sport_event_serializer.py changed, reloading.
+INFO 2026-02-20 03:43:07,016 autoreload 8499 123902681088128 Watching for file changes with StatReloader
+INFO 2026-02-20 03:43:15,325 log 8499 123902552438464 "GET /api/sportevents/ HTTP/1.1" 200 9726
+INFO 2026-02-20 03:45:04,428 autoreload 186 128223113457792 Watching for file changes with StatReloader
+INFO 2026-02-20 03:46:00,490 log 186 128223052342976 "GET /api/auth/me/ HTTP/1.1" 200 579
+INFO 2026-02-20 03:46:01,118 log 186 128222960285376 "GET /api/teams/ HTTP/1.1" 200 273
+INFO 2026-02-20 03:46:01,129 log 186 128223052342976 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-20 03:46:03,145 auth_viewset 186 128223052342976 User logged out: felix.egana@caliente.mx
+INFO 2026-02-20 03:46:03,150 log 186 128223052342976 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-20 03:46:21,652 auth_viewset 186 128223052342976 User logged in: felix.egana@caliente.mx
+INFO 2026-02-20 03:46:21,662 log 186 128223052342976 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-20 03:46:22,195 log 186 128223052342976 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-20 03:46:22,223 log 186 128222951892672 "GET /api/shiftcategories/ HTTP/1.1" 200 1450
+INFO 2026-02-20 03:46:22,228 log 186 128222943499968 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-20 03:46:22,236 log 186 128222960285376 "GET /api/shifttypes/ HTTP/1.1" 200 6571
+INFO 2026-02-20 03:46:22,325 log 186 128222960285376 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 177240
+INFO 2026-02-20 03:46:35,200 log 186 128222943499968 "GET /api/teams/ HTTP/1.1" 200 273
+INFO 2026-02-20 03:46:35,205 log 186 128222960285376 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-20 03:46:37,054 log 186 128222943499968 "GET /api/leagues/ HTTP/1.1" 200 1149
+INFO 2026-02-20 03:46:37,067 log 186 128222960285376 "GET /api/sportevents/ HTTP/1.1" 200 9726
+INFO 2026-02-20 03:46:58,375 log 186 128222960285376 "GET /api/leagues/ HTTP/1.1" 200 1149
+INFO 2026-02-20 03:47:06,002 log 186 128222951892672 "GET /api/leagues/ HTTP/1.1" 200 1149
+INFO 2026-02-20 03:47:06,007 log 186 128222943499968 "GET /api/sportevents/sports/ HTTP/1.1" 200 45
+INFO 2026-02-20 03:47:06,013 log 186 128222960285376 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 547
+INFO 2026-02-20 03:47:10,956 log 186 128222960285376 "GET /api/swaprequests/ HTTP/1.1" 200 2
+INFO 2026-02-20 03:47:11,903 log 186 128222943499968 "GET /api/sportevents/sports/ HTTP/1.1" 200 45
+INFO 2026-02-20 03:47:11,909 log 186 128222951892672 "GET /api/leagues/ HTTP/1.1" 200 1149
+INFO 2026-02-20 03:47:11,911 log 186 128222960285376 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 547
+INFO 2026-02-20 03:47:17,094 log 186 128222960285376 "OPTIONS /api/sportevents/calendar/month/?year=2026&month=2&sport=Baseball HTTP/1.1" 200 0
+INFO 2026-02-20 03:47:17,123 log 186 128222960285376 "GET /api/sportevents/calendar/month/?year=2026&month=2&sport=Baseball HTTP/1.1" 200 139
+INFO 2026-02-20 03:47:18,095 log 186 128222960285376 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 547
+INFO 2026-02-20 03:47:18,979 log 186 128222960285376 "OPTIONS /api/sportevents/calendar/month/?year=2026&month=2&sport=Basketball HTTP/1.1" 200 0
+INFO 2026-02-20 03:47:19,007 log 186 128222960285376 "GET /api/sportevents/calendar/month/?year=2026&month=2&sport=Basketball HTTP/1.1" 200 241
+INFO 2026-02-20 03:47:19,709 log 186 128222960285376 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 547
+INFO 2026-02-20 03:47:20,460 log 186 128222960285376 "OPTIONS /api/sportevents/calendar/month/?year=2026&month=2&sport=Tennis HTTP/1.1" 200 0
+INFO 2026-02-20 03:47:20,487 log 186 128222960285376 "GET /api/sportevents/calendar/month/?year=2026&month=2&sport=Tennis HTTP/1.1" 200 89
+INFO 2026-02-20 03:47:21,176 log 186 128222960285376 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 547
+INFO 2026-02-20 03:47:22,659 log 186 128222960285376 "OPTIONS /api/sportevents/calendar/month/?year=2026&month=2&league=ATP+Singles HTTP/1.1" 200 0
+INFO 2026-02-20 03:47:22,699 log 186 128222960285376 "GET /api/sportevents/calendar/month/?year=2026&month=2&league=ATP+Singles HTTP/1.1" 200 89
+INFO 2026-02-20 03:47:23,520 log 186 128222960285376 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 547
+INFO 2026-02-20 03:54:08,752 autoreload 186 128223113457792 /app/core/api/services/importers/sport_event_import_service.py changed, reloading.
+INFO 2026-02-20 03:54:09,487 autoreload 1248 136119702790272 Watching for file changes with StatReloader
+INFO 2026-02-20 03:54:13,197 autoreload 1248 136119702790272 /app/core/api/services/importers/sport_event_import_service.py changed, reloading.
+INFO 2026-02-20 03:54:13,914 autoreload 1260 123869821501568 Watching for file changes with StatReloader
+INFO 2026-02-20 03:57:11,108 autoreload 1260 123869821501568 /app/core/api/Viewsets/sport_event_viewset.py changed, reloading.
+INFO 2026-02-20 03:57:12,380 autoreload 1608 131941447684224 Watching for file changes with StatReloader
+INFO 2026-02-20 03:58:56,427 log 1608 131941386569408 "POST /api/sportevents/import/ HTTP/1.1" 201 26
+INFO 2026-02-20 03:59:07,831 log 1608 131941386569408 "POST /api/sportevents/import/ HTTP/1.1" 201 26
+INFO 2026-02-20 03:59:51,476 log 1608 131941386569408 "POST /api/leagues/import/ HTTP/1.1" 201 66
+WARNING 2026-02-20 04:00:37,849 log 1608 131941386569408 "POST /api/sportevents/scrape/ HTTP/1.1" 400 163
+WARNING 2026-02-20 04:06:36,009 log 1608 131941386569408 "POST /api/sportevents/scrape/ HTTP/1.1" 400 54
+INFO 2026-02-20 04:09:26,276 autoreload 1608 131941447684224 /app/core/api/management/commands/scrape_flashscore.py changed, reloading.
+INFO 2026-02-20 04:09:27,142 autoreload 5306 135850602549376 Watching for file changes with StatReloader
+INFO 2026-02-20 04:09:49,431 log 5306 135850541426368 "POST /api/sportevents/scrape/ HTTP/1.1" 201 28
+INFO 2026-02-20 04:10:35,118 log 5306 135850541426368 "GET /api/auth/me/ HTTP/1.1" 200 579
+INFO 2026-02-20 04:10:35,333 log 5306 135850413258432 "GET /api/sportevents/sports/ HTTP/1.1" 200 48
+INFO 2026-02-20 04:10:35,390 log 5306 135850404865728 "GET /api/leagues/ HTTP/1.1" 200 22599
+INFO 2026-02-20 04:10:35,398 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 573
+INFO 2026-02-20 04:10:39,403 log 5306 135850541426368 "GET /api/leagues/ HTTP/1.1" 200 22599
+INFO 2026-02-20 04:10:43,352 log 5306 135850404865728 "GET /api/leagues/ HTTP/1.1" 200 22599
+INFO 2026-02-20 04:10:43,392 log 5306 135850541426368 "GET /api/sportevents/ HTTP/1.1" 200 119914
+INFO 2026-02-20 04:10:54,486 log 5306 135850541426368 "GET /api/leagues/ HTTP/1.1" 200 22599
+INFO 2026-02-20 04:10:55,472 log 5306 135850404865728 "GET /api/sportevents/sports/ HTTP/1.1" 200 48
+INFO 2026-02-20 04:10:55,507 log 5306 135850413258432 "GET /api/leagues/ HTTP/1.1" 200 22599
+INFO 2026-02-20 04:10:55,509 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 573
+INFO 2026-02-20 04:11:11,495 log 5306 135850541426368 "OPTIONS /api/sportevents/calendar/day/?date=2026-02-20 HTTP/1.1" 200 0
+INFO 2026-02-20 04:11:11,547 log 5306 135850541426368 "GET /api/sportevents/calendar/day/?date=2026-02-20 HTTP/1.1" 200 63890
+INFO 2026-02-20 04:12:01,798 log 5306 135850541426368 "GET /api/leagues/ HTTP/1.1" 200 22599
+INFO 2026-02-20 04:12:02,763 log 5306 135850413258432 "GET /api/sportevents/sports/ HTTP/1.1" 200 48
+INFO 2026-02-20 04:12:02,810 log 5306 135850404865728 "GET /api/leagues/ HTTP/1.1" 200 22599
+INFO 2026-02-20 04:12:02,813 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 573
+INFO 2026-02-20 04:12:08,361 log 5306 135850541426368 "GET /api/leagues/ HTTP/1.1" 200 22599
+INFO 2026-02-20 04:12:16,957 log 5306 135850404865728 "GET /api/leagues/ HTTP/1.1" 200 22599
+INFO 2026-02-20 04:12:17,140 log 5306 135850541426368 "GET /api/sportevents/ HTTP/1.1" 200 119914
+INFO 2026-02-20 04:12:27,982 log 5306 135850541426368 "GET /api/leagues/ HTTP/1.1" 200 22599
+INFO 2026-02-20 04:12:29,037 log 5306 135850404865728 "GET /api/sportevents/sports/ HTTP/1.1" 200 48
+INFO 2026-02-20 04:12:29,091 log 5306 135850413258432 "GET /api/leagues/ HTTP/1.1" 200 22599
+INFO 2026-02-20 04:12:29,107 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 573
+INFO 2026-02-20 04:12:54,820 log 5306 135850396473024 "POST /api/sportevents/scrape/ HTTP/1.1" 201 28
+INFO 2026-02-20 04:13:19,076 log 5306 135850541426368 "GET /api/auth/me/ HTTP/1.1" 200 579
+INFO 2026-02-20 04:13:19,275 log 5306 135850413258432 "GET /api/sportevents/sports/ HTTP/1.1" 200 48
+INFO 2026-02-20 04:13:19,324 log 5306 135850404865728 "GET /api/leagues/ HTTP/1.1" 200 22599
+INFO 2026-02-20 04:13:19,356 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 573
+INFO 2026-02-20 04:13:26,679 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=3 HTTP/1.1" 200 39
+INFO 2026-02-20 04:13:29,879 log 5306 135850541426368 "OPTIONS /api/sportevents/calendar/month/?year=2026&month=4 HTTP/1.1" 200 0
+INFO 2026-02-20 04:13:29,915 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=4 HTTP/1.1" 200 2
+INFO 2026-02-20 04:13:30,819 log 5306 135850541426368 "OPTIONS /api/sportevents/calendar/month/?year=2026&month=5 HTTP/1.1" 200 0
+INFO 2026-02-20 04:13:30,849 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=5 HTTP/1.1" 200 39
+INFO 2026-02-20 04:13:31,591 log 5306 135850541426368 "OPTIONS /api/sportevents/calendar/month/?year=2026&month=6 HTTP/1.1" 200 0
+INFO 2026-02-20 04:13:31,627 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=6 HTTP/1.1" 200 49
+INFO 2026-02-20 04:13:32,377 log 5306 135850541426368 "OPTIONS /api/sportevents/calendar/month/?year=2026&month=7 HTTP/1.1" 200 0
+INFO 2026-02-20 04:13:32,408 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=7 HTTP/1.1" 200 2
+INFO 2026-02-20 04:13:33,604 log 5306 135850541426368 "OPTIONS /api/sportevents/calendar/month/?year=2026&month=8 HTTP/1.1" 200 0
+INFO 2026-02-20 04:13:33,637 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=8 HTTP/1.1" 200 2
+INFO 2026-02-20 04:13:34,470 log 5306 135850541426368 "OPTIONS /api/sportevents/calendar/month/?year=2026&month=9 HTTP/1.1" 200 0
+INFO 2026-02-20 04:13:34,498 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=9 HTTP/1.1" 200 2
+INFO 2026-02-20 04:13:35,051 log 5306 135850541426368 "OPTIONS /api/sportevents/calendar/month/?year=2026&month=10 HTTP/1.1" 200 0
+INFO 2026-02-20 04:13:35,081 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=10 HTTP/1.1" 200 2
+INFO 2026-02-20 04:13:35,618 log 5306 135850541426368 "OPTIONS /api/sportevents/calendar/month/?year=2026&month=11 HTTP/1.1" 200 0
+INFO 2026-02-20 04:13:35,652 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=11 HTTP/1.1" 200 2
+INFO 2026-02-20 04:13:36,018 log 5306 135850541426368 "OPTIONS /api/sportevents/calendar/month/?year=2026&month=12 HTTP/1.1" 200 0
+INFO 2026-02-20 04:13:36,076 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=12 HTTP/1.1" 200 2
+INFO 2026-02-20 04:13:37,546 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=11 HTTP/1.1" 200 2
+INFO 2026-02-20 04:13:39,879 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=10 HTTP/1.1" 200 2
+INFO 2026-02-20 04:13:40,544 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=9 HTTP/1.1" 200 2
+INFO 2026-02-20 04:13:41,396 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=8 HTTP/1.1" 200 2
+INFO 2026-02-20 04:13:41,963 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=7 HTTP/1.1" 200 2
+INFO 2026-02-20 04:13:42,566 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=6 HTTP/1.1" 200 49
+INFO 2026-02-20 04:13:43,375 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=5 HTTP/1.1" 200 39
+INFO 2026-02-20 04:13:44,320 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=4 HTTP/1.1" 200 2
+INFO 2026-02-20 04:13:45,099 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=3 HTTP/1.1" 200 39
+INFO 2026-02-20 04:13:45,826 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 573
+INFO 2026-02-20 04:13:48,925 log 5306 135850541426368 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 573
+INFO 2026-02-20 04:13:52,628 log 5306 135850541426368 "GET /api/sportevents/calendar/day/?date=2026-02-20 HTTP/1.1" 200 126302
+INFO 2026-02-20 04:14:34,105 autoreload 5306 135850602549376 /app/core/api/management/commands/scrape_flashscore.py changed, reloading.
+INFO 2026-02-20 04:14:35,032 autoreload 6383 135909183946880 Watching for file changes with StatReloader
+INFO 2026-02-20 04:15:33,440 log 6383 135909122823872 "POST /api/sportevents/scrape/ HTTP/1.1" 201 28
+INFO 2026-02-20 04:18:24,274 autoreload 6383 135909183946880 /app/core/api/Viewsets/sport_event_viewset.py changed, reloading.
+INFO 2026-02-20 04:18:25,201 autoreload 6971 139133798387840 Watching for file changes with StatReloader
+INFO 2026-02-20 04:19:25,315 autoreload 6971 139133798387840 /app/core/api/Viewsets/sport_event_viewset.py changed, reloading.
+INFO 2026-02-20 04:19:26,317 autoreload 7093 123335970058368 Watching for file changes with StatReloader
+INFO 2026-02-20 04:28:34,688 scrape_flashscore 7093 123335908935360 Scraping: Ligue 1 (France) - Football
+INFO 2026-02-20 04:28:37,152 scrape_flashscore 7093 123335908935360 Scraping: Bundesliga (Germany) - Football
+INFO 2026-02-20 04:28:39,252 scrape_flashscore 7093 123335908935360 Scraping: Serie A (Italy) - Football
+INFO 2026-02-20 04:28:41,739 scrape_flashscore 7093 123335908935360 Scraping: Eredivisie (Netherlands) - Football
+INFO 2026-02-20 04:28:44,091 scrape_flashscore 7093 123335908935360 Scraping: Laliga (Spain) - Football
+INFO 2026-02-20 04:28:45,914 scrape_flashscore 7093 123335908935360 Scraping: Premier League (England) - Football
+INFO 2026-02-20 04:28:48,007 scrape_flashscore 7093 123335908935360 Scraping: Champions League (Europe) - Football
+INFO 2026-02-20 04:28:49,557 scrape_flashscore 7093 123335908935360 Scraping: Liga Mx (Mexico) - Football
+INFO 2026-02-20 04:28:51,251 scrape_flashscore 7093 123335908935360 Scraping: Australian Open (Atp Singles) - Tennis
+INFO 2026-02-20 04:29:01,994 scrape_flashscore 7093 123335908935360   No matches found for Australian Open
+INFO 2026-02-20 04:29:01,996 scrape_flashscore 7093 123335908935360 Scraping: French Open (Atp Singles) - Tennis
+INFO 2026-02-20 04:29:13,507 scrape_flashscore 7093 123335908935360   No matches found for French Open
+INFO 2026-02-20 04:29:13,509 scrape_flashscore 7093 123335908935360 Scraping: Nba (Usa) - Basketball
+INFO 2026-02-20 04:29:16,529 scrape_flashscore 7093 123335908935360 Scraping: Mlb (Usa) - Baseball
+INFO 2026-02-20 04:29:18,398 scrape_flashscore 7093 123335908935360 Scraping: Lmb (Mexico) - Baseball
+INFO 2026-02-20 04:29:19,718 scrape_flashscore 7093 123335908935360 Scraping: Nhl (Usa) - Hockey
+INFO 2026-02-20 04:29:26,652 log 7093 123335908935360 "POST /api/sportevents/scrape/ HTTP/1.1" 201 41
+INFO 2026-02-20 04:29:59,045 scrape_flashscore 7093 123335908935360 Scraping: Ligue 1 (France) - Football
+INFO 2026-02-20 04:30:00,729 scrape_flashscore 7093 123335908935360 Scraping: Bundesliga (Germany) - Football
+INFO 2026-02-20 04:30:02,790 scrape_flashscore 7093 123335908935360 Scraping: Serie A (Italy) - Football
+INFO 2026-02-20 04:30:05,273 scrape_flashscore 7093 123335908935360 Scraping: Eredivisie (Netherlands) - Football
+INFO 2026-02-20 04:30:06,871 scrape_flashscore 7093 123335908935360 Scraping: Laliga (Spain) - Football
+INFO 2026-02-20 04:30:08,985 scrape_flashscore 7093 123335908935360 Scraping: Premier League (England) - Football
+INFO 2026-02-20 04:30:10,995 scrape_flashscore 7093 123335908935360 Scraping: Champions League (Europe) - Football
+INFO 2026-02-20 04:30:12,820 scrape_flashscore 7093 123335908935360 Scraping: Liga Mx (Mexico) - Football
+INFO 2026-02-20 04:30:14,442 scrape_flashscore 7093 123335908935360 Scraping: Australian Open (Atp Singles) - Tennis
+INFO 2026-02-20 04:30:25,084 scrape_flashscore 7093 123335908935360   No matches found for Australian Open
+INFO 2026-02-20 04:30:25,086 scrape_flashscore 7093 123335908935360 Scraping: French Open (Atp Singles) - Tennis
+INFO 2026-02-20 04:30:36,149 scrape_flashscore 7093 123335908935360   No matches found for French Open
+INFO 2026-02-20 04:30:36,151 scrape_flashscore 7093 123335908935360 Scraping: Nba (Usa) - Basketball
+INFO 2026-02-20 04:30:38,034 scrape_flashscore 7093 123335908935360 Scraping: Mlb (Usa) - Baseball
+INFO 2026-02-20 04:30:39,381 scrape_flashscore 7093 123335908935360 Scraping: Lmb (Mexico) - Baseball
+INFO 2026-02-20 04:30:40,669 scrape_flashscore 7093 123335908935360 Scraping: Nhl (Usa) - Hockey
+INFO 2026-02-20 04:30:42,723 log 7093 123335908935360 "POST /api/sportevents/scrape/ HTTP/1.1" 200 41
+INFO 2026-02-20 04:32:10,617 auth_viewset 7093 123335908935360 User logged out: felix.egana@caliente.mx
+INFO 2026-02-20 04:32:10,622 log 7093 123335908935360 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-02-20 04:44:38,275 autoreload 783 125157029064832 Watching for file changes with StatReloader
+INFO 2026-02-20 04:45:38,289 auth_viewset 783 125156967950016 User logged in: felix.egana@caliente.mx
+INFO 2026-02-20 04:45:38,302 log 783 125156967950016 "POST /api/auth/login/ HTTP/1.1" 200 1268
+INFO 2026-02-20 04:45:38,962 log 783 125156967950016 "OPTIONS /api/employees/ HTTP/1.1" 200 0
+INFO 2026-02-20 04:45:38,970 log 783 125156879771328 "OPTIONS /api/shifttypes/ HTTP/1.1" 200 0
+INFO 2026-02-20 04:45:38,974 log 783 125156967950016 "OPTIONS /api/shiftcycleconfigs/ HTTP/1.1" 200 0
+INFO 2026-02-20 04:45:38,977 log 783 125156871378624 "OPTIONS /api/shiftcategories/ HTTP/1.1" 200 0
+INFO 2026-02-20 04:45:39,077 log 783 125156967950016 "GET /api/shiftcycleconfigs/ HTTP/1.1" 200 2
+INFO 2026-02-20 04:45:39,093 log 783 125156871378624 "GET /api/shiftcategories/ HTTP/1.1" 200 1453
+INFO 2026-02-20 04:45:39,101 log 783 125156879771328 "GET /api/shifttypes/ HTTP/1.1" 200 6583
+INFO 2026-02-20 04:45:39,115 log 783 125156862985920 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-20 04:45:39,142 log 783 125156967950016 "OPTIONS /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 0
+INFO 2026-02-20 04:45:39,218 log 783 125156967950016 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 2
+INFO 2026-02-20 04:45:45,229 log 783 125156967950016 "OPTIONS /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 0
+INFO 2026-02-20 04:45:45,254 log 783 125156967950016 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 2
+INFO 2026-02-20 04:45:45,855 log 783 125156967950016 "OPTIONS /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 0
+INFO 2026-02-20 04:45:45,883 log 783 125156967950016 "GET /api/schedules/?date_from=2026-03-02&date_to=2026-03-08 HTTP/1.1" 200 2
+INFO 2026-02-20 04:45:47,366 log 783 125156967950016 "GET /api/schedules/?date_from=2026-02-23&date_to=2026-03-01 HTTP/1.1" 200 2
+INFO 2026-02-20 04:45:47,764 log 783 125156967950016 "GET /api/schedules/?date_from=2026-02-16&date_to=2026-02-22 HTTP/1.1" 200 2
+INFO 2026-02-20 04:45:50,602 log 783 125156862985920 "OPTIONS /api/teams/ HTTP/1.1" 200 0
+INFO 2026-02-20 04:45:50,633 log 783 125156967950016 "GET /api/employees/ HTTP/1.1" 200 8187
+INFO 2026-02-20 04:45:50,642 log 783 125156862985920 "GET /api/teams/ HTTP/1.1" 200 273
+INFO 2026-02-20 04:45:54,043 log 783 125156862985920 "OPTIONS /api/sportevents/ HTTP/1.1" 200 0
+INFO 2026-02-20 04:45:54,045 log 783 125156967950016 "OPTIONS /api/leagues/ HTTP/1.1" 200 0
+INFO 2026-02-20 04:45:54,099 log 783 125156862985920 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-20 04:45:54,106 log 783 125156967950016 "GET /api/sportevents/ HTTP/1.1" 200 2
+INFO 2026-02-20 04:45:56,129 log 783 125156967950016 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-20 04:45:57,556 log 783 125156879771328 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-20 04:45:57,560 log 783 125156862985920 "GET /api/sportevents/sports/ HTTP/1.1" 200 2
+INFO 2026-02-20 04:45:57,569 log 783 125156967950016 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 2
+INFO 2026-02-20 04:46:03,172 log 783 125156967950016 "OPTIONS /api/swaprequests/ HTTP/1.1" 200 0
+INFO 2026-02-20 04:46:03,223 log 783 125156967950016 "GET /api/swaprequests/ HTTP/1.1" 200 2
+INFO 2026-02-20 04:46:04,350 log 783 125156967950016 "OPTIONS /api/vacations/ HTTP/1.1" 200 0
+INFO 2026-02-20 04:46:04,378 log 783 125156967950016 "GET /api/vacations/ HTTP/1.1" 200 2
+INFO 2026-02-20 04:46:05,165 log 783 125156967950016 "GET /api/sportevents/calendar/month/?year=2026&month=2 HTTP/1.1" 200 2
+INFO 2026-02-20 04:46:05,170 log 783 125156879771328 "GET /api/leagues/ HTTP/1.1" 200 2
+INFO 2026-02-20 04:46:05,177 log 783 125156862985920 "GET /api/sportevents/sports/ HTTP/1.1" 200 2
+INFO 2026-02-20 04:49:19,305 log 783 125156862985920 "OPTIONS /api/sportevents/scrape/ HTTP/1.1" 200 0
+WARNING 2026-02-20 04:49:20,093 log 783 125156862985920 "POST /api/sportevents/scrape/ HTTP/1.1" 400 985
+INFO 2026-02-20 04:59:03,298 autoreload 131 126732759604096 Watching for file changes with StatReloader
+INFO 2026-02-20 05:09:56,998 auth_viewset 1 129146532452032 User logged in: felix.egana@caliente.mx
+INFO 2026-02-20 05:10:06,672 scrape_flashscore 1 129146532452032 Scraping: Ligue 1 (France) - Football
+INFO 2026-02-20 05:10:08,445 scrape_flashscore 1 129146532452032 Scraping: Bundesliga (Germany) - Football
+INFO 2026-02-20 05:10:10,305 scrape_flashscore 1 129146532452032 Scraping: Serie A (Italy) - Football
+INFO 2026-02-20 05:10:12,675 scrape_flashscore 1 129146532452032 Scraping: Eredivisie (Netherlands) - Football
+INFO 2026-02-20 05:10:15,080 scrape_flashscore 1 129146532452032 Scraping: Laliga (Spain) - Football
+INFO 2026-02-20 05:10:16,817 scrape_flashscore 1 129146532452032 Scraping: Premier League (England) - Football
+INFO 2026-02-20 05:10:18,597 scrape_flashscore 1 129146532452032 Scraping: Champions League (Europe) - Football
+INFO 2026-02-20 05:10:19,942 scrape_flashscore 1 129146532452032 Scraping: Liga Mx (Mexico) - Football
+INFO 2026-02-20 05:10:21,934 scrape_flashscore 1 129146532452032 Scraping: Australian Open (Atp Singles) - Tennis
+INFO 2026-02-20 05:10:32,726 scrape_flashscore 1 129146532452032   No matches found for Australian Open
+INFO 2026-02-20 05:10:32,727 scrape_flashscore 1 129146532452032 Scraping: French Open (Atp Singles) - Tennis
+INFO 2026-02-20 05:10:43,791 scrape_flashscore 1 129146532452032   No matches found for French Open
+INFO 2026-02-20 05:10:43,792 scrape_flashscore 1 129146532452032 Scraping: Nba (Usa) - Basketball
+INFO 2026-02-20 05:10:45,914 scrape_flashscore 1 129146532452032 Scraping: Mlb (Usa) - Baseball
+INFO 2026-02-20 05:10:47,858 scrape_flashscore 1 129146532452032 Scraping: Lmb (Mexico) - Baseball
+INFO 2026-02-20 05:10:49,590 scrape_flashscore 1 129146532452032 Scraping: Nhl (Usa) - Hockey
+INFO 2026-02-20 05:14:06,839 auth_viewset 1 129146532452032 User logged out: felix.egana@caliente.mx
